@@ -21,7 +21,9 @@ The page reads these JSON files on load, so any commit shows up as soon as Pages
 4. Open the site with `#pick` at the end of the URL (e.g. `https://bilbosagggins.github.io/Active-Matter/#pick`), pick the map, and click where each spot is. The page shows `"x":..,"y":..` (percent of width/height) and copies it.
 5. Paste those numbers into the matching node in `data/loot.json`.
 
-Until a map has an image, it shows a schematic board instead.
+Until a map has an image, it shows a schematic board instead. Gigastructure stays schematic because its in-game map is scrambled.
+
+Marker type `exit` draws a green extraction square without a label.
 
 ## Data format
 

@@ -4,7 +4,8 @@ const TYPES = {
   med:  { n: "Medical",             c: "--med"  },
   val:  { n: "Valuables",           c: "--val"  },
   key:  { n: "Locked / key",        c: "--key"  },
-  boss: { n: "Boss / heavy threat", c: "--boss" }
+  boss: { n: "Boss / heavy threat", c: "--boss" },
+  exit: { n: "Exits",               c: "--exit" }
 };
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmtDate = iso => { const d = new Date(iso + (iso.length === 10 ? "T12:00:00Z" : "")); return isNaN(d) ? iso : d.toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" }); };
@@ -87,6 +88,13 @@ function draw() {
   m.nodes.forEach((n, i) => {
     if (!active.has(n.type)) return;
     const [x, y] = P(n), c = `var(${TYPES[n.type].c})`, right = n.x > 72;
+    if (n.type === "exit") {
+      const r = 7 * s;
+      h += `<g class="marker exit${i === sel ? " sel" : ""}" tabindex="0" role="button" aria-label="Exit" data-i="${i}">` +
+        `<rect x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}" rx="${2 * s}" fill="${c}" style="stroke-width:${(i === sel ? 3 : 1.5) * s}"/>` +
+        `<path d="M${x - 3 * s} ${y}h${6 * s}m${-2.5 * s} ${-2.5 * s}l${2.5 * s} ${2.5 * s}l${-2.5 * s} ${2.5 * s}" stroke="var(--panel)" stroke-width="${1.6 * s}" fill="none"/></g>`;
+      return;
+    }
     h += `<g class="marker${i === sel ? " sel" : ""}" tabindex="0" role="button" aria-label="${esc(n.label)}" data-i="${i}">` +
       `<circle class="ring" cx="${x}" cy="${y}" r="${10 * s}" stroke="${c}" style="stroke-width:${(i === sel ? 4 : 2.5) * s}"/>` +
       `<circle cx="${x}" cy="${y}" r="${4 * s}" fill="${c}"/>` +

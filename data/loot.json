@@ -4,22 +4,22 @@
     {
       "id": "cargo",
       "name": "Cargo Port",
-      "image": "",
+      "image": "maps/cargo-port.webp",
       "summary": "Strongest weapon run on Dalniy Island. Works without keys; the Port crane key unlocks the deep route.",
       "nodes": [
         {
-          "x": 15,
-          "y": 77,
+          "x": 49.2,
+          "y": 72.5,
           "type": "val",
           "label": "Safe-side entry",
           "loot": "Standard containers on the quieter side",
           "access": "None",
           "danger": "Other squads in Open Raids",
-          "tip": "Work the safer side first, then push toward the barges."
+          "tip": "Work the safer side first, then push toward the barges. Marker position is approximate."
         },
         {
-          "x": 38,
-          "y": 58,
+          "x": 31.4,
+          "y": 23.7,
           "type": "wpn",
           "label": "Barges",
           "loot": "Barge containers, military gear; small/big military crates on floating barges",
@@ -28,39 +28,63 @@
           "tip": "Shotgun as secondary. Automatics burn too much ammo."
         },
         {
-          "x": 60,
-          "y": 42,
+          "x": 46.4,
+          "y": 10.5,
           "type": "key",
           "label": "Portal → Crane",
           "loot": "Route to the Weapon Barge",
           "access": "Port crane key",
           "danger": "Exposed travel between portals",
-          "tip": "Portal is near the end of the barge route."
+          "tip": "Crane sits inside the barge gravity anomaly. Marker position is approximate."
         },
         {
-          "x": 83,
-          "y": 23,
+          "x": 35.8,
+          "y": 15.6,
           "type": "wpn",
           "label": "Weapon Barge",
           "loot": "Weapon crates; players report PKM, VAL, SVD",
           "access": "Port crane key + portal",
           "danger": "Devourers",
-          "tip": "Highest-value stop on the map. Leave once you've hit it."
+          "tip": "Inside the \"Barge anomaly\" zone. Leave once you've hit it."
         },
         {
-          "x": 28,
-          "y": 23,
+          "x": 57.4,
+          "y": 46.0,
           "type": "val",
           "label": "Back buildings",
           "loot": "Mixed containers to fill your pack on the way out",
           "access": "None",
           "danger": "Moderate",
-          "tip": "Top off here instead of detouring."
+          "tip": "Top off here instead of detouring. Marker position is approximate."
+        },
+        {
+          "x": 26.0,
+          "y": 32.4,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 77.2,
+          "y": 33.5,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
         [
           0,
+          4
+        ],
+        [
+          4,
           1
         ],
         [
@@ -70,58 +94,94 @@
         [
           2,
           3
-        ],
-        [
-          1,
-          4
         ]
       ]
     },
     {
       "id": "mil",
       "name": "Military Base",
-      "image": "",
+      "image": "maps/military-base.webp",
       "summary": "Short, crate-dense route. Hangars first, then barracks if you have a key.",
       "nodes": [
         {
-          "x": 20,
-          "y": 31,
+          "x": 43.7,
+          "y": 27.9,
           "type": "wpn",
           "label": "Hangar A",
           "loot": "Many rifle and weapon crates",
           "access": "None",
           "danger": "Distorted packs",
-          "tip": "Clear only what blocks you. Save meds."
+          "tip": "Clear only what blocks you. Save meds. Marker position is approximate."
         },
         {
-          "x": 20,
-          "y": 73,
+          "x": 66.9,
+          "y": 17.6,
           "type": "wpn",
           "label": "Hangar B",
           "loot": "Weapon crates",
           "access": "None",
           "danger": "Distorted packs",
-          "tip": "Hangars 148 and 209 need their own keys."
+          "tip": "Check both before committing to barracks. Marker position is approximate."
         },
         {
-          "x": 55,
-          "y": 35,
+          "x": 29.4,
+          "y": 65.4,
           "type": "key",
           "label": "Barracks #1 Armory",
           "loot": "2× AS Val, AKMs, mags (2F grate door)",
           "access": "Armory #1 key",
           "danger": "Distorted",
-          "tip": "Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F."
+          "tip": "Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F. Marker position is approximate."
         },
         {
-          "x": 82,
-          "y": 58,
+          "x": 27.3,
+          "y": 77.2,
           "type": "key",
           "label": "Barracks #2 Armory",
           "loot": "Armory crates, same layout as #1",
           "access": "Armory #2 key",
           "danger": "Distorted on the upper floor",
-          "tip": "Go up carefully; armory sits in the same spot as Barracks #1."
+          "tip": "Same position as the armory in Barracks #1. Marker position is approximate."
+        },
+        {
+          "x": 49.9,
+          "y": 46.8,
+          "type": "key",
+          "label": "Hangar #209",
+          "loot": "Unconfirmed",
+          "access": "Hangar 209 key",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 49.9,
+          "y": 55.1,
+          "type": "key",
+          "label": "Hangar #148",
+          "loot": "Unconfirmed",
+          "access": "Hangar 148 key (Silent Observers raid only)",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 62.2,
+          "y": 31.6,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 46.2,
+          "y": 68.7,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
@@ -142,58 +202,118 @@
     {
       "id": "dog",
       "name": "Dogorsk",
-      "image": "",
+      "image": "maps/dogorsk.webp",
       "summary": "Rotating events: helicopter and checkpoint spawns can swap each raid. Extraction points are dynamic.",
       "nodes": [
         {
-          "x": 18,
-          "y": 27,
+          "x": 58.7,
+          "y": 21.8,
           "type": "val",
           "label": "House 1 rooftop",
           "loot": "Rooftop loot",
           "access": "First entrance, climb to roof",
           "danger": "Devourers",
-          "tip": "Keep moving on the stairs."
+          "tip": "Keep moving on the stairs. Marker position is approximate."
         },
         {
-          "x": 40,
-          "y": 50,
+          "x": 47.8,
+          "y": 59.6,
           "type": "wpn",
           "label": "Anomaly helicopter",
           "loot": "Helicopter crates inside an anomaly",
           "access": "Climb the wall of House 2, drop to the other section",
           "danger": "Anomaly hazards",
-          "tip": "Main prize of the house route."
+          "tip": "Main prize of the house route. Marker position is approximate."
         },
         {
-          "x": 67,
-          "y": 31,
+          "x": 32.1,
+          "y": 39.5,
           "type": "wpn",
-          "label": "Police-area event",
-          "loot": "Helicopter ringed by Flowermen, or a checkpoint with weapon crates",
-          "access": "None",
-          "danger": "Flowermen",
-          "tip": "Station basement has a Lock actuator board door with high-tier loot."
+          "label": "Police Station",
+          "loot": "Nearby event: helicopter ringed by Flowermen, or a checkpoint with weapon crates. Basement: high-tier loot",
+          "access": "Lock actuator board for the basement",
+          "danger": "Flowermen; the interior is deadly",
+          "tip": "Skip the interior if you're under-geared."
         },
         {
-          "x": 82,
-          "y": 77,
+          "x": 13.7,
+          "y": 72.7,
           "type": "wpn",
           "label": "Tunnel helicopter",
           "loot": "Possible helicopter spawn",
           "access": "None",
           "danger": "Varies",
-          "tip": "Not every raid."
+          "tip": "Not every raid. Marker position is approximate."
         },
         {
-          "x": 45,
-          "y": 82,
+          "x": 75.8,
+          "y": 52.0,
           "type": "key",
-          "label": "Cinema storage",
+          "label": "Cinema \"Sputnik\" storage",
           "loot": "Unconfirmed",
           "access": "Cinema storage key",
           "danger": "Unknown",
           "tip": ""
+        },
+        {
+          "x": 30.3,
+          "y": 21.1,
+          "type": "key",
+          "label": "Hangar #29",
+          "loot": "Unconfirmed",
+          "access": "Hangar 29 key",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 68.3,
+          "y": 76.7,
+          "type": "key",
+          "label": "Hangar #35",
+          "loot": "Unconfirmed",
+          "access": "Hangar 35 key",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 46.9,
+          "y": 17.0,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map. Dogorsk exits are dynamic, so not all are open every raid."
+        },
+        {
+          "x": 84.4,
+          "y": 38.5,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map. Dogorsk exits are dynamic."
+        },
+        {
+          "x": 14.1,
+          "y": 46.1,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map. Dogorsk exits are dynamic."
+        },
+        {
+          "x": 43.2,
+          "y": 62.8,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map. Dogorsk exits are dynamic."
         }
       ],
       "links": [
@@ -204,52 +324,94 @@
         [
           1,
           2
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          1,
-          4
         ]
       ]
     },
     {
       "id": "ozer",
       "name": "Ozernoe",
-      "image": "",
+      "image": "maps/ozernoe.webp",
       "summary": "Mid-risk mix of weapons and meds. Forest helicopter can be swapped for a ZIL convoy.",
       "nodes": [
         {
-          "x": 22,
-          "y": 31,
+          "x": 26.0,
+          "y": 47.6,
           "type": "wpn",
           "label": "Forest helicopter",
           "loot": "Helicopter + three weapon crates (or ZIL convoy)",
           "access": "None",
           "danger": "Mines, Flowermen, Turned Soldiers",
-          "tip": "Approach slowly; watch for mines."
+          "tip": "Approach slowly; watch for mines. Marker position is approximate."
         },
         {
-          "x": 62,
-          "y": 65,
+          "x": 29.4,
+          "y": 59.1,
           "type": "med",
           "label": "Fire-station road ZILs",
           "loot": "Two ZIL trucks, 2–3 crates of weapons and meds",
           "access": "None",
           "danger": "Low–moderate",
-          "tip": "Quick, low-commitment stop."
+          "tip": "On the road by the Fire Station. Quick, low-commitment stop. Marker position is approximate."
         },
         {
-          "x": 80,
-          "y": 27,
+          "x": 58.7,
+          "y": 67.3,
           "type": "boss",
           "label": "Boss spawn",
           "loot": "Boss encounter",
           "access": "Mostly with the Overgrowth modifier",
           "danger": "Boss",
-          "tip": "Swarms can't sting you inside the church; use it to regroup."
+          "tip": "Only engage with a full kit. Marker position is approximate."
+        },
+        {
+          "x": 74.9,
+          "y": 55.0,
+          "type": "med",
+          "label": "Church",
+          "loot": "Safe spot: Swarms can't sting inside",
+          "access": "None",
+          "danger": "Low",
+          "tip": "Duck in here to heal when Swarms are out."
+        },
+        {
+          "x": 77.9,
+          "y": 20.9,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 33.6,
+          "y": 26.2,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 40.7,
+          "y": 64.3,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 68.3,
+          "y": 89.9,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
@@ -308,6 +470,16 @@
           "access": "Room key (3F apartment building, north)",
           "danger": "Unknown",
           "tip": "3rd floor of the apartment building on the north side."
+        },
+        {
+          "x": 66.3,
+          "y": 78.7,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": []
@@ -315,51 +487,85 @@
     {
       "id": "dam",
       "name": "Dam",
-      "image": "",
+      "image": "maps/dam.webp",
       "summary": "Dense indoor loot behind keyed and electric doors.",
       "nodes": [
         {
-          "x": 20,
-          "y": 42,
+          "x": 26.0,
+          "y": 57.7,
           "type": "key",
           "label": "West electric door",
           "loot": "Full rosin barrel + high-tier loot",
           "access": "Lock actuator board",
           "danger": "Flowermen, mines, Devourers",
-          "tip": "Needed for the Rosin Stockpile objective."
+          "tip": "Needed for the Rosin Stockpile objective. Marker position is approximate."
         },
         {
-          "x": 78,
-          "y": 35,
+          "x": 68.3,
+          "y": 57.7,
           "type": "key",
           "label": "East storage",
           "loot": "Equipment",
-          "access": "East storage key (director's office desk)",
+          "access": "East storage key",
           "danger": "Moderate",
-          "tip": "Grab the key from the director's office first."
+          "tip": "Grab the key from the director's office first. Marker position is approximate."
         },
         {
-          "x": 50,
-          "y": 60,
+          "x": 38.9,
+          "y": 65.8,
           "type": "val",
-          "label": "Central interior",
+          "label": "Dam interior",
           "loot": "Lots of containers",
           "access": "None",
-          "danger": "Early player traffic",
+          "danger": "Early player traffic; heavy monster presence on the dam",
           "tip": "Good group target."
         },
         {
-          "x": 80,
-          "y": 85,
+          "x": 57.1,
+          "y": 70.5,
           "type": "val",
           "label": "Severniy Veter helm",
           "loot": "Captain's safe: AKS-74U, Molotovs, ammo, log page",
           "access": "Captain's key (from the Factory roof crate)",
           "danger": "Water approach",
-          "tip": "SE side of the southern waterfront."
+          "tip": "Front half of the sunken ship south of the dam. Marker position is approximate."
+        },
+        {
+          "x": 34.8,
+          "y": 43.9,
+          "type": "key",
+          "label": "Administration (director's office)",
+          "loot": "East storage key on the desk",
+          "access": "None",
+          "danger": "Moderate",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 50.5,
+          "y": 51.0,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 47.4,
+          "y": 61.4,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
+        [
+          4,
+          1
+        ],
         [
           2,
           0
@@ -373,6 +579,84 @@
           3
         ]
       ]
+    },
+    {
+      "id": "factory",
+      "name": "Factory",
+      "image": "maps/factory.webp",
+      "summary": "Industrial zone with the Hive, keyed hangars, and garages known for backpacks.",
+      "nodes": [
+        {
+          "x": 75.1,
+          "y": 57.8,
+          "type": "key",
+          "label": "Hangars #17 & #18",
+          "loot": "Unconfirmed",
+          "access": "Hangar 17 / Hangar 18 keys",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 42.3,
+          "y": 26.1,
+          "type": "val",
+          "label": "Factory buildings #3 / #5",
+          "loot": "Garages here are a known spot for hiking and climbing backpacks; Captain's key crate is on the Factory roof",
+          "access": "None",
+          "danger": "Turned Soldiers, tight corridors",
+          "tip": "Grab the Captain's key for the Dam safe. Marker position is approximate."
+        },
+        {
+          "x": 25.3,
+          "y": 13.5,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 33.9,
+          "y": 66.2,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "scrap",
+      "name": "Scrapyard",
+      "image": "maps/scrapyard.webp",
+      "summary": "Added from your screenshot. Only the Hangar #84 lock is documented so far.",
+      "nodes": [
+        {
+          "x": 36.2,
+          "y": 72.2,
+          "type": "key",
+          "label": "Hangar #84",
+          "loot": "Unconfirmed",
+          "access": "Hangar 84 key",
+          "danger": "Unknown",
+          "tip": "Labeled on the in-game map."
+        },
+        {
+          "x": 54.6,
+          "y": 45.9,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        }
+      ],
+      "links": []
     },
     {
       "id": "hq",
@@ -453,38 +737,68 @@
     {
       "id": "down",
       "name": "Downtown",
-      "image": "",
+      "image": "maps/downtown.webp",
       "summary": "Large urban map with room to avoid traffic. Police and SWAT enemies.",
       "nodes": [
         {
-          "x": 30,
-          "y": 31,
+          "x": 48.5,
+          "y": 52.1,
           "type": "wpn",
           "label": "Suspended train cars",
           "loot": "Weapon crates; backpacks around the trains",
           "access": "None",
           "danger": "Exposure while climbing",
-          "tip": "Open the backpacks: keys and valuables."
+          "tip": "Open the backpacks: keys and valuables. Marker position is approximate."
         },
         {
-          "x": 70,
-          "y": 58,
+          "x": 57.4,
+          "y": 35.5,
           "type": "val",
-          "label": "Coble Hill Inn",
+          "label": "Cobble Hill Inn",
           "loot": "Floors of offices",
           "access": "None",
           "danger": "Room-to-room fights",
           "tip": "Better as a team."
         },
         {
-          "x": 50,
-          "y": 85,
+          "x": 41.0,
+          "y": 88.5,
           "type": "med",
           "label": "Street vehicles",
           "loot": "Trunk loot",
           "access": "None",
           "danger": "Police/SWAT",
-          "tip": ""
+          "tip": "Marker position is approximate."
+        },
+        {
+          "x": 79.9,
+          "y": 58.1,
+          "type": "wpn",
+          "label": "Gun Store",
+          "loot": "Not yet documented",
+          "access": "Unknown",
+          "danger": "Police/SWAT",
+          "tip": "Labeled on the in-game map; worth a look on your way to the east exit."
+        },
+        {
+          "x": 36.9,
+          "y": 56.1,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 77.9,
+          "y": 60.3,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
@@ -501,48 +815,78 @@
     {
       "id": "park",
       "name": "Park",
-      "image": "",
+      "image": "maps/park.webp",
       "summary": "Hard map. Go in for the underground lab with keys and fire.",
       "nodes": [
         {
-          "x": 30,
-          "y": 30,
+          "x": 45.1,
+          "y": 57.5,
           "type": "key",
-          "label": "Lab entrances",
+          "label": "Greenhouse lab entrances",
           "loot": "Access to the underground lab",
           "access": "Underground laboratory key (Sokolov's suitcase, truck)",
           "danger": "Flowermen, Dendroids",
-          "tip": "Entrances: Restaurant kitchen door, south Greenhouse planter grate, north-central Greenhouse stairs."
+          "tip": "Entrances: south planter grate and north-central stairs of the Greenhouse; also the Restaurant kitchen door."
         },
         {
-          "x": 62,
-          "y": 42,
+          "x": 49.2,
+          "y": 71.8,
           "type": "key",
           "label": "Lab south door",
           "loot": "Reagents, several weapon crates",
           "access": "Lock actuator board",
           "danger": "Flowermen, Dendroids",
-          "tip": "Fire works well here."
+          "tip": "At the south end of the underground lab. Fire works well here. Marker position is approximate."
         },
         {
-          "x": 80,
-          "y": 72,
+          "x": 38.9,
+          "y": 67.5,
           "type": "key",
           "label": "Lab Armory & AM vault",
           "loot": "Armory, AM vault",
           "access": "Armory key (Turned Soldier on lab steps), AM vault key (lab loot)",
           "danger": "High",
-          "tip": ""
+          "tip": "Marker position is approximate."
         },
         {
-          "x": 25,
-          "y": 75,
+          "x": 34.2,
+          "y": 41.7,
           "type": "boss",
           "label": "Flowerman nests",
           "loot": "Active Matter, creature parts",
           "access": "None",
           "danger": "Waking the nest",
-          "tip": "Leave lure flowers until you're ready."
+          "tip": "Leave lure flowers until you're ready. Marker position is approximate."
+        },
+        {
+          "x": 70.6,
+          "y": 54.2,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 22.3,
+          "y": 69.1,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 31.7,
+          "y": 71.4,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": [
@@ -575,6 +919,45 @@
           "access": "Storage room key (random world loot here)",
           "danger": "Getting lost",
           "tip": "Run it in cheap gear until you know the landmarks."
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "epi",
+      "name": "Epicenter",
+      "image": "maps/epicenter.webp",
+      "summary": "No loot spots documented yet. Exits shown from your screenshot.",
+      "nodes": [
+        {
+          "x": 51.5,
+          "y": 22.8,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 54.7,
+          "y": 50.0,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
+        },
+        {
+          "x": 30.9,
+          "y": 74.7,
+          "type": "exit",
+          "label": "Exit",
+          "loot": "Extraction point",
+          "access": "—",
+          "danger": "Can be camped in Open Raids",
+          "tip": "Position from the in-game map."
         }
       ],
       "links": []
