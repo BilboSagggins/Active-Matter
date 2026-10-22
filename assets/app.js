@@ -333,3 +333,5 @@ getJSON("data/threats.json").then(data => {
 }).catch(e => { document.getElementById("threatcards").textContent = "Couldn't load threat data: " + e.message; });
 
 window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "threats", "keys"].includes(v)) show(v); });
+
+if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

@@ -15,7 +15,7 @@ These instructions are the single source of truth for the scheduled update run. 
 - `data/threats.json` — monsters and anomalies: `name, kind, danger (1–4), counters, where (map ids from loot.json), does, beat, drops`, plus `rules`.
 - `data/last-run.json` — `{ "date": "YYYY-MM-DD", "model": "...", "changed": true|false }`. Written by every scheduled run so the backup run knows the update already happened.
 - `data/news.json` — **don't touch**; the `Update news` GitHub Action refreshes it from Steam.
-- Don't change `maps/` images or code (`index.html`, `assets/`) during a content update.
+- Don't change `maps/` images or code (`index.html`, `assets/`, `sw.js`, `manifest.webmanifest`, `icons/`) during a content update. The site is an installable app; its service worker fetches from the network first, so data updates reach phones without any cache changes.
 
 ## Scheduled update procedure
 
