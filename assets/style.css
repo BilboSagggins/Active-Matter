@@ -222,3 +222,10 @@ footer.src{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;fon
 .modlist ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:14px}
 .modbuilds{margin-top:22px;overflow-x:auto}
 .modbuilds td:first-child{white-space:normal;min-width:150px}
+
+/* tabs wrap instead of scrolling */
+nav.tabs{flex-wrap:wrap;overflow-x:visible}
+@media (max-width:640px){
+  nav.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+  nav.tabs button{font-size:12.5px;letter-spacing:.04em;padding:8px 4px;white-space:normal;line-height:1.2;text-align:center}
+}
