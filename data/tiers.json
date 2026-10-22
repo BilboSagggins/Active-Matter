@@ -375,7 +375,8 @@
       "items": [
         {
           "name": "Ceramic / Titan plates",
-          "why": "Slot them into your armor first, then carry spares."
+          "why": "Slot them into your armor first, then carry spares.",
+          "find": "Armor plates"
         },
         {
           "name": "Electronics & circuit boards",
@@ -428,23 +429,29 @@
       "rows": [
         {
           "name": "Titan",
-          "note": "Most durable over a long fight and much lighter. Absorbs slightly less per hit than ceramic at first. Expensive."
+          "note": "Most durable in a long fight and much lighter than steel or ceramic; absorbs slightly less per hit than ceramic at first. Titan (S): durability 230, +45% projectile, +55% melee, +35% explosive. Fuse from 1 Ceramic (S) + chronotraces, or Replicator.",
+          "find": "Armor plates"
         },
         {
           "name": "Ceramic",
-          "note": "Highest initial absorption. Heavier than titan. Common at the Headquarters south gas station and signal posts."
+          "note": "Highest initial absorption, heavier than titan. Commonly found at the Headquarters south gas station and signal posts.",
+          "find": "Armor plates"
         },
         {
           "name": "Steel",
-          "note": "Very durable but heavy."
+          "note": "Very durable but heavy. Sold at the Market."
         },
         {
           "name": "UHMWPE",
-          "note": "Basic. Matches steel against melee but wears out faster."
+          "note": "Basic; matches steel against melee but wears out faster."
         },
         {
-          "name": "Assault plate (XL)",
-          "note": "Replaces two Large slots; slightly less protection than a pair of L plates."
+          "name": "Rusty",
+          "note": "Lowest tier. Replace as soon as you can."
+        },
+        {
+          "name": "Sizes: S, L, XL",
+          "note": "XL (Assault) fills a slot that used to take two L plates, with slightly less protection than a pair of L."
         }
       ]
     },
@@ -452,16 +459,26 @@
       "group": "Helmets",
       "rows": [
         {
-          "name": "TFMK-I",
-          "note": "Most bullet-resistant helmet. Active headset built in. Late game."
+          "name": "Ballistic helmet TFMK-I",
+          "note": "Most bullet-resistant helmet; has an active headset. Late game.",
+          "find": "Helmets"
         },
         {
-          "name": "EDH-Gen V",
-          "note": "Mid-game helmet with an active headset."
+          "name": "Enhanced Helmet EDH-Gen V",
+          "note": "Mid-game helmet with an active headset.",
+          "find": "Helmets"
         },
         {
-          "name": "SF, A3, Tactical PASGT",
-          "note": "Edition and early helmets. No official ranking published."
+          "name": "SF, A3, IHPS, K6 / K6-3, PASGT, TRM-73, KVR",
+          "note": "Mid and early lootable helmets. No official ranking published."
+        },
+        {
+          "name": "Tank crew helmet",
+          "note": "Common, light protection (+5% projectile) but takes night vision. In loot crates on all raids and in the Replicator."
+        },
+        {
+          "name": "SSh-40, Stahlhelm, M1, Winter Hat",
+          "note": "Low-tier finds. Swap out early."
         }
       ]
     },
@@ -474,12 +491,29 @@
         },
         {
           "name": "Hiking & climbing packs",
-          "note": "Factory garages and Chagulko houses. Use until you unlock the Large.",
+          "note": "Drop in general loot everywhere; most reported in Factory garages and Chagulko houses. Use them until you have the Large.",
           "find": "Backpacks"
         },
         {
           "name": "Small / Medium",
           "note": "Starter kit."
+        }
+      ]
+    },
+    {
+      "group": "Getting gear without looting",
+      "rows": [
+        {
+          "name": "Market",
+          "note": "Credits buy shop guns, plates, ammo and cheap consumables like AI-2 kits."
+        },
+        {
+          "name": "Replicator",
+          "note": "Prints unlocked blueprints on a timer, such as plates and helmets."
+        },
+        {
+          "name": "Fusion",
+          "note": "Upgrades items, e.g. Ceramic (S) plate into Titan (S)."
         }
       ]
     }

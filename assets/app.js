@@ -140,6 +140,7 @@ getJSON("data/loot.json").then(data => {
     ms.appendChild(b);
   });
   document.getElementById("lootStamp").textContent = data.updated || "";
+  CATS = data.categories || {}; COMMON = data.common || {};
   MAPS.forEach(m => m.nodes.forEach((n, i) => (n.items || []).forEach(it => (INDEX[it] ||= []).push({ map: m.id, i, type: n.type }))));
   renderFinder();
   refreshFindLinks();
@@ -205,28 +206,31 @@ getJSON("data/tiers.json").then(data => {
   document.getElementById("lootcols").innerHTML = (data.loot || []).map((b, i) =>
     `<div class="bucket" data-b="${i}"><h3>${esc(b.bucket)}</h3><ul>` + b.items.map(it => `<li><b>${esc(it.name)}</b><span>${esc(it.why)}</span>${it.find ? `<button class="findlink" data-find="${esc(it.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
   document.getElementById("gearcols").innerHTML = (data.gear || []).map(g =>
-    `<div class="bucket"><h3>${esc(g.group)}</h3><p class="eyebrow">Best first</p><ul class="gearlist">` + g.rows.map(r => `<li><b>${esc(r.name)}</b><span>${esc(r.note)}</span>${r.find ? `<button class="findlink" data-find="${esc(r.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
+    `<div class="bucket"><h3>${esc(g.group)}</h3>${/^Getting/.test(g.group) ? "" : `<p class="eyebrow">Best first</p>`}<ul class="gearlist">` + g.rows.map(r => `<li><b>${esc(r.name)}</b><span>${esc(r.note)}</span>${r.find ? `<button class="findlink" data-find="${esc(r.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
   refreshFindLinks();
 }).catch(e => { document.getElementById("tierboard").textContent = "Couldn't load tier data: " + e.message; });
 
 
 /* ---------- Gear finder ---------- */
-const GROUPS = [
-  ["Weapons", it => /crate|PKM|Val|SVD|AKM|AKS|SMG|Molotov/i.test(it)],
-  ["Keys & locks", it => /key|board/i.test(it)],
-  ["Valuables & Active Matter", it => /valuable|high-tier|active matter/i.test(it)],
-  ["Gear & supplies", it => /backpack|equipment|medical|grenade|trunk|container/i.test(it)],
-  ["Other", () => true]
-];
+let CATS = {}, COMMON = {};
+function catOf(it) {
+  for (const [c, list] of Object.entries(CATS)) if (list.includes(it)) return c;
+  return /key|board/i.test(it) ? "Keys & locks" : "Other";
+}
 function renderFinder() {
   const q = (document.getElementById("findq").value || "").trim().toLowerCase();
-  const items = Object.keys(INDEX).sort((a, b) => a.localeCompare(b)).filter(it => !q || it.toLowerCase().includes(q));
-  const used = new Set();
-  document.getElementById("findgroups").innerHTML = GROUPS.map(([g, test]) => {
-    const list = items.filter(it => !used.has(it) && test(it)); list.forEach(it => used.add(it));
-    if (!list.length) return "";
-    return `<div class="fgroup"><div class="eyebrow">${g}</div><div class="itemchips">${list.map(it =>
-      `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)} <span>${INDEX[it].length}</span></button>`).join("")}</div></div>`;
+  const all = [...new Set([...Object.keys(INDEX), ...Object.keys(COMMON)])].sort((a, b) => a.localeCompare(b));
+  const items = all.filter(it => !q || it.toLowerCase().includes(q));
+  const groups = {};
+  items.forEach(it => (groups[catOf(it)] ||= []).push(it));
+  const order = [...Object.keys(CATS), "Other"].filter(c => groups[c]);
+  document.getElementById("findgroups").innerHTML = order.map(c => {
+    const open = q || groups[c].includes(HL);
+    return `<details class="fgroup"${open ? " open" : ""}><summary><span>${esc(c)}</span><span class="fcount">${groups[c].length}</span></summary><div class="itemchips">` +
+      groups[c].map(it => {
+        const n = (INDEX[it] || []).length;
+        return `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)} <span>${COMMON[it] ? (n ? n + " + everywhere" : "everywhere") : n}</span></button>`;
+      }).join("") + `</div></details>`;
   }).join("") || `<p class="unk">Nothing matches “${esc(q)}”.</p>`;
 }
 document.getElementById("findq").addEventListener("input", renderFinder);
@@ -234,7 +238,7 @@ document.getElementById("findq").addEventListener("input", renderFinder);
 function findItem(item) {
   const hits = INDEX[item];
   show("map"); history.replaceState(null, "", "#map");
-  if (!hits) { HL = null; renderFindBar(item); return; }
+  if (!hits) { HL = COMMON[item] ? item : null; draw(); renderFinder(); renderFindBar(item); return; }
   HL = item;
   hits.forEach(h => { if (!active.has(h.type)) { active.add(h.type); } });
   [...fl.children].forEach((b, k) => b.setAttribute("aria-pressed", active.has(Object.keys(TYPES)[k])));
@@ -246,17 +250,23 @@ function findItem(item) {
 }
 function renderFindBar(missing) {
   const bar = document.getElementById("findbar");
-  if (missing) { bar.hidden = false; bar.innerHTML = `No map spots logged for <b>${esc(missing)}</b> yet. <button data-clear>Clear</button>`; return; }
+  if (missing) {
+    bar.hidden = false;
+    bar.innerHTML = COMMON[missing]
+      ? `<div class="fnote"><b>${esc(missing)}</b> · found everywhere. ${esc(COMMON[missing])}</div><button data-clear>Clear</button>`
+      : `No map spots logged for <b>${esc(missing)}</b> yet. <button data-clear>Clear</button>`;
+    return;
+  }
   if (!HL) { bar.hidden = true; return; }
   const per = {}; INDEX[HL].forEach(h => (per[h.map] = per[h.map] || []).push(h.i));
   bar.hidden = false;
   bar.innerHTML = `Showing <b>${esc(HL)}</b> · ${INDEX[HL].length} spot${INDEX[HL].length > 1 ? "s" : ""}: ` +
     Object.entries(per).map(([id, idx]) => { const m = MAPS.find(x => x.id === id);
       return `<button class="mapjump${curMap && curMap.id === id ? " on" : ""}" data-jump="${id}" data-i="${idx[0]}">${esc(m.name)} (${idx.length})</button>`; }).join("") +
-    ` <button data-clear>Clear</button>`;
+    ` <button data-clear>Clear</button>` + (COMMON[HL] ? `<div class="fnote">${esc(COMMON[HL])}</div>` : "");
 }
 function refreshFindLinks() {
-  document.querySelectorAll("[data-find]").forEach(el => { if (!el.classList.contains("ichip")) el.hidden = !INDEX[el.dataset.find]; });
+  document.querySelectorAll("[data-find]").forEach(el => { if (!el.classList.contains("ichip")) el.hidden = !(INDEX[el.dataset.find] || COMMON[el.dataset.find]); });
 }
 document.addEventListener("click", e => {
   const f = e.target.closest("[data-find]");

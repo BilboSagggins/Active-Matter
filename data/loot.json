@@ -31,7 +31,7 @@
           "tip": "Shotgun as secondary. Automatics burn too much ammo.",
           "items": [
             "Weapon crates",
-            "SMGs & pistols",
+            "Military crates (keyed)",
             "Small military crate key"
           ]
         },
@@ -58,10 +58,7 @@
           "danger": "Devourers",
           "tip": "Inside the \"Barge anomaly\" zone. Leave once you've hit it.",
           "items": [
-            "Weapon crates",
-            "PKM",
-            "AS Val",
-            "SVD"
+            "Weapon crates"
           ]
         },
         {
@@ -159,8 +156,7 @@
           "danger": "Distorted",
           "tip": "Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F. Marker position is approximate.",
           "items": [
-            "AS Val",
-            "AKM",
+            "Weapon crates",
             "Armory #1 key"
           ]
         },
@@ -633,8 +629,7 @@
           "items": [
             "Safes & valuables",
             "Captain's key",
-            "AKS-74U",
-            "Molotovs"
+            "Grenades & throwables"
           ]
         },
         {
@@ -837,7 +832,7 @@
           "tip": "",
           "items": [
             "Weapon crates",
-            "Grenades & consumables"
+            "Grenades & throwables"
           ]
         },
         {
@@ -850,8 +845,21 @@
           "danger": "Low",
           "tip": "Sweep the road after a bunker.",
           "items": [
-            "Grenades & consumables",
+            "Grenades & throwables",
             "Car trunks"
+          ]
+        },
+        {
+          "x": 55,
+          "y": 88,
+          "type": "med",
+          "label": "South gas station",
+          "loot": "Ceramic armor plates are commonly found here and at signal posts",
+          "access": "None",
+          "danger": "Low",
+          "tip": "Good early stop for plates.",
+          "items": [
+            "Armor plates"
           ]
         }
       ],
@@ -891,7 +899,7 @@
           "tip": "Open the backpacks: keys and valuables. Marker position is approximate.",
           "items": [
             "Weapon crates",
-            "Keys (random)"
+            "Random keys"
           ]
         },
         {
@@ -1132,5 +1140,44 @@
       ],
       "links": []
     }
-  ]
+  ],
+  "categories": {
+    "Weapons & ammo": [
+      "Weapon crates",
+      "Military crates (keyed)"
+    ],
+    "Armor & gear": [
+      "Backpacks",
+      "Armor plates",
+      "Helmets",
+      "Equipment"
+    ],
+    "Medical": [
+      "Medical supplies"
+    ],
+    "Grenades & throwables": [
+      "Grenades & throwables"
+    ],
+    "Valuables & Active Matter": [
+      "Safes & valuables",
+      "High-tier loot",
+      "Active Matter"
+    ],
+    "Containers & vehicles": [
+      "General containers",
+      "Car trunks"
+    ],
+    "Keys & locks": [],
+    "Points of interest": [
+      "Boss",
+      "Safe from Swarms"
+    ]
+  },
+  "common": {
+    "Backpacks": "Backpacks drop from general loot on every map, so check any container or body. The spots marked are where players report them most: Factory garages and houses in Chagulko (Chagulko isn't on this site's maps yet). The Large Backpack is unlocked from the Monolith.",
+    "Armor plates": "Plates come in Rusty, UHMWPE, Steel, Ceramic and Titan, in S, L and XL sizes, and drop from general loot everywhere. Ceramic is commonly reported at the Headquarters south gas station and signal posts. Titan can also be fused from a Ceramic plate plus chronotraces, and the Market sells plates.",
+    "Helmets": "Helmets drop from loot crates in every raid. TFMK-I is the most bullet-resistant; EDH-Gen V is the mid-game pick. Basic helmets can also be made in the Replicator.",
+    "Medical supplies": "Medical items drop in general loot across all maps. Marked spots are reliable extras: Ozernoe ZIL trucks and the Headquarters southern edge (driver's first aid kits). AI-2 kits are cheap at the Market.",
+    "Weapon crates": "Weapon spawns are random. These are crates that reliably appear; the gun inside changes each raid."
+  }
 }

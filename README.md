@@ -37,7 +37,7 @@ Marker type `exit` draws a green extraction square without a label.
   "links": [[0, 1]] }
 ```
 
-`type` is one of `wpn`, `med`, `val`, `key`, `boss`, `exit`. Optional `items` (list of gear names) powers the "Find gear on the map" panel; a key's spot should list the key's exact name from `keys.json`, and a weapon's spot its name from `tiers.json`, so their "Find on map" links appear. `links` draws dashed route lines between node indexes.
+`type` is one of `wpn`, `med`, `val`, `key`, `boss`, `exit`. Optional `items` (list of gear names) powers the "Find gear on the map" panel; a key's spot should list the key's exact name from `keys.json`, so its "Find on map" link appears. Weapon spawns are random, so tag weapon spots only as `Weapon crates`. `categories` sets the finder's groups; `common` holds a note for gear that drops everywhere (backpacks, plates, helmets, meds). `links` draws dashed route lines between node indexes.
 
 `data/keys.json` → `keys[]`: `name, map, opens, found, craft, uses, loot, source`. Use `"?"` or `"Unconfirmed"` for unknowns; they render in gray.
 
