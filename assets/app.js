@@ -278,7 +278,11 @@ function refreshFindLinks() {
 }
 document.addEventListener("click", e => {
   const f = e.target.closest("[data-find]");
-  if (f) { e.preventDefault(); findItem(f.dataset.find); return; }
+  if (f) {
+    e.preventDefault();
+    if (f.classList.contains("ichip") && f.dataset.find === HL) { HL = null; renderFindBar(); renderFinder(); draw(); return; }
+    findItem(f.dataset.find); return;
+  }
   const j = e.target.closest("[data-jump]");
   if (j) { const m = MAPS.find(x => x.id === j.dataset.jump); selectMap(m, +j.dataset.i); renderFindBar(); return; }
   if (e.target.closest("[data-clear]")) { HL = null; renderFindBar(); renderFinder(); draw(); return; }
