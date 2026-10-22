@@ -335,3 +335,25 @@ getJSON("data/threats.json").then(data => {
 window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "threats", "keys"].includes(v)) show(v); });
 
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+
+/* ---------- Install app ---------- */
+(() => {
+  const btn = document.getElementById("installBtn"), help = document.getElementById("installHelp");
+  const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  if (standalone) return;
+  let deferred = null;
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; btn.hidden = false; });
+  window.addEventListener("appinstalled", () => { btn.hidden = true; help.hidden = true; });
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  // Show the button everywhere; fall back to written steps when the browser has no install prompt.
+  setTimeout(() => { btn.hidden = false; }, 1200);
+  btn.addEventListener("click", async () => {
+    if (deferred) { deferred.prompt(); await deferred.userChoice.catch(() => {}); deferred = null; return; }
+    help.hidden = !help.hidden;
+    help.innerHTML = ios
+      ? "<b>Add to your home screen:</b> tap the Share button, then <b>Add to Home Screen</b>."
+      : /SamsungBrowser/i.test(navigator.userAgent)
+        ? "<b>Add to your home screen:</b> tap the ☰ menu, then <b>Add page to</b> → <b>Home screen</b>."
+        : "<b>Add to your home screen:</b> tap the ⋮ menu, then <b>Install app</b> or <b>Add to Home screen</b>.";
+  });
+})();

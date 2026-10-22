@@ -1,7 +1,7 @@
 // Offline support for the Active Matter Field Guide.
 // Network first for everything, so new data and code show up as soon as they're pushed;
 // the cache is only used when the phone is offline. Map images are cache-first (they rarely change).
-const CACHE = "am-guide-v1";
+const CACHE = "am-guide-v2";
 const SHELL = ["./", "index.html", "assets/style.css", "assets/app.js", "manifest.webmanifest",
   "data/news.json", "data/loot.json", "data/keys.json", "data/tiers.json", "data/threats.json", "icons/icon-192.png"];
 
