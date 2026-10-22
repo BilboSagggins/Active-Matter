@@ -13,11 +13,13 @@ These instructions are the single source of truth for the scheduled update run. 
 - `data/keys.json` — keys: `name, map, opens, found, craft, uses, loot, source`. Unknowns are `"?"` or `"Unconfirmed"`.
 - `data/tiers.json` — `weapons` (tiers from several community lists in `sources`), `patchNotes`, `mods` (attachment slot priority, picks, builds by role, tips), `loot` (priority buckets), `gear` (plates, helmets, backpacks, rigs, safe containers, other ways to get gear).
 - `data/threats.json` — monsters and anomalies: `name, kind, danger (1–4), counters, where (map ids from loot.json), does, beat, drops`, plus `rules`.
+- `data/last-run.json` — `{ "date": "YYYY-MM-DD", "model": "...", "changed": true|false }`. Written by every scheduled run so the backup run knows the update already happened.
 - `data/news.json` — **don't touch**; the `Update news` GitHub Action refreshes it from Steam.
 - Don't change `maps/` images or code (`index.html`, `assets/`) during a content update.
 
 ## Scheduled update procedure
 
+0. **Backup check.** If you were started as the *backup* run, read `data/last-run.json`. If its `date` is today (America/Chicago), the main run already finished: stop and reply "Main run already completed today." Otherwise do the full procedure below.
 1. Search the web for new or corrected info since the `updated` date in each data file: patch notes at activematter.game/en/news (weapon, attachment, loot, key, map, monster or recipe changes), activematter.wiki.gg pages, and reputable community guides and tier lists.
 2. **keys.json**: fill fields marked Unconfirmed/`?` when a source confirms them, add new keys, fix anything a patch changed. Set a `source` URL for each change.
 3. **loot.json**: add newly documented spots and edit nodes that patches changed.
@@ -30,5 +32,6 @@ These instructions are the single source of truth for the scheduled update run. 
 5. **threats.json**: add new monsters/anomalies, update behavior or counters that patches changed, note drop buffs.
 6. Set `updated` to today's date in each file you change. Validate every file parses as JSON.
 7. Only add facts backed by a source you read. Paraphrase; don't copy text. If nothing new was found, change nothing.
-8. Commit to `main` with a message summarizing the changes, ending with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`, and push.
-9. Reply with a short summary of what changed with source links, or "No new info this run."
+8. Always write `data/last-run.json` with today's date (America/Chicago), the model you are, and whether any content changed, even if nothing else changed.
+9. Commit to `main` with a message summarizing the changes (or "Scheduled check: no new info"), ending with a `Co-Authored-By:` line naming the model you are (e.g. `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`), and push.
+10. Reply with a short summary of what changed with source links, or "No new info this run."
