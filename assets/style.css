@@ -235,3 +235,19 @@ nav.tabs{flex-wrap:wrap;overflow-x:visible}
 .installbtn{font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;background:var(--accent);color:var(--bg);border:0;border-radius:3px;padding:7px 12px;cursor:pointer}
 .installhelp{margin-top:10px;font-size:14px;background:var(--accent-soft);border:1px solid var(--accent);border-radius:4px;padding:10px 12px}
 @media (display-mode: standalone){.installbtn,.installhelp{display:none!important}}
+
+/* progression */
+.ph{margin-top:26px;font-family:var(--f-display);text-transform:uppercase;letter-spacing:.04em;border-top:2px solid var(--fg);padding-top:10px}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chk{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.invgroup{border-top:1px solid var(--line);padding:4px 0}
+.invgroup summary{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:8px 0;list-style:none}
+.invgroup summary::-webkit-details-marker{display:none}
+.invgroup summary::after{content:"+";font-size:16px;color:var(--accent);margin-left:8px}
+.invgroup[open] summary::after{content:"−"}
+.invgroup summary span:first-child{flex:1}
+.invgroup ul{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:8px}
+.invgroup li{border:1px solid var(--line);border-radius:3px;padding:8px 10px;background:var(--panel)}
+.invgroup li.star{border-left:3px solid var(--accent)}
+.invtop{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;align-items:baseline}
+.invwhy{display:block;font-size:13px;color:var(--muted);margin-top:2px}

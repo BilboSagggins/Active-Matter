@@ -357,3 +357,29 @@ if ("serviceWorker" in navigator) window.addEventListener("load", () => navigato
         : "<b>Add to your home screen:</b> tap the ⋮ menu, then <b>Install app</b> or <b>Add to Home screen</b>.";
   });
 })();
+
+/* ---------- Progression ---------- */
+let PROG = null;
+const LEVELS = ["Default", "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Chain"];
+function drawInvs() {
+  const q = document.getElementById("invq").value.trim().toLowerCase(), star = document.getElementById("invstar").checked;
+  const list = PROG.investigations.filter(v => (!star || v.pick) && (!q || JSON.stringify(v).toLowerCase().includes(q)));
+  document.getElementById("invs").innerHTML = LEVELS.map(L => {
+    const g = list.filter(v => v.level === L); if (!g.length) return "";
+    const open = q || star || ["Default", "Alpha", "Beta"].includes(L);
+    return `<details class="invgroup"${open ? " open" : ""}><summary><span>${L === "Chain" ? "Unlocked by finishing another" : L === "Default" ? "Available from the start" : "Monolith " + L}</span><span class="fcount">${g.length}</span></summary><ul>` +
+      g.map(v => `<li class="${v.pick ? "star" : ""}"><div class="invtop"><b>${v.pick ? "★ " : ""}${esc(v.name)}</b><span class="eyebrow">${esc(v.cat)}${v.tokens ? " · " + esc(v.tokens) + " tokens" : ""}</span></div>` +
+        `${v.pick ? `<span class="invwhy">${esc(v.pick)}</span>` : ""}${v.after ? `<span class="invwhy">After: ${esc(v.after)}</span>` : ""}</li>`).join("") + `</ul></details>`;
+  }).join("") || `<p class="unk">No investigations match.</p>`;
+}
+getJSON("data/progress.json").then(d => {
+  PROG = d;
+  document.getElementById("route").innerHTML = d.route.map(r => `<li><h3>${esc(r.step)}</h3><p>${esc(r.detail)}</p>${r.find ? `<button class="findlink" data-find="${esc(r.find)}" hidden>Find on map →</button>` : ""}</li>`).join("");
+  document.getElementById("mono").innerHTML = d.monolith.map(m => `<tr><td>${esc(m.level)}</td><td class="num">${esc(m.tokens)}</td><td>${esc(m.needs)}</td><td>${esc(m.unlocks)}</td></tr>`).join("");
+  document.getElementById("spend").innerHTML = d.spending.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("curr").innerHTML = d.currencies.map(c => `<tr><td>${esc(c.name)}</td><td>${esc(c.use)}</td><td>${esc(c.source)}</td></tr>`).join("");
+  document.getElementById("reset").innerHTML = `<li><b>Kept:</b> ${esc(d.reset.kept)}</li><li><b>Lost:</b> ${esc(d.reset.lost)}</li>`;
+  document.getElementById("invq").addEventListener("input", drawInvs);
+  document.getElementById("invstar").addEventListener("change", drawInvs);
+  drawInvs(); refreshFindLinks();
+}).catch(e => { document.getElementById("route").textContent = "Couldn't load progression data: " + e.message; });

@@ -43,13 +43,14 @@
 
   <section class="view" id="tiers" role="tabpanel" aria-labelledby="tab-tiers" hidden>
     <h2>What to Prioritize</h2>
-    <p class="lede">Weapon tiers, which mods to fit first, what to keep in your bag, and which gear to chase. Updated <span id="tierStamp"></span>.</p>
+    <p class="lede">Weapon tiers, which mods to fit first, what to keep, which gear to chase, and the best route through the Monolith and Investigations. Updated <span id="tierStamp"></span>.</p>
 
     <div class="subtabs" role="tablist" aria-label="Priority lists">
       <button role="tab" aria-selected="true" data-sub="pw">Weapons</button>
       <button role="tab" aria-selected="false" data-sub="pm">Mods</button>
       <button role="tab" aria-selected="false" data-sub="pl">Loot</button>
       <button role="tab" aria-selected="false" data-sub="pg">Gear</button>
+      <button role="tab" aria-selected="false" data-sub="pp">Progression</button>
     </div>
 
     <div id="pw" class="subview">
@@ -62,6 +63,20 @@
     </div>
     <div id="pm" class="subview" hidden><div id="mods"></div></div>
     <div id="pl" class="subview" hidden><div class="lootcols" id="lootcols"></div></div>
+    <div id="pp" class="subview" hidden>
+      <h3 class="ph">Suggested route</h3>
+      <ol class="modlist" id="route"></ol>
+      <h3 class="ph">Monolith levels</h3>
+      <div class="tablewrap" style="margin-top:6px"><table class="data"><thead><tr><th>Level</th><th>Tokens</th><th>To unlock</th><th>You get</th></tr></thead><tbody id="mono"></tbody></table></div>
+      <div class="rules" style="margin-top:20px"><h3>Spending tips</h3><ul id="spend"></ul></div>
+      <h3 class="ph">Investigations</h3>
+      <p class="keynote">Unlocked by Monolith level. Starred ones are worth doing early. Each can be done once per cycle.</p>
+      <div class="keytools"><input id="invq" type="search" placeholder="Search investigations…" aria-label="Search investigations"><label class="chk"><input id="invstar" type="checkbox"> Starred only</label></div>
+      <div id="invs"></div>
+      <h3 class="ph">Currencies</h3>
+      <div class="tablewrap" style="margin-top:6px"><table class="data"><thead><tr><th>Currency</th><th>Spend on</th><th>Get from</th></tr></thead><tbody id="curr"></tbody></table></div>
+      <div class="rules" style="margin-top:20px"><h3>Starting a new Personal Timeline</h3><ul id="reset"></ul></div>
+    </div>
     <div id="pg" class="subview" hidden><div class="gearcols" id="gearcols"></div></div>
   </section>
 
