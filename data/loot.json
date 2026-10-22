@@ -1,0 +1,73 @@
+{
+  "updated": "2026-10-22",
+  "maps": [
+    {"id":"cargo","name":"Cargo Port","image":"","summary":"Strongest weapon run on Dalniy Island. Works without keys; the Port crane key unlocks the deep route.",
+     "nodes":[
+      {"x":15,"y":77,"type":"val","label":"Safe-side entry","loot":"Standard containers on the quieter side","access":"None","danger":"Other squads in Open Raids","tip":"Work the safer side first, then push toward the barges."},
+      {"x":38,"y":58,"type":"wpn","label":"Barges","loot":"Barge containers, military gear; small/big military crates on floating barges","access":"Crate keys for the military crates","danger":"Devourers guard the teleporters","tip":"Shotgun as secondary. Automatics burn too much ammo."},
+      {"x":60,"y":42,"type":"key","label":"Portal → Crane","loot":"Route to the Weapon Barge","access":"Port crane key","danger":"Exposed travel between portals","tip":"Portal is near the end of the barge route."},
+      {"x":83,"y":23,"type":"wpn","label":"Weapon Barge","loot":"Weapon crates; players report PKM, VAL, SVD","access":"Port crane key + portal","danger":"Devourers","tip":"Highest-value stop on the map. Leave once you've hit it."},
+      {"x":28,"y":23,"type":"val","label":"Back buildings","loot":"Mixed containers to fill your pack on the way out","access":"None","danger":"Moderate","tip":"Top off here instead of detouring."}],
+     "links":[[0,1],[1,2],[2,3],[1,4]]},
+    {"id":"mil","name":"Military Base","image":"","summary":"Short, crate-dense route. Hangars first, then barracks if you have a key.",
+     "nodes":[
+      {"x":20,"y":31,"type":"wpn","label":"Hangar A","loot":"Many rifle and weapon crates","access":"None","danger":"Distorted packs","tip":"Clear only what blocks you. Save meds."},
+      {"x":20,"y":73,"type":"wpn","label":"Hangar B","loot":"Weapon crates","access":"None","danger":"Distorted packs","tip":"Hangars 148 and 209 need their own keys."},
+      {"x":55,"y":35,"type":"key","label":"Barracks #1 Armory","loot":"2× AS Val, AKMs, mags (2F grate door)","access":"Armory #1 key","danger":"Distorted","tip":"Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F."},
+      {"x":82,"y":58,"type":"key","label":"Barracks #2 Armory","loot":"Armory crates, same layout as #1","access":"Armory #2 key","danger":"Distorted on the upper floor","tip":"Go up carefully; armory sits in the same spot as Barracks #1."}],
+     "links":[[0,1],[0,2],[2,3]]},
+    {"id":"dog","name":"Dogorsk","image":"","summary":"Rotating events: helicopter and checkpoint spawns can swap each raid. Extraction points are dynamic.",
+     "nodes":[
+      {"x":18,"y":27,"type":"val","label":"House 1 rooftop","loot":"Rooftop loot","access":"First entrance, climb to roof","danger":"Devourers","tip":"Keep moving on the stairs."},
+      {"x":40,"y":50,"type":"wpn","label":"Anomaly helicopter","loot":"Helicopter crates inside an anomaly","access":"Climb the wall of House 2, drop to the other section","danger":"Anomaly hazards","tip":"Main prize of the house route."},
+      {"x":67,"y":31,"type":"wpn","label":"Police-area event","loot":"Helicopter ringed by Flowermen, or a checkpoint with weapon crates","access":"None","danger":"Flowermen","tip":"Station basement has a Lock actuator board door with high-tier loot."},
+      {"x":82,"y":77,"type":"wpn","label":"Tunnel helicopter","loot":"Possible helicopter spawn","access":"None","danger":"Varies","tip":"Not every raid."},
+      {"x":45,"y":82,"type":"key","label":"Cinema storage","loot":"Unconfirmed","access":"Cinema storage key","danger":"Unknown","tip":""}],
+     "links":[[0,1],[1,2],[2,3],[1,4]]},
+    {"id":"ozer","name":"Ozernoe","image":"","summary":"Mid-risk mix of weapons and meds. Forest helicopter can be swapped for a ZIL convoy.",
+     "nodes":[
+      {"x":22,"y":31,"type":"wpn","label":"Forest helicopter","loot":"Helicopter + three weapon crates (or ZIL convoy)","access":"None","danger":"Mines, Flowermen, Turned Soldiers","tip":"Approach slowly; watch for mines."},
+      {"x":62,"y":65,"type":"med","label":"Fire-station road ZILs","loot":"Two ZIL trucks, 2–3 crates of weapons and meds","access":"None","danger":"Low–moderate","tip":"Quick, low-commitment stop."},
+      {"x":80,"y":27,"type":"boss","label":"Boss spawn","loot":"Boss encounter","access":"Mostly with the Overgrowth modifier","danger":"Boss","tip":"Swarms can't sting you inside the church; use it to regroup."}],
+     "links":[[0,1],[1,2]]},
+    {"id":"shch","name":"Shegolskoe","image":"","summary":"Submerged helicopter, floating houses, and numbered attics.",
+     "nodes":[
+      {"x":50,"y":54,"type":"wpn","label":"Underwater helicopter","loot":"Two crates near the rear section","access":"Oxygen","danger":"Drowning","tip":"From the tail, crates are on the left; from the cockpit, on the right."},
+      {"x":22,"y":27,"type":"val","label":"Floating houses","loot":"Houses lifted by gravity anomalies","access":"Usually a nearby portal","danger":"Anomalies","tip":"Find the portal first."},
+      {"x":78,"y":25,"type":"key","label":"Attics #4/#8/#11/#15","loot":"Unconfirmed","access":"Matching attic key","danger":"Unknown","tip":"Keys come from the Keys fuse recipe."},
+      {"x":70,"y":80,"type":"key","label":"Surveillance room","loot":"Institute objective","access":"Room key (3F apartment building, north)","danger":"Unknown","tip":""}],
+     "links":[[1,0]]},
+    {"id":"dam","name":"Dam","image":"","summary":"Dense indoor loot behind keyed and electric doors.",
+     "nodes":[
+      {"x":20,"y":42,"type":"key","label":"West electric door","loot":"Full rosin barrel + high-tier loot","access":"Lock actuator board","danger":"Flowermen, mines, Devourers","tip":"Needed for the Rosin Stockpile objective."},
+      {"x":78,"y":35,"type":"key","label":"East storage","loot":"Equipment","access":"East storage key (director's office desk)","danger":"Moderate","tip":"Grab the key from the director's office first."},
+      {"x":50,"y":60,"type":"val","label":"Central interior","loot":"Lots of containers","access":"None","danger":"Early player traffic","tip":"Good group target."},
+      {"x":80,"y":85,"type":"val","label":"Severniy Veter helm","loot":"Captain's safe: AKS-74U, Molotovs, ammo, log page","access":"Captain's key (from the Factory roof crate)","danger":"Water approach","tip":"SE side of the southern waterfront."}],
+     "links":[[2,0],[2,1],[2,3]]},
+    {"id":"hq","name":"Headquarters","image":"","summary":"Best early-to-mid game farm for a basic combat kit.",
+     "nodes":[
+      {"x":28,"y":19,"type":"wpn","label":"Northern bunker","loot":"Weapon crates, equipment","access":"None","danger":"Enclosed fights","tip":"Quiet solo option."},
+      {"x":28,"y":81,"type":"wpn","label":"Southern bunker","loot":"Weapon crates, equipment","access":"None","danger":"Enclosed fights","tip":"Driver's first aid kits are common on the southern edge."},
+      {"x":62,"y":50,"type":"val","label":"Offices","loot":"Safes and valuables","access":"None","danger":"Moderate","tip":""},
+      {"x":85,"y":27,"type":"wpn","label":"Airport hangars / hotel roof","loot":"Weapon crates, grenades","access":"None","danger":"Open sightlines","tip":""},
+      {"x":82,"y":81,"type":"med","label":"Wrecks & pickup trunk","loot":"Ammo, grenades, smoke","access":"None","danger":"Low","tip":"Sweep the road after a bunker."}],
+     "links":[[0,2],[1,4],[2,3],[2,4]]},
+    {"id":"down","name":"Downtown","image":"","summary":"Large urban map with room to avoid traffic. Police and SWAT enemies.",
+     "nodes":[
+      {"x":30,"y":31,"type":"wpn","label":"Suspended train cars","loot":"Weapon crates; backpacks around the trains","access":"None","danger":"Exposure while climbing","tip":"Open the backpacks: keys and valuables."},
+      {"x":70,"y":58,"type":"val","label":"Coble Hill Inn","loot":"Floors of offices","access":"None","danger":"Room-to-room fights","tip":"Better as a team."},
+      {"x":50,"y":85,"type":"med","label":"Street vehicles","loot":"Trunk loot","access":"None","danger":"Police/SWAT","tip":""}],
+     "links":[[0,1],[1,2]]},
+    {"id":"park","name":"Park","image":"","summary":"Hard map. Go in for the underground lab with keys and fire.",
+     "nodes":[
+      {"x":30,"y":30,"type":"key","label":"Lab entrances","loot":"Access to the underground lab","access":"Underground laboratory key (Sokolov's suitcase, truck)","danger":"Flowermen, Dendroids","tip":"Entrances: Restaurant kitchen door, south Greenhouse planter grate, north-central Greenhouse stairs."},
+      {"x":62,"y":42,"type":"key","label":"Lab south door","loot":"Reagents, several weapon crates","access":"Lock actuator board","danger":"Flowermen, Dendroids","tip":"Fire works well here."},
+      {"x":80,"y":72,"type":"key","label":"Lab Armory & AM vault","loot":"Armory, AM vault","access":"Armory key (Turned Soldier on lab steps), AM vault key (lab loot)","danger":"High","tip":""},
+      {"x":25,"y":75,"type":"boss","label":"Flowerman nests","loot":"Active Matter, creature parts","access":"None","danger":"Waking the nest","tip":"Leave lure flowers until you're ready."}],
+     "links":[[0,1],[1,2],[3,0]]},
+    {"id":"giga","name":"Gigastructure","image":"","summary":"Gravity-warped maze with generous loot. Navigation is the real threat.",
+     "nodes":[
+      {"x":50,"y":45,"type":"key","label":"White-door storage","loot":"60× Active Matter, 11× Fragment, 4× weapon crates","access":"Storage room key (random world loot here)","danger":"Getting lost","tip":"Run it in cheap gear until you know the landmarks."}],
+     "links":[]}
+  ]
+}

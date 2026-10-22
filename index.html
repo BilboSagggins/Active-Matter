@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Active Matter Field Guide</title>
+<meta name="description" content="Patch news, raid tips, loot spots and key locations for Active Matter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Active Matter<br>Field Guide</h1>
+      <div class="sub">PATCH INTEL · RAID TIPS · LOOT MAP · KEYS</div>
+    </div>
+    <div class="stamp">News synced <b id="newsStamp">…</b> · <span id="buildStamp"></span></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-news" aria-controls="news" aria-selected="true" data-view="news">Updates &amp; News</button>
+    <button role="tab" id="tab-guide" aria-controls="guide" aria-selected="false" data-view="guide">Tips &amp; Gear</button>
+    <button role="tab" id="tab-map" aria-controls="map" aria-selected="false" data-view="map">Loot Map</button>
+    <button role="tab" id="tab-keys" aria-controls="keys" aria-selected="false" data-view="keys">Keys</button>
+  </nav>
+
+  <section class="view" id="news" role="tabpanel" aria-labelledby="tab-news">
+    <h2>Latest from the Agency</h2>
+    <p class="lede">Pulled from the official Steam news feed every few hours.</p>
+    <div class="latest" id="latest"><p class="unk">Loading news…</p></div>
+    <ol class="timeline" id="timeline"></ol>
+    <div class="feeds">
+      <a href="https://activematter.game/en/news" target="_blank" rel="noopener">Official news</a>
+      <a href="https://steamdb.info/app/2887580/patchnotes/" target="_blank" rel="noopener">SteamDB patch history</a>
+      <a href="http://discord.gg/RWajbUQZfH" target="_blank" rel="noopener">Official Discord</a>
+      <a href="https://activematter.wiki.gg/" target="_blank" rel="noopener">Community wiki</a>
+    </div>
+  </section>
+
+  <section class="view" id="guide" role="tabpanel" aria-labelledby="tab-guide" hidden>
+    <h2>Tips &amp; Tricks</h2>
+    <p class="lede">Community-tested habits for getting loot home. A raid only pays if you reach the Shelter, so most of these are about knowing when to stop.</p>
+    <div class="tips">
+      <div class="tipgroup">
+        <h3>Before you drop</h3>
+        <ul>
+          <li>Pick one goal per raid: weapons, crafting parts, Active Matter, valuables, or an investigation item.</li>
+          <li>Read the objective panel and map right after spawning. Check whether the loot spot is on your route to extraction.</li>
+          <li>Learn new maps in Isolated Raids (no enemy squads), then take that route into Open Raids.</li>
+          <li>Carry a shotgun as your second gun for barges and tight interiors. Devourers eat automatic ammo.</li>
+          <li>Bring fire to Park. It works well on Flowermen and Dendroids, and Molotovs now ignite instantly.</li>
+        </ul>
+      </div>
+      <div class="tipgroup">
+        <h3>While looting</h3>
+        <ul>
+          <li>Always grab Active Matter. It has its own capacity and doesn't take backpack space.</li>
+          <li>Don't pick Active Matter off lure flowers until you're ready to fight; it wakes the nest.</li>
+          <li>Search backpacks lying around (Downtown trains especially). They can hold keys and valuables.</li>
+          <li>Check vehicle trunks: Ural trucks, the Headquarters pickup, Downtown cars and Dalniy Island cars all roll loot.</li>
+          <li>Rare-loot zones show as color-coded resource icons on the raid map. Monster clusters there mean better loot.</li>
+          <li>Small monster habitats no longer respawn on their own; a rift next to each one summons them. Clear and move.</li>
+        </ul>
+      </div>
+      <div class="tipgroup">
+        <h3>Getting out</h3>
+        <ul>
+          <li>Found something hard to replace? Treat the rest of the raid as an extraction run.</li>
+          <li>Low on meds, ammo or armor? Skip side buildings and take the quieter exit.</li>
+          <li>After a loud fight in an Open Raid, avoid the obvious extraction approach.</li>
+          <li>Dogorsk uses dynamic extraction points. Don't follow an old route from memory.</li>
+        </ul>
+      </div>
+      <div class="tipgroup">
+        <h3>Back at the Shelter</h3>
+        <ul>
+          <li>Check whether an item feeds a recipe, investigation or Replicator queue before selling it.</li>
+          <li>Medications restock medkits: one pile restores 100 charges and takes one slot.</li>
+          <li>Unlock the Lock actuator board through the Dam "Rosin" Stockpile objective. It opens electric doors on Dam, Dogorsk and Park.</li>
+          <li>Buy the Keys fuse recipe at Monolith Delta (300 tokens) to roll hangar, attic and crane keys from cassettes.</li>
+          <li>Rebind the new "reload all magazines" action. It's unbound by default.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tablewrap">
+      <h3>Where to find specific gear</h3>
+      <table class="data">
+        <thead><tr><th>Looking for</th><th>Best places to check</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Rare rifles (PKM, VAL, SVD)</td><td>Cargo Port Weapon Barge</td><td>Through the crane portal; needs the Port crane key.</td></tr>
+          <tr><td>AS Val, AKMs</td><td>Military Base Armory #1</td><td>2F of Barracks #1; Armory #1 key.</td></tr>
+          <tr><td>Weapon crates in bulk</td><td>Military Base hangars, Headquarters bunkers</td><td>Hangars hold many crates and many Distorted.</td></tr>
+          <tr><td>Backpacks</td><td>Factory garages, Chagulko houses</td><td>Hiking and climbing packs hold you over until the Large Backpack.</td></tr>
+          <tr><td>Medical supplies</td><td>Ozernoe ZIL trucks, road vehicles, tents, offices</td><td>ZIL crates mix weapons and meds.</td></tr>
+          <tr><td>Safes &amp; valuables</td><td>Headquarters offices, Dam interior, locked rooms</td><td>Dam rooms need keys or a Lock actuator board.</td></tr>
+          <tr><td>Grenades &amp; consumables</td><td>Wrecked vehicles near Headquarters bunkers</td><td>Ammo, smoke and grenades along the roads.</td></tr>
+          <tr><td>Active Matter in bulk</td><td>Gigastructure white-door storage, Flowerman nests</td><td>Storage room holds 60 Active Matter; key is random loot there.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="view" id="map" role="tabpanel" aria-labelledby="tab-map" hidden>
+    <h2>Loot Map</h2>
+    <p class="lede">Pick a raid zone, then tap a marker for what spawns there, what you need to get in, and what will try to stop you. Loot data updated <span id="lootStamp"></span>.</p>
+    <div class="picker" id="picker" hidden>Placement mode: click the map to get coordinates → <b id="pickout">click somewhere</b> (copied to clipboard)</div>
+    <div class="mapsel" id="mapsel" role="tablist" aria-label="Raid zone"></div>
+    <div class="filters" id="filters" aria-label="Loot type filters"></div>
+    <p class="mapsummary" id="mapsummary"></p>
+    <div class="board">
+      <div class="canvas" id="canvas">
+        <img class="mapimg" id="mapimg" alt="" hidden>
+        <svg id="svg" viewBox="0 0 400 260" role="img" aria-label="Loot markers"></svg>
+        <div class="note" id="mapnote"></div>
+      </div>
+      <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+    <p class="legendnote">Spawns vary by raid modifier and patch; helicopter and convoy events can swap between locations. Dashed lines are routes players commonly run.</p>
+  </section>
+
+  <section class="view" id="keys" role="tabpanel" aria-labelledby="tab-keys" hidden>
+    <h2>Keys</h2>
+    <p class="lede">Where each key turns up, what it opens, and what's behind the door. Gray entries haven't been confirmed by the community yet.</p>
+    <div class="keytools">
+      <input id="keyq" type="search" placeholder="Search keys, rooms, loot…" aria-label="Search keys">
+      <select id="keymap" aria-label="Filter by map"></select>
+    </div>
+    <p class="keynote" id="keynote"></p>
+    <div class="tablewrap">
+      <div class="eyebrow" id="keycount"></div>
+      <table class="data keys">
+        <thead><tr><th>Key</th><th>Opens</th><th>Where to find</th><th>Craft</th><th>Behind the door</th><th>Uses</th><th></th></tr></thead>
+        <tbody id="keyrows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="src">
+    Sources: official patch notes (activematter.game, Steam); community guides at activematter.wiki.gg, ninewiki.com, activematter.store and activematter-game.wiki. Fan-made page, not affiliated with Gaijin or Matter.Team.
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

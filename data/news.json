@@ -1,0 +1,18 @@
+{
+  "updated": "2026-10-22T18:30:00Z",
+  "source": "Seeded from activematter.game; replaced automatically by the Steam feed",
+  "items": [
+    {"date":"2026-10-21","title":"Update 0.4.0.201","kind":"patch","summary":"Muzzle flash hiders work again. Large anomaly zones return to Isolated Raids on Ozernoe, Factory, Shegolskoe and Airport. Flowermen dash more often. RPG-7 nerfed. PKM can chamber a round. Cargo Port's Abnormal Signal zone moved off the road.","url":"https://activematter.game/en/news/363"},
+    {"date":"2026-10-16","title":"Update 0.4.0.199","kind":"patch","summary":"Gear preset fixes, better lighting in dark areas and at night, pistol recoil restored, item-collection contract fixes.","url":"https://activematter.game/en/news/361"},
+    {"date":"2026-10-15","title":"Update 0.4.0.196","kind":"patch","summary":"Weapon flashlight and laser can be toggled separately again (both on L by default).","url":"https://activematter.game/en/news/359"},
+    {"date":"2026-10-15","title":"Updates 0.4.0.192","kind":"patch","summary":"Controls overhaul with new aim settings, less camera sway, sharper sound positioning. Magazines no longer drop on reload. Small monster habitats now use summoning rifts instead of respawning.","url":"https://activematter.game/en/news/356"},
+    {"date":"2026-10-09","title":"Active Matter: Activity Report","kind":"news","summary":"First-month recap: more than ten updates and hundreds of changes since the Steam and console launch.","url":"https://activematter.game/en/news/354"},
+    {"date":"2026-10-09","title":"Update 0.4.0.182","kind":"patch","summary":"Guts and Ghost Body Sleeves reworked, faster magazine handling, KB+M on consoles, armor resists melee better, M82A1 hits harder, big medkits buffed.","url":"https://activematter.game/en/news/352"},
+    {"date":"2026-10-07","title":"A Beginner Operative's Guide","kind":"news","summary":"Official illustrated briefing for new players.","url":"https://activematter.game/en/news/351"},
+    {"date":"2026-10-05","title":"Update 0.4.0.173","kind":"patch","summary":"More cover at Headquarters, Airport and Downtown exits. Contract locations easier to find. Molotovs and incendiaries ignite instantly.","url":"https://activematter.game/en/news/349"},
+    {"date":"2026-09-30","title":"Update 0.4.0.163","kind":"patch","summary":"Dalniy Island exits relocated with new cover, Seeds give up chases sooner, no rooftop Hellhounds, Distorted pursuit tuned.","url":"https://activematter.game/en/news/341"},
+    {"date":"2026-09-26","title":"Update 0.4.0.156","kind":"patch","summary":"Some property now carries over when you collapse a Personal Timeline. Bigger rewards for dangerous anomalies, reworked fusion UI.","url":"https://activematter.game/en/news/339"},
+    {"date":"2026-09-21","title":"Update 0.4.0.132","kind":"patch","summary":"Loot added to Ural truck cargo. Tougher Distorted in marked threat zones. Level 2–5 rewards no longer edition-locked.","url":"https://activematter.game/en/news/327"},
+    {"date":"2026-09-18","title":"Update 0.4.0.122","kind":"patch","summary":"Dynamic extraction points in Dogorsk. New scream-summoning Distorted variant in lairs.","url":"https://activematter.game/en/news/324"}
+  ]
+}
