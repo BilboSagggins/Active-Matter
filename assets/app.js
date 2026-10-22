@@ -18,7 +18,7 @@ function show(v) {
 tabs.forEach(t => t.addEventListener("click", () => { show(t.dataset.view); history.replaceState(null, "", "#" + t.dataset.view); }));
 const PICK = location.hash === "#pick";
 const startView = PICK ? "map" : location.hash.slice(1);
-if (["news", "guide", "map", "keys"].includes(startView)) show(startView);
+if (["news", "guide", "map", "tiers", "keys"].includes(startView)) show(startView);
 
 /* ---------- News ---------- */
 getJSON("data/news.json").then(data => {
@@ -153,3 +153,40 @@ getJSON("data/keys.json").then(data => {
 }).catch(e => { document.getElementById("keyrows").innerHTML = `<tr><td colspan="7">Couldn't load key data: ${esc(e.message)}</td></tr>`; });
 q.addEventListener("input", drawKeys);
 mapf.addEventListener("change", drawKeys);
+
+/* ---------- Priorities ---------- */
+const TV = { S: 4, A: 3, B: 2, C: 1 }, VT = ["?", "C", "B", "A", "S"];
+document.querySelectorAll(".subtabs button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".subtabs button").forEach(x => { const on = x === b; x.setAttribute("aria-selected", on); document.getElementById(x.dataset.sub).hidden = !on; });
+}));
+let TIERS = null;
+const wclass = document.getElementById("wclass");
+function drawTiers() {
+  const srcs = TIERS.sources || {}, cls = wclass.value;
+  const ws = (TIERS.weapons || []).filter(w => !cls || w.class === cls).map(w => {
+    const vals = Object.values(w.tiers || {}).map(t => TV[t]).filter(Boolean);
+    const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+    return { ...w, avg, tier: VT[Math.round(avg)] || "?" };
+  }).sort((a, b) => b.avg - a.avg || Object.keys(b.tiers).length - Object.keys(a.tiers).length);
+  document.getElementById("tierboard").innerHTML = ["S", "A", "B", "C", "?"].map(t => {
+    const list = ws.filter(w => w.tier === t); if (!list.length) return "";
+    return `<div class="tierrow" data-t="${t}"><div class="tierlabel">${t === "?" ? "–" : t}</div><div class="tiercards">` + list.map(w =>
+      `<div class="wcard"><div class="top"><b>${esc(w.name)}</b><span class="cls">${esc(w.class)}</span></div>` +
+      `<div class="votes">${Object.entries(w.tiers).map(([s, v]) => `<a class="vote" href="${esc(srcs[s]?.url || "#")}" target="_blank" rel="noopener" title="${esc(srcs[s]?.name || s)}">${esc((srcs[s]?.name || s).replace(/\..*$/, ""))} <b>${esc(v)}</b></a>`).join("") || `<span class="vote">unranked</span>`}</div>` +
+      `<p>${esc(w.why)}</p></div>`).join("") + `</div></div>`;
+  }).join("");
+}
+getJSON("data/tiers.json").then(data => {
+  TIERS = data;
+  document.getElementById("tierStamp").textContent = data.updated || "";
+  const classes = [...new Set((data.weapons || []).map(w => w.class))].sort();
+  wclass.innerHTML = `<option value="">All classes</option>` + classes.map(c => `<option>${esc(c)}</option>`).join("");
+  wclass.addEventListener("change", drawTiers);
+  drawTiers();
+  document.getElementById("patchbox").innerHTML = `<h3>Recent balance changes</h3><ul>` +
+    (data.patchNotes || []).map(p => `<li><b>${esc(p.patch)}</b> — ${esc(p.change)}</li>`).join("") + `</ul>`;
+  document.getElementById("lootcols").innerHTML = (data.loot || []).map((b, i) =>
+    `<div class="bucket" data-b="${i}"><h3>${esc(b.bucket)}</h3><ul>` + b.items.map(it => `<li><b>${esc(it.name)}</b><span>${esc(it.why)}</span></li>`).join("") + `</ul></div>`).join("");
+  document.getElementById("gearcols").innerHTML = (data.gear || []).map(g =>
+    `<div class="bucket"><h3>${esc(g.group)}</h3><p class="eyebrow">Best first</p><ul class="gearlist">` + g.rows.map(r => `<li><b>${esc(r.name)}</b><span>${esc(r.note)}</span></li>`).join("") + `</ul></div>`).join("");
+}).catch(e => { document.getElementById("tierboard").textContent = "Couldn't load tier data: " + e.message; });

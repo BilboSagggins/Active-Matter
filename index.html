@@ -14,7 +14,7 @@
   <header class="top">
     <div class="brand">
       <h1>Active Matter<br>Field Guide</h1>
-      <div class="sub">PATCH INTEL · RAID TIPS · LOOT MAP · KEYS</div>
+      <div class="sub">PATCH INTEL · TIPS · LOOT MAP · TIERS · KEYS</div>
     </div>
     <div class="stamp">News synced <b id="newsStamp">…</b> · <span id="buildStamp"></span></div>
   </header>
@@ -23,8 +23,31 @@
     <button role="tab" id="tab-news" aria-controls="news" aria-selected="true" data-view="news">Updates &amp; News</button>
     <button role="tab" id="tab-guide" aria-controls="guide" aria-selected="false" data-view="guide">Tips &amp; Gear</button>
     <button role="tab" id="tab-map" aria-controls="map" aria-selected="false" data-view="map">Loot Map</button>
+    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="false" data-view="tiers">Priorities</button>
     <button role="tab" id="tab-keys" aria-controls="keys" aria-selected="false" data-view="keys">Keys</button>
   </nav>
+
+  <section class="view" id="tiers" role="tabpanel" aria-labelledby="tab-tiers" hidden>
+    <h2>What to Prioritize</h2>
+    <p class="lede">Weapon tiers blended from three community tier lists, what to keep in your bag, and which gear to chase. Updated <span id="tierStamp"></span>.</p>
+
+    <div class="subtabs" role="tablist" aria-label="Priority lists">
+      <button role="tab" aria-selected="true" data-sub="pw">Weapons</button>
+      <button role="tab" aria-selected="false" data-sub="pl">Loot</button>
+      <button role="tab" aria-selected="false" data-sub="pg">Gear</button>
+    </div>
+
+    <div id="pw" class="subview">
+      <div class="keytools">
+        <select id="wclass" aria-label="Filter by weapon class"></select>
+      </div>
+      <p class="keynote">The tier is the average of the lists that rank a weapon. The small letters show each list's call, so you can see where they disagree.</p>
+      <div class="tierboard" id="tierboard"></div>
+      <div class="patchbox" id="patchbox"></div>
+    </div>
+    <div id="pl" class="subview" hidden><div class="lootcols" id="lootcols"></div></div>
+    <div id="pg" class="subview" hidden><div class="gearcols" id="gearcols"></div></div>
+  </section>
 
   <section class="view" id="news" role="tabpanel" aria-labelledby="tab-news">
     <h2>Latest from the Agency</h2>
