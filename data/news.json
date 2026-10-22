@@ -1,18 +1,202 @@
 {
-  "updated": "2026-10-22T18:30:00Z",
-  "source": "Seeded from activematter.game; replaced automatically by the Steam feed",
+  "updated": "2026-10-22T20:49:57.033Z",
+  "source": "Steam news for app 2887580",
   "items": [
-    {"date":"2026-10-21","title":"Update 0.4.0.201","kind":"patch","summary":"Muzzle flash hiders work again. Large anomaly zones return to Isolated Raids on Ozernoe, Factory, Shegolskoe and Airport. Flowermen dash more often. RPG-7 nerfed. PKM can chamber a round. Cargo Port's Abnormal Signal zone moved off the road.","url":"https://activematter.game/en/news/363"},
-    {"date":"2026-10-16","title":"Update 0.4.0.199","kind":"patch","summary":"Gear preset fixes, better lighting in dark areas and at night, pistol recoil restored, item-collection contract fixes.","url":"https://activematter.game/en/news/361"},
-    {"date":"2026-10-15","title":"Update 0.4.0.196","kind":"patch","summary":"Weapon flashlight and laser can be toggled separately again (both on L by default).","url":"https://activematter.game/en/news/359"},
-    {"date":"2026-10-15","title":"Updates 0.4.0.192","kind":"patch","summary":"Controls overhaul with new aim settings, less camera sway, sharper sound positioning. Magazines no longer drop on reload. Small monster habitats now use summoning rifts instead of respawning.","url":"https://activematter.game/en/news/356"},
-    {"date":"2026-10-09","title":"Active Matter: Activity Report","kind":"news","summary":"First-month recap: more than ten updates and hundreds of changes since the Steam and console launch.","url":"https://activematter.game/en/news/354"},
-    {"date":"2026-10-09","title":"Update 0.4.0.182","kind":"patch","summary":"Guts and Ghost Body Sleeves reworked, faster magazine handling, KB+M on consoles, armor resists melee better, M82A1 hits harder, big medkits buffed.","url":"https://activematter.game/en/news/352"},
-    {"date":"2026-10-07","title":"A Beginner Operative's Guide","kind":"news","summary":"Official illustrated briefing for new players.","url":"https://activematter.game/en/news/351"},
-    {"date":"2026-10-05","title":"Update 0.4.0.173","kind":"patch","summary":"More cover at Headquarters, Airport and Downtown exits. Contract locations easier to find. Molotovs and incendiaries ignite instantly.","url":"https://activematter.game/en/news/349"},
-    {"date":"2026-09-30","title":"Update 0.4.0.163","kind":"patch","summary":"Dalniy Island exits relocated with new cover, Seeds give up chases sooner, no rooftop Hellhounds, Distorted pursuit tuned.","url":"https://activematter.game/en/news/341"},
-    {"date":"2026-09-26","title":"Update 0.4.0.156","kind":"patch","summary":"Some property now carries over when you collapse a Personal Timeline. Bigger rewards for dangerous anomalies, reworked fusion UI.","url":"https://activematter.game/en/news/339"},
-    {"date":"2026-09-21","title":"Update 0.4.0.132","kind":"patch","summary":"Loot added to Ural truck cargo. Tougher Distorted in marked threat zones. Level 2–5 rewards no longer edition-locked.","url":"https://activematter.game/en/news/327"},
-    {"date":"2026-09-18","title":"Update 0.4.0.122","kind":"patch","summary":"Dynamic extraction points in Dogorsk. New scream-summoning Distorted variant in lairs.","url":"https://activematter.game/en/news/324"}
+    {
+      "date": "2026-10-22",
+      "title": "Update 0.4.0.205",
+      "kind": "patch",
+      "summary": "In this update, markers made on the map, and shown on the compass, now show distance and elevation more clearly. The “Repair All” inventory button now also repairs armor being carried as spares, and DualSense touchpad functionality hs been improved.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114033075"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Update 0.4.0.201",
+      "kind": "patch",
+      "summary": "Fixed muzzle flash hiders as they now once again help conceal your position when firing. Resolved several gameplay bugs in raids and made interface improvements. Controls have been further refined and performance on consoles has been improved.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114028169"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Update 0.4.0.199",
+      "kind": "patch",
+      "summary": "Interface Gear presets now equip correctly when pressing the \"Purchase and Equip\" button. Gear presets are now purchased without camouflages: if the preset included a camouflage on a weapon, it won't be purchased or applied. You can apply one separately afterwards as normal.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706681880"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Update 0.4.0.196",
+      "kind": "patch",
+      "summary": "Controls The weapon tactical flashlight and laser sight can once again be toggled separately. By default, both options are bound to the same control (“L” on keyboard), but you can assign a different binding to either of them in the controls settings.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678912"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Update 0.4.0.195",
+      "kind": "patch",
+      "summary": "Managing gear has become less of a hassle, magazines no longer can drop on reload, visual recoil when using scopes has been adjusted, and improved item swapping when changing backpacks and safe containers at the Shelter.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677093"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Signal Lost",
+      "kind": "news",
+      "summary": "URGENT! We've lost contact with one of our Operatives, and a sudden anomaly has wiped the data on which raid they deployed to. But, their camera transmitted one final frame, and the zone is about to collapse with them still inside.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067944333"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "Server update",
+      "kind": "patch",
+      "summary": "Extended the search time of the auto-fill squad feature, it should find players twice as often now.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067941187"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Active Matter: Activity Report",
+      "kind": "news",
+      "summary": "How have we already improved the game? Here are just a few examples of what we’ve fixed in recent days and weeks. Fewer motion sickness-inducing effects reduce camera bobbing while moving directly in the game’s settings menu.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067934479"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Update 0.4.0.182",
+      "kind": "patch",
+      "summary": "Gameplay and Balance Rare \"Guts\" and \"Ghost\" Body Sleeves have been reworked: they are now \"epic\" Body Sleeves with the same characteristics as the \"Knight\" and \"Paladin\" Body Sleeves. In Isolated (PvE) Raids, Invisibles and Hellhounds no longer suddenly spawn near players who remain in one area for a long time.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932592"
+    },
+    {
+      "date": "2026-10-07",
+      "title": "A Beginner Operative’s Guide",
+      "kind": "news",
+      "summary": "The Agency HQ has prepared an introductory briefing for operatives being deployed to explore the Multiverse. Reviewing the material is recommended before proceeding. [img src=\" src=\" src=\" src=\" src=\" src=\" src=\" src=\"",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067925881"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Update 0.4.0.173",
+      "kind": "patch",
+      "summary": "Gameplay and Balance Updated Molotov Cocktails and Incendiary Grenades to immediately ignite enemies splashed with the flammable mixture. Previously, 1–2 seconds in the flame were required to catch fire. Updated Devourers to take damage from flamethrowers and areas of fire.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656393325"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Week 3 Rewards For Watching Active Matter Streams!",
+      "kind": "news",
+      "summary": "NOTE: To receive Twitch Drops for Active Matter, you must first own an edition of the game. If you purchased or received the game on Steam, you need to launch it at least once first. Then, sign in with Steam on this page and select Active Matter from the list of games that appears, if prompted.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656386321"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Update 0.4.0.165",
+      "kind": "patch",
+      "summary": "Distorted that teleport in front of a fleeing player now appear farther away, giving you more time to react. Agitated Distorted animate more visibly, making it easier to see whether their sleep is restless, and that they could wake up at any moment.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656379082"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Update 0.4.0.164",
+      "kind": "patch",
+      "summary": "When firing in full-auto, the sight now tracks weapon recoil accurately and correctly again. Previously, a bug could cause the sight position to drift from the actual point of impact. Recoil itself is unchanged.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656378576"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Update 0.4.0.163",
+      "kind": "patch",
+      "summary": "Enemies Reduced the pursuit range of Seeds: they now give up the chase sooner. Fixed an issue where Hellhounds could spawn on rooftops. Distorted that are already chasing a fleeing target will now occasionally teleport ahead of it.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656377486"
+    },
+    {
+      "date": "2026-09-26",
+      "title": "Update 0.4.0.156",
+      "kind": "patch",
+      "summary": "Creating Personal Timelines Placed all equipped gear to a temporary stash after creating a new Personal Timeline; equipped chronogenes, as before, are discarded.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498226745"
+    },
+    {
+      "date": "2026-09-25",
+      "title": "Earn More Rewards For Watching Active Matter Streams!",
+      "kind": "news",
+      "summary": "We’re continuing to celebrate the release of Active Matter on Steam, Xbox Series X|S, and PlayStation 5, so tune in to more Active Matter live streams on Twitch from September 25th (15:00 UTC) to October 2nd (15:00 UTC) and earn fresh rewards for your loadout!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498224300"
+    },
+    {
+      "date": "2026-09-24",
+      "title": "Update \"The Fundamental Protocol\"",
+      "kind": "patch",
+      "summary": "Rewards in this Protocol can be redeemed with Merits at any time, whether or not you’re currently participating in a Harmonization Cycle! Rewards include consumables, unique decorations, Credits, and Monolith Tokens — everything you need to accelerate your push toward establishing your new Personal Timeline.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498221246"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Update 0.4.0.137",
+      "kind": "patch",
+      "summary": "Raids and Profile Restored the unlocking of a Devourer’s journal entry in the Notes upon defeating one. Harmonization Fixed incorrect dog tag issuance when purchasing during Harmonization Cycle 2.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498218156"
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Update 0.4.0.135",
+      "kind": "patch",
+      "summary": "Improved the ability to reconnect to a raid after a connection loss. Fixed a bug where items in containers (e.g., in chests and bags) occupied space but were not displayed. Fixed a rare server freeze. Fixed a bug where some players did not appear in the Playstation® 5 friends list.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010504721"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Scheduled Maintenance on Active Matter Servers",
+      "kind": "news",
+      "summary": "Hello, Operatives! On September 22nd, from 07:00 UTC to approximately 07:30 UTC, we will be performing scheduled maintenance on the Active Matter servers. The Agency apologizes for any inconvenience this may cause and appreciates your patience during the calibration of portals to the Multiverse.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010502308"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Update 0.4.0.132",
+      "kind": "patch",
+      "summary": "Gameplay and Balance Increased the number of the stronger Distorted variants in areas marked with a threat of Distorted. Updated level 2-5 rewards to no longer require a specific edition; all players now receive them. Added loot to Ural truck cargo. Disabled the use of items while in monster form.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010502163"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "The Agency Is Recruiting Content Creators!",
+      "kind": "news",
+      "summary": "We’ve completely reworked our Content Partnership Program for video makers, streamers, and other creators. Participants can now receive regular in-game bonuses plus support to grow their channels. Constant supply: regular distribution of in-game resources, so you’re always equipped both in the raid and on camera.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010501308"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "Update 0.4.0.122",
+      "kind": "patch",
+      "summary": "By order of the Agency, an experimental Body Sleeve appearance-correction mode has been activated. Spatial distortions may occur; further adjustments are planned in subsequent updates. Character Customization Added Body Sleeve customization (BETA), available on the Sleeve selection screen.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495607"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "Rewards for Watching Active Matter Streams All Week!",
+      "kind": "news",
+      "summary": "To celebrate the launch of Active Matter on Steam, Xbox Series X|S, and PlayStation 5, tune in to Active Matter live streams on Twitch from September 18th (15:00 UTC) to September 25th (15:00 UTC) and earn new rewards for your loadout! Drops run for a full three weeks; we’ll reveal the rewards for Weeks 2 and 3 soon!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010494363"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Update 0.4.0.115",
+      "kind": "patch",
+      "summary": "Improved performance, reworked several animations, fixed multiple bugs, and delivered important updates to the user interface and sound. Gameplay and Balance Fixed an issue that displayed an incorrect magazine round count when spawning into a raid. Fixed an animation glitch that could interrupt reloads.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010491563"
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Active Matter Is Now Available On PC",
+      "kind": "news",
+      "summary": "Operatives, the door to the Multiverse is open! Active Matter is out now on Steam! If you purchased the early version from the Gaijin Store, you can get the Steam edition at no extra cost until November 23rd. New Harmonization Cycle With the release, the next Harmonization Cycle begins, featuring new rewards.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704000"
+    },
+    {
+      "date": "2026-09-14",
+      "title": "Harmonization Cycles Q&A",
+      "kind": "news",
+      "summary": "How can we earn Merits? You can earn Merits from daily \"Priority Raid\" objectives and from Monolith Access Levels, but only while a Harmonization Cycle is active. If I gain a Monolith Access Level between cycles, will I receive those Merits once the next Cycle starts? No.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262702675"
+    }
   ]
 }
