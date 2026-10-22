@@ -43,13 +43,14 @@
 
   <section class="view" id="tiers" role="tabpanel" aria-labelledby="tab-tiers" hidden>
     <h2>What to Prioritize</h2>
-    <p class="lede">Weapon tiers, which mods to fit first, what to keep, which gear to chase, and the best route through the Monolith and Investigations. Updated <span id="tierStamp"></span>.</p>
+    <p class="lede">Weapon tiers, mods, what to keep, gear, chronogene builds, and the best route through the Monolith and Investigations. Updated <span id="tierStamp"></span>.</p>
 
     <div class="subtabs" role="tablist" aria-label="Priority lists">
       <button role="tab" aria-selected="true" data-sub="pw">Weapons</button>
       <button role="tab" aria-selected="false" data-sub="pm">Mods</button>
       <button role="tab" aria-selected="false" data-sub="pl">Loot</button>
       <button role="tab" aria-selected="false" data-sub="pg">Gear</button>
+      <button role="tab" aria-selected="false" data-sub="pb">Builds</button>
       <button role="tab" aria-selected="false" data-sub="pp">Progression</button>
     </div>
 
@@ -63,6 +64,22 @@
     </div>
     <div id="pm" class="subview" hidden><div id="mods"></div></div>
     <div id="pl" class="subview" hidden><div class="lootcols" id="lootcols"></div></div>
+    <div id="pb" class="subview" hidden>
+      <h3 class="ph" style="margin-top:4px">Chronogene builds</h3>
+      <p class="keynote">Four slots each. Tap a build to see swaps, the best body sleeve and why it works.</p>
+      <div id="builds" class="buildgrid"></div>
+      <div class="rules" style="margin-top:18px"><h3>Build tips</h3><ul id="btips"></ul></div>
+      <h3 class="ph">All chronogenes</h3>
+      <div class="keytools"><input id="chq" type="search" placeholder="Search chronogenes…" aria-label="Search chronogenes"></div>
+      <div class="filters" id="chtags" aria-label="Filter chronogenes"></div>
+      <details class="invgroup" open><summary><span>Abilities (Rare, one tier)</span><span class="fcount" id="abcount"></span></summary><ul id="abilities"></ul></details>
+      <details class="invgroup" open><summary><span>Stat chronogenes (Tier I / II / III)</span><span class="fcount" id="stcount"></span></summary><ul id="tiered"></ul></details>
+      <div class="rules" style="margin-top:18px"><h3>How chronogenes work</h3><ul id="chhow"></ul></div>
+      <h3 class="ph">Skill tree (level-up traits)</h3>
+      <ul class="plainlist" id="skhow"></ul>
+      <div class="tablewrap" style="margin-top:8px"><table class="data"><thead><tr><th>Goal</th><th>Pick first</th></tr></thead><tbody id="skpri"></tbody></table></div>
+      <p class="keynote" id="skagency" style="margin-top:12px"></p>
+    </div>
     <div id="pp" class="subview" hidden>
       <h3 class="ph">Suggested route</h3>
       <ol class="modlist" id="route"></ol>

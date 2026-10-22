@@ -1,0 +1,85 @@
+{
+  "updated": "2026-10-22",
+  "skills": {
+    "how": [
+      "Each time your operative levels up you get materials and pick one passive skill from a skill tree.",
+      "The tree is different for every player and reshuffles with each new Personal Timeline, so there's no fixed best order. Pick by goal instead.",
+      "Skills stack with your body sleeve and chronogenes. Check Modified Stats on the Characteristics screen after each pick; some bonuses stack less than 1:1."
+    ],
+    "priorities": [
+      {"goal": "Survival (PvE)", "pick": "Healing, armor or damage resistance first, then movement so you can disengage."},
+      {"goal": "Looting", "pick": "Carrying capacity first, then anything that makes extraction safer."},
+      {"goal": "PvP", "pick": "Weapon handling first, with one escape or movement skill so you can reset fights."},
+      {"goal": "New players", "pick": "One combat, one survival and one utility skill before specializing."}
+    ],
+    "agency": "The Agency investigations Vitality and Chronogene Theory (Monolith Beta) and Strength and Perception (Delta) are cheap and build on your characteristics. Grab them as soon as they unlock."
+  },
+  "chrono": {
+    "how": [
+      "You have 4 chronogene slots on the Characteristics screen. Swap them between raids.",
+      "Most come in Tier I, II and III (Common, Uncommon, Rare). Ability chronogenes are Rare with a single tier.",
+      "You can own only one chronogene of each type at a time.",
+      "Tier III has 10 charges. Dying burns charges; at 0 it drops to Tier II. Overcharged ones (Overunstable) burn 1–2 per death.",
+      "Tier III synthesis: 20 Active Matter + 3 random Tier II chronogenes, instant, random result. Mixed inputs favor the majority color.",
+      "Other chronogenes come from the Replicator using creature remains (Distorted, Dendroid, Shy Girl, Devourer…). Epsilon unlocks Tier III synthesis.",
+      "Equipped chronogenes are discarded when you start a new Personal Timeline. Unequip the good ones first.",
+      "Effects stack, but not 1:1."
+    ],
+    "tiered": [
+      {"name":"Active Matter Gathering","tag":"Loot","t":["+10%","+25%","+40%"],"what":"Active Matter gathering speed"},
+      {"name":"Breath Control","tag":"Combat","t":["+0.7s","+1.5s","+3.0s"],"what":"Hold breath longer while aiming"},
+      {"name":"Bulletproof","tag":"Survival","t":["+2%","+3.8%","+6%"],"what":"Bullet protection"},
+      {"name":"Carrying Capacity","tag":"Loot","t":["+10%","+20%","+30%"],"what":"Less weight penalty"},
+      {"name":"Cold-blooded","tag":"Survival","t":["−20%","−50%","−90%"],"what":"Body temperature"},
+      {"name":"Endurance","tag":"Movement","t":["−2%","−4%","−7%"],"what":"Pulse escalation and stamina drain (fatigue threshold +3 / +5 / +7)"},
+      {"name":"Examination","tag":"Loot","t":["+15%","+40%","+60%"],"what":"Item recognition speed"},
+      {"name":"Fine Motor Skills","tag":"Combat","t":["+10%","+20%","+30%"],"what":"Reload, mag stuffing and healing-item speed"},
+      {"name":"Fire Resistance","tag":"Survival","t":["+9.1%","+20%","+28.6%"],"what":"Fire damage protection"},
+      {"name":"Heal Efficiency","tag":"Survival","t":["+10%","+20%","+40%"],"what":"Healing effectiveness"},
+      {"name":"Hit Stability","tag":"Combat","t":["−10%","−20%","−35%"],"what":"View and aim shake when hit"},
+      {"name":"Jump","tag":"Movement","t":["+10%","+20%","+30%"],"what":"Jump height (fall damage resistance +3 / +5 / +7%)"},
+      {"name":"Melee","tag":"Combat","t":["+10%","+25%","+40%"],"what":"Melee strength"},
+      {"name":"Overflow Healing","tag":"Survival","t":["+5%","+10%","+20%"],"what":"Extra healing spread to all body parts"},
+      {"name":"Pain Shock","tag":"Survival","t":["−3s","−5s","−7s"],"what":"Shock time"},
+      {"name":"Resilience","tag":"Survival","t":["+9.1%","+16.7%","+23.1%"],"what":"Melee protection"},
+      {"name":"Serenity","tag":"Movement","t":["+2%","+4%","+7%"],"what":"Stamina and pulse recovery"},
+      {"name":"Speed","tag":"Movement","t":["+3%","+5%","+7%"],"what":"Move speed"},
+      {"name":"Sprint","tag":"Movement","t":["+3%","+6%","+10%"],"what":"Sprint speed"},
+      {"name":"Sprint Duration","tag":"Movement","t":["+3.1%","+6.4%","+10%"],"what":"Sprint duration"},
+      {"name":"Steady Hand","tag":"Combat","t":["−10%","−20%","−35%"],"what":"Hand stamina drain while aiming"}
+    ],
+    "abilities": [
+      {"name":"Active Matter Locator","tag":"Loot","what":"Shows the direction of nearby Active Matter"},
+      {"name":"Berserk","tag":"Combat","what":"High heart rate boosts melee damage"},
+      {"name":"Calming Effect","tag":"Survival","what":"Healing items also lower your heart rate"},
+      {"name":"Conduit","tag":"Loot","what":"Extraction portal opens faster"},
+      {"name":"Gunslinger","tag":"Combat","what":"Dual-wield and fire two sidearms"},
+      {"name":"Knife Master","tag":"Combat","what":"Dual-wield two melee weapons"},
+      {"name":"Limb Regeneration","tag":"Survival","what":"Critically injured limbs slowly recover to pain-free"},
+      {"name":"Monster Detector","tag":"Survival","what":"Shows the direction of nearby monsters"},
+      {"name":"Motion Detector","tag":"Combat","what":"Shows where movement was recently detected"},
+      {"name":"Night Owl","tag":"Survival","what":"Slightly better vision in the dark"},
+      {"name":"Observation","tag":"Loot","what":"Highlights nearby lootable containers and items"},
+      {"name":"Parkour","tag":"Movement","what":"Pull up on ledges, grab edges mid-air, push off walls"},
+      {"name":"Reanimator","tag":"Squad","what":"Faster, cheaper teammate revives"},
+      {"name":"Sharp Memory","tag":"Combat","what":"Always know your magazine round count"},
+      {"name":"Soft Steps","tag":"Combat","what":"Quieter running and jumping"},
+      {"name":"Tenacity","tag":"Survival","what":"Once per raid, lethal damage puts you in shock instead of killing you (not headshots)"},
+      {"name":"Trap Sense","tag":"Survival","what":"Shows the direction of nearby traps"},
+      {"name":"Weapon Expert","tag":"Combat","what":"Faster reloads and weapon swaps"}
+    ]
+  },
+  "builds": [
+    {"name":"Survival (PvE)","slots":["Tenacity","Limb Regeneration","Heal Efficiency","Hit Stability"],"swap":"Monster Detector or Trap Sense on maps with lots of anomalies; Fire Resistance for Park.","sleeve":"Beast or Rock in Isolated Raids; Knight in Open Raids; Paladin if you heal the squad.","why":"Tenacity is a free second life once per raid, Limb Regeneration keeps you mobile, and the other two make every medkit go further."},
+    {"name":"Looting","slots":["Observation","Carrying Capacity","Active Matter Gathering","Examination"],"swap":"Conduit for faster exits; Active Matter Locator on AM farming runs.","sleeve":"Viper (largest base volume, 550).","why":"Find containers faster, identify loot faster, carry more and grab Active Matter quicker, so you spend less time exposed."},
+    {"name":"PvP","slots":["Tenacity","Hit Stability","Motion Detector","Weapon Expert"],"swap":"Soft Steps for ambushes; Breath Control and Steady Hand for marksman rifles; Fine Motor Skills instead of Weapon Expert if you heal mid-fight.","sleeve":"Ghost or Shadow to avoid being found; Knight if you plan to win the fight.","why":"Survive the first burst, keep your aim steady when hit, know where enemies moved, and reload faster."},
+    {"name":"Melee","slots":["Melee","Berserk","Knife Master","Resilience"],"swap":"Serenity or Endurance to keep stamina up.","sleeve":"Reaper, Warlord or Mirage (big melee strength bonuses).","why":"Stacks melee damage with sleeves that already boost it. Good for clearing Hellhounds, Mimics and sleeping Distorted without ammo."},
+    {"name":"Squad medic","slots":["Reanimator","Heal Efficiency","Overflow Healing","Calming Effect"],"swap":"Tenacity if you're the one getting focused.","sleeve":"Paladin, Bulwark or Angel.","why":"Faster revives and stronger healing keep the whole squad in the raid."}
+  ],
+  "tips": [
+    "Put your Tier III chronogenes in the slots that matter most for the build; they lose charges when you die, so use Tier I/II for risky experiments.",
+    "Ability chronogenes like Tenacity and Observation change how you play; take one or two over a small stat bonus.",
+    "Body sleeves stack with chronogenes and skills. Don't double up where the sleeve already covers it (e.g. Paladin already cuts body temperature 90%, so skip Cold-blooded).",
+    "After any change, check Modified Stats on the Characteristics screen."
+  ]
+}

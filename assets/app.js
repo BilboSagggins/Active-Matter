@@ -383,3 +383,32 @@ getJSON("data/progress.json").then(d => {
   document.getElementById("invstar").addEventListener("change", drawInvs);
   drawInvs(); refreshFindLinks();
 }).catch(e => { document.getElementById("route").textContent = "Couldn't load progression data: " + e.message; });
+
+/* ---------- Builds ---------- */
+let BUILDS = null, chTag = "";
+function drawChrono() {
+  const q = document.getElementById("chq").value.trim().toLowerCase();
+  const ok = c => (!chTag || c.tag === chTag) && (!q || JSON.stringify(c).toLowerCase().includes(q));
+  const used = new Set(BUILDS.builds.flatMap(b => b.slots));
+  const ab = BUILDS.chrono.abilities.filter(ok), tr = BUILDS.chrono.tiered.filter(ok);
+  document.getElementById("abcount").textContent = ab.length;
+  document.getElementById("stcount").textContent = tr.length;
+  document.getElementById("abilities").innerHTML = ab.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span></li>`).join("") || `<li class="unk">None match.</li>`;
+  document.getElementById("tiered").innerHTML = tr.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span><div class="tiers3">${c.t.map((v, i) => `<span><i>${["I", "II", "III"][i]}</i>${esc(v)}</span>`).join("")}</div></li>`).join("") || `<li class="unk">None match.</li>`;
+}
+getJSON("data/builds.json").then(d => {
+  BUILDS = d;
+  document.getElementById("builds").innerHTML = d.builds.map(b => `<details class="tcard build"><summary><div class="ttop"><h3>${esc(b.name)}</h3></div><div class="bslots">${b.slots.map(x => `<span>${esc(x)}</span>`).join("")}</div></summary>` +
+    `<div class="tbody"><p class="does">${esc(b.why)}</p><dl class="bdl"><dt>Swap in</dt><dd>${esc(b.swap)}</dd><dt>Body sleeve</dt><dd>${esc(b.sleeve)}</dd></dl></div></details>`).join("");
+  document.getElementById("btips").innerHTML = d.tips.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("chhow").innerHTML = d.chrono.how.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("skhow").innerHTML = d.skills.how.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("skpri").innerHTML = d.skills.priorities.map(p => `<tr><td>${esc(p.goal)}</td><td>${esc(p.pick)}</td></tr>`).join("");
+  document.getElementById("skagency").textContent = d.skills.agency;
+  const tags = [...new Set([...d.chrono.tiered, ...d.chrono.abilities].map(c => c.tag))].sort();
+  const box = document.getElementById("chtags");
+  box.innerHTML = `<button class="chip" aria-pressed="true" data-t="">All</button>` + tags.map(t => `<button class="chip" aria-pressed="false" data-t="${esc(t)}">${esc(t)}</button>`).join("");
+  box.addEventListener("click", e => { const b = e.target.closest("[data-t]"); if (!b) return; chTag = chTag === b.dataset.t ? "" : b.dataset.t; box.querySelectorAll("[data-t]").forEach(x => x.setAttribute("aria-pressed", x.dataset.t === chTag)); drawChrono(); });
+  document.getElementById("chq").addEventListener("input", drawChrono);
+  drawChrono();
+}).catch(e => { document.getElementById("builds").textContent = "Couldn't load build data: " + e.message; });

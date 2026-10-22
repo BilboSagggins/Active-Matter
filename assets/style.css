@@ -251,3 +251,16 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 .invgroup li.star{border-left:3px solid var(--accent)}
 .invtop{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;align-items:baseline}
 .invwhy{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+
+/* builds */
+.buildgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;align-items:start;margin-top:8px}
+.tcard.build{border-left-color:var(--anom)}
+.bslots{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.bslots span{font-size:12.5px;border:1px solid var(--line);background:var(--bg);border-radius:3px;padding:3px 6px;text-align:center}
+.bdl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:14px}
+.bdl dt{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
+.bdl dd{margin:0}
+.tiers3{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.tiers3 span{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);border-radius:3px;padding:2px 6px;background:var(--bg)}
+.tiers3 i{font-style:normal;color:var(--muted);margin-right:4px}
+.plainlist{margin:8px 0 0;padding-left:18px;display:grid;gap:5px;max-width:75ch}
