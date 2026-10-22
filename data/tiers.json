@@ -379,6 +379,11 @@
           "find": "Armor plates"
         },
         {
+          "name": "Rigs",
+          "why": "A better rig than yours is a straight upgrade: more storage and smaller ammo.",
+          "find": "Rigs"
+        },
+        {
           "name": "Electronics & circuit boards",
           "why": "Good resale per slot."
         },
@@ -497,6 +502,47 @@
         {
           "name": "Small / Medium",
           "note": "Starter kit."
+        }
+      ]
+    },
+    {
+      "group": "Rigs",
+      "rows": [
+        {
+          "name": "Large Magazine Rig",
+          "note": "+600 storage and 30% smaller ammo and grenades. Shop 4,500 credits or 1,500 Monolith Tokens; also Replicator and Fusion.",
+          "find": "Rigs"
+        },
+        {
+          "name": "Large Rig / Medium Rig / Medium Magazine Rig",
+          "note": "Step-ups from the starter rig. Raid locations not documented yet."
+        },
+        {
+          "name": "Small Medicine Rig",
+          "note": "Holds meds compactly; medical pockets take only medkits, injectors and painkillers."
+        },
+        {
+          "name": "Small Rig / Small Magazine Rig",
+          "note": "Small Rig: +300 storage, smaller mags and grenades. Drops in every raid and in army crates; Shop 500 credits.",
+          "find": "Rigs"
+        }
+      ]
+    },
+    {
+      "group": "Safe containers",
+      "rows": [
+        {
+          "name": "Large safe container",
+          "note": "150 volume. Contents teleport to your Shelter if you die.",
+          "find": "Safe containers"
+        },
+        {
+          "name": "Medium safe container",
+          "note": "100 volume. Shop (Prime)."
+        },
+        {
+          "name": "Small safe container",
+          "note": "50 volume. Shop (Prime). One oversized item can fill it."
         }
       ]
     },

@@ -130,7 +130,8 @@
           "danger": "Distorted packs",
           "tip": "Clear only what blocks you. Save meds. Marker position is approximate.",
           "items": [
-            "Weapon crates"
+            "Weapon crates",
+            "Rigs"
           ]
         },
         {
@@ -143,7 +144,8 @@
           "danger": "Distorted packs",
           "tip": "Check both before committing to barracks. Marker position is approximate.",
           "items": [
-            "Weapon crates"
+            "Weapon crates",
+            "Rigs"
           ]
         },
         {
@@ -791,7 +793,8 @@
           "tip": "Quiet solo option.",
           "items": [
             "Weapon crates",
-            "Equipment"
+            "Equipment",
+            "Rigs"
           ]
         },
         {
@@ -805,7 +808,8 @@
           "tip": "Driver's first aid kits are common on the southern edge.",
           "items": [
             "Weapon crates",
-            "Medical supplies"
+            "Medical supplies",
+            "Rigs"
           ]
         },
         {
@@ -1148,6 +1152,8 @@
     ],
     "Armor & gear": [
       "Backpacks",
+      "Rigs",
+      "Safe containers",
       "Armor plates",
       "Helmets",
       "Equipment"
@@ -1178,6 +1184,11 @@
     "Armor plates": "Plates come in Rusty, UHMWPE, Steel, Ceramic and Titan, in S, L and XL sizes, and drop from general loot everywhere. Ceramic is commonly reported at the Headquarters south gas station and signal posts. Titan can also be fused from a Ceramic plate plus chronotraces, and the Market sells plates.",
     "Helmets": "Helmets drop from loot crates in every raid. TFMK-I is the most bullet-resistant; EDH-Gen V is the mid-game pick. Basic helmets can also be made in the Replicator.",
     "Medical supplies": "Medical items drop in general loot across all maps. Marked spots are reliable extras: Ozernoe ZIL trucks and the Headquarters southern edge (driver's first aid kits). AI-2 kits are cheap at the Market.",
-    "Weapon crates": "Weapon spawns are random. These are crates that reliably appear; the gun inside changes each raid."
+    "Weapon crates": "Weapon spawns are random. These are crates that reliably appear; the gun inside changes each raid.",
+    "Rigs": "Rigs are your base inventory and come in Small, Medium and Large, plus Magazine and Medicine versions that shrink ammo, grenades or meds. The Small Rig drops in every raid and in army (military) crates, so the marked spots are military-crate hotspots. Swapping onto a dead enemy's rig gives you whatever they carried. Bigger rigs come from the Shop, Replicator or Fusion: the Large Magazine Rig adds 600 storage and cuts ammo and grenade volume by 30%.",
+    "Safe containers": {
+      "badge": "Shop only",
+      "note": "Safe containers aren't a raid drop in any source so far. Anything inside is sent straight to your Shelter if you die. Small (50 volume) and Medium (100) are sold in the Shop for Prime; Large holds 150. Editions also include them."
+    }
   }
 }

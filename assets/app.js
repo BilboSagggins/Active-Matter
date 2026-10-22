@@ -213,6 +213,7 @@ getJSON("data/tiers.json").then(data => {
 
 /* ---------- Gear finder ---------- */
 let CATS = {}, COMMON = {};
+const cinfo = it => { const c = COMMON[it]; return !c ? null : typeof c === "string" ? { note: c, badge: "everywhere" } : c; };
 function catOf(it) {
   for (const [c, list] of Object.entries(CATS)) if (list.includes(it)) return c;
   return /key|board/i.test(it) ? "Keys & locks" : "Other";
@@ -223,13 +224,14 @@ function renderFinder() {
   const items = all.filter(it => !q || it.toLowerCase().includes(q));
   const groups = {};
   items.forEach(it => (groups[catOf(it)] ||= []).push(it));
+  Object.entries(groups).forEach(([c, list]) => { const ord = CATS[c] || []; list.sort((a, b) => ((ord.indexOf(a) + 1) || 999) - ((ord.indexOf(b) + 1) || 999) || a.localeCompare(b)); });
   const order = [...Object.keys(CATS), "Other"].filter(c => groups[c]);
   document.getElementById("findgroups").innerHTML = order.map(c => {
     const open = q || groups[c].includes(HL);
     return `<details class="fgroup"${open ? " open" : ""}><summary><span>${esc(c)}</span><span class="fcount">${groups[c].length}</span></summary><div class="itemchips">` +
       groups[c].map(it => {
         const n = (INDEX[it] || []).length;
-        return `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)} <span>${COMMON[it] ? (n ? n + " + everywhere" : "everywhere") : n}</span></button>`;
+        return `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)} <span>${cinfo(it) ? (n ? n + " + " + cinfo(it).badge : cinfo(it).badge) : n}</span></button>`;
       }).join("") + `</div></details>`;
   }).join("") || `<p class="unk">Nothing matches “${esc(q)}”.</p>`;
 }
@@ -253,7 +255,7 @@ function renderFindBar(missing) {
   if (missing) {
     bar.hidden = false;
     bar.innerHTML = COMMON[missing]
-      ? `<div class="fnote"><b>${esc(missing)}</b> · found everywhere. ${esc(COMMON[missing])}</div><button data-clear>Clear</button>`
+      ? `<div class="fnote"><b>${esc(missing)}</b> · ${esc(cinfo(missing).badge)}. ${esc(cinfo(missing).note)}</div><button data-clear>Clear</button>`
       : `No map spots logged for <b>${esc(missing)}</b> yet. <button data-clear>Clear</button>`;
     return;
   }
@@ -263,7 +265,7 @@ function renderFindBar(missing) {
   bar.innerHTML = `Showing <b>${esc(HL)}</b> · ${INDEX[HL].length} spot${INDEX[HL].length > 1 ? "s" : ""}: ` +
     Object.entries(per).map(([id, idx]) => { const m = MAPS.find(x => x.id === id);
       return `<button class="mapjump${curMap && curMap.id === id ? " on" : ""}" data-jump="${id}" data-i="${idx[0]}">${esc(m.name)} (${idx.length})</button>`; }).join("") +
-    ` <button data-clear>Clear</button>` + (COMMON[HL] ? `<div class="fnote">${esc(COMMON[HL])}</div>` : "");
+    ` <button data-clear>Clear</button>` + (cinfo(HL) ? `<div class="fnote">${esc(cinfo(HL).note)}</div>` : "");
 }
 function refreshFindLinks() {
   document.querySelectorAll("[data-find]").forEach(el => { if (!el.classList.contains("ichip")) el.hidden = !(INDEX[el.dataset.find] || COMMON[el.dataset.find]); });
