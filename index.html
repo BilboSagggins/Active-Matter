@@ -14,7 +14,7 @@
   <header class="top">
     <div class="brand">
       <h1>Active Matter<br>Field Guide</h1>
-      <div class="sub">PATCH INTEL · TIPS · LOOT MAP · TIERS · KEYS</div>
+      <div class="sub">PATCH INTEL · TIPS · LOOT MAP · TIERS · THREATS · KEYS</div>
     </div>
     <div class="stamp">News synced <b id="newsStamp">…</b> · <span id="buildStamp"></span></div>
   </header>
@@ -24,6 +24,7 @@
     <button role="tab" id="tab-guide" aria-controls="guide" aria-selected="false" data-view="guide">Tips &amp; Gear</button>
     <button role="tab" id="tab-map" aria-controls="map" aria-selected="false" data-view="map">Loot Map</button>
     <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="false" data-view="tiers">Priorities</button>
+    <button role="tab" id="tab-threats" aria-controls="threats" aria-selected="false" data-view="threats">Threats</button>
     <button role="tab" id="tab-keys" aria-controls="keys" aria-selected="false" data-view="keys">Keys</button>
   </nav>
 
@@ -113,14 +114,14 @@
       <table class="data">
         <thead><tr><th>Looking for</th><th>Best places to check</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Rare rifles (PKM, VAL, SVD)</td><td>Cargo Port Weapon Barge</td><td>Through the crane portal; needs the Port crane key.</td></tr>
-          <tr><td>AS Val, AKMs</td><td>Military Base Armory #1</td><td>2F of Barracks #1; Armory #1 key.</td></tr>
-          <tr><td>Weapon crates in bulk</td><td>Military Base hangars, Headquarters bunkers</td><td>Hangars hold many crates and many Distorted.</td></tr>
-          <tr><td>Backpacks</td><td>Factory garages, Chagulko houses</td><td>Hiking and climbing packs hold you over until the Large Backpack.</td></tr>
-          <tr><td>Medical supplies</td><td>Ozernoe ZIL trucks, road vehicles, tents, offices</td><td>ZIL crates mix weapons and meds.</td></tr>
-          <tr><td>Safes &amp; valuables</td><td>Headquarters offices, Dam interior, locked rooms</td><td>Dam rooms need keys or a Lock actuator board.</td></tr>
-          <tr><td>Grenades &amp; consumables</td><td>Wrecked vehicles near Headquarters bunkers</td><td>Ammo, smoke and grenades along the roads.</td></tr>
-          <tr><td>Active Matter in bulk</td><td>Gigastructure white-door storage, Flowerman nests</td><td>Storage room holds 60 Active Matter; key is random loot there.</td></tr>
+          <tr><td>Rare rifles (PKM, VAL, SVD)<button class="findlink" data-find="PKM" hidden>Find on map →</button></td><td>Cargo Port Weapon Barge</td><td>Through the crane portal; needs the Port crane key.</td></tr>
+          <tr><td>AS Val, AKMs<button class="findlink" data-find="AS Val" hidden>Find on map →</button></td><td>Military Base Armory #1</td><td>2F of Barracks #1; Armory #1 key.</td></tr>
+          <tr><td>Weapon crates in bulk<button class="findlink" data-find="Weapon crates" hidden>Find on map →</button></td><td>Military Base hangars, Headquarters bunkers</td><td>Hangars hold many crates and many Distorted.</td></tr>
+          <tr><td>Backpacks<button class="findlink" data-find="Backpacks" hidden>Find on map →</button></td><td>Factory garages, Chagulko houses</td><td>Hiking and climbing packs hold you over until the Large Backpack.</td></tr>
+          <tr><td>Medical supplies<button class="findlink" data-find="Medical supplies" hidden>Find on map →</button></td><td>Ozernoe ZIL trucks, road vehicles, tents, offices</td><td>ZIL crates mix weapons and meds.</td></tr>
+          <tr><td>Safes &amp; valuables<button class="findlink" data-find="Safes &amp; valuables" hidden>Find on map →</button></td><td>Headquarters offices, Dam interior, locked rooms</td><td>Dam rooms need keys or a Lock actuator board.</td></tr>
+          <tr><td>Grenades &amp; consumables<button class="findlink" data-find="Grenades &amp; consumables" hidden>Find on map →</button></td><td>Wrecked vehicles near Headquarters bunkers</td><td>Ammo, smoke and grenades along the roads.</td></tr>
+          <tr><td>Active Matter in bulk<button class="findlink" data-find="Active Matter" hidden>Find on map →</button></td><td>Gigastructure white-door storage, Flowerman nests</td><td>Storage room holds 60 Active Matter; key is random loot there.</td></tr>
         </tbody>
       </table>
     </div>
@@ -130,6 +131,12 @@
     <h2>Loot Map</h2>
     <p class="lede">Pick a raid zone, then tap a marker for what spawns there, what you need to get in, and what will try to stop you. Loot data updated <span id="lootStamp"></span>.</p>
     <div class="picker" id="picker" hidden>Placement mode: click the map to get coordinates → <b id="pickout">click somewhere</b> (copied to clipboard)</div>
+    <details class="finder" open>
+      <summary>Find gear on the map</summary>
+      <input id="findq" type="search" placeholder="Search: backpack, AS Val, crane key…" aria-label="Search gear">
+      <div id="findgroups"></div>
+    </details>
+    <div class="findbar" id="findbar" hidden></div>
     <div class="mapsel" id="mapsel" role="tablist" aria-label="Raid zone"></div>
     <div class="filters" id="filters" aria-label="Loot type filters"></div>
     <p class="mapsummary" id="mapsummary"></p>
@@ -142,6 +149,15 @@
       <div class="detail" id="detail" aria-live="polite"></div>
     </div>
     <p class="legendnote">Spawns vary by raid modifier and patch; helicopter and convoy events can swap between locations. Dashed lines are routes players commonly run.</p>
+  </section>
+
+  <section class="view" id="threats" role="tabpanel" aria-labelledby="tab-threats" hidden>
+    <h2>Monsters &amp; Anomalies</h2>
+    <p class="lede">How each threat behaves and how to beat it. Filter by what you're carrying. Updated <span id="threatStamp"></span>.</p>
+    <div class="rules"><h3>Rules of thumb</h3><ul id="rules"></ul></div>
+    <div class="keytools"><input id="threatq" type="search" placeholder="Search threats…" aria-label="Search threats"></div>
+    <div class="filters" id="countchips" aria-label="Filter by counter"></div>
+    <div class="threatgrid" id="threatcards"></div>
   </section>
 
   <section class="view" id="keys" role="tabpanel" aria-labelledby="tab-keys" hidden>

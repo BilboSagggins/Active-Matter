@@ -19,7 +19,7 @@ function show(v) {
 tabs.forEach(t => t.addEventListener("click", () => { show(t.dataset.view); history.replaceState(null, "", "#" + t.dataset.view); }));
 const PICK = location.hash === "#pick";
 const startView = PICK ? "map" : location.hash.slice(1);
-if (["news", "guide", "map", "tiers", "keys"].includes(startView)) show(startView);
+if (["news", "guide", "map", "tiers", "threats", "keys"].includes(startView)) show(startView);
 
 /* ---------- News ---------- */
 getJSON("data/news.json").then(data => {
@@ -39,7 +39,8 @@ getJSON("data/news.json").then(data => {
 }).catch(e => { document.getElementById("latest").innerHTML = `<p>Couldn't load the news feed (${esc(e.message)}). Check the official site linked below.</p>`; });
 
 /* ---------- Loot map ---------- */
-let MAPS = [], curMap = null, sel = 0;
+let MAPS = [], curMap = null, sel = 0, HL = null;
+const INDEX = {};
 const active = new Set(Object.keys(TYPES));
 const ms = document.getElementById("mapsel"), fl = document.getElementById("filters");
 const canvas = document.getElementById("canvas"), svg = document.getElementById("svg");
@@ -54,8 +55,8 @@ Object.entries(TYPES).forEach(([k, v]) => {
   fl.appendChild(b);
 });
 
-function selectMap(m) {
-  curMap = m; sel = 0;
+function selectMap(m, pick) {
+  curMap = m; sel = pick ?? 0;
   [...ms.children].forEach(b => b.setAttribute("aria-selected", b.dataset.id === m.id));
   document.getElementById("mapsummary").textContent = m.summary;
   if (m.image) {
@@ -90,12 +91,14 @@ function draw() {
     const [x, y] = P(n), c = `var(${TYPES[n.type].c})`, right = n.x > 72;
     if (n.type === "exit") {
       const r = 7 * s;
-      h += `<g class="marker exit${i === sel ? " sel" : ""}" tabindex="0" role="button" aria-label="Exit" data-i="${i}">` +
+      h += `<g class="marker exit${i === sel ? " sel" : ""}${HL ? " dim" : ""}" tabindex="0" role="button" aria-label="Exit" data-i="${i}">` +
         `<rect x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}" rx="${2 * s}" fill="${c}" style="stroke-width:${(i === sel ? 3 : 1.5) * s}"/>` +
         `<path d="M${x - 3 * s} ${y}h${6 * s}m${-2.5 * s} ${-2.5 * s}l${2.5 * s} ${2.5 * s}l${-2.5 * s} ${2.5 * s}" stroke="var(--panel)" stroke-width="${1.6 * s}" fill="none"/></g>`;
       return;
     }
-    h += `<g class="marker${i === sel ? " sel" : ""}" tabindex="0" role="button" aria-label="${esc(n.label)}" data-i="${i}">` +
+    const hit = HL && (n.items || []).includes(HL);
+    h += `<g class="marker${i === sel ? " sel" : ""}${HL && !hit ? " dim" : ""}" tabindex="0" role="button" aria-label="${esc(n.label)}" data-i="${i}">` +
+      (hit ? `<circle class="pulse" cx="${x}" cy="${y}" r="${16 * s}" stroke="${c}" style="stroke-width:${3 * s}"/>` : "") +
       `<circle class="ring" cx="${x}" cy="${y}" r="${10 * s}" stroke="${c}" style="stroke-width:${(i === sel ? 4 : 2.5) * s}"/>` +
       `<circle cx="${x}" cy="${y}" r="${4 * s}" fill="${c}"/>` +
       `<text x="${right ? x - 16 * s : x + 16 * s}" y="${y + 4 * s}" text-anchor="${right ? "end" : "start"}" style="font-size:${11 * s}px;stroke-width:${3 * s}px">${esc(n.label)}</text></g>`;
@@ -115,7 +118,8 @@ function draw() {
   }
   const ty = TYPES[n.type];
   det.innerHTML = `<div class="eyebrow">${esc(m.name)}</div><h3>${esc(n.label)}</h3><span class="pill" style="color:var(${ty.c})">${ty.n}</span>` +
-    `<dl><dt>Loot</dt><dd>${esc(n.loot)}</dd><dt>Access</dt><dd>${esc(n.access)}</dd><dt>Danger</dt><dd>${esc(n.danger)}</dd>${n.tip ? `<dt>Tip</dt><dd>${esc(n.tip)}</dd>` : ""}</dl>`;
+    `<dl><dt>Loot</dt><dd>${esc(n.loot)}</dd><dt>Access</dt><dd>${esc(n.access)}</dd><dt>Danger</dt><dd>${esc(n.danger)}</dd>${n.tip ? `<dt>Tip</dt><dd>${esc(n.tip)}</dd>` : ""}</dl>` +
+    ((n.items || []).length ? `<div><div class="eyebrow">Gear here · tap to find elsewhere</div><div class="itemchips">${n.items.map(it => `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)}</button>`).join("")}</div></div>` : "");
 }
 
 canvas.addEventListener("click", e => {
@@ -136,6 +140,9 @@ getJSON("data/loot.json").then(data => {
     ms.appendChild(b);
   });
   document.getElementById("lootStamp").textContent = data.updated || "";
+  MAPS.forEach(m => m.nodes.forEach((n, i) => (n.items || []).forEach(it => (INDEX[it] ||= []).push({ map: m.id, i, type: n.type }))));
+  renderFinder();
+  refreshFindLinks();
   if (MAPS[0]) selectMap(MAPS[0]);
 }).catch(e => { document.getElementById("detail").textContent = "Couldn't load loot data: " + e.message; });
 
@@ -147,10 +154,11 @@ function drawKeys() {
   const term = q.value.trim().toLowerCase(), mp = mapf.value;
   const rows = KEYS.filter(k => (!mp || k.map.includes(mp)) && (!term || Object.values(k).join(" ").toLowerCase().includes(term)));
   document.getElementById("keyrows").innerHTML = rows.map(k =>
-    `<tr><td>${esc(k.name)}<div class="eyebrow" style="margin-top:2px">${esc(k.map)}</div></td><td>${cell(k.opens)}</td><td>${cell(k.found)}</td><td>${cell(k.craft)}</td><td>${cell(k.loot)}</td><td>${cell(k.uses)}</td>` +
+    `<tr><td>${esc(k.name)}<div class="eyebrow" style="margin-top:2px">${esc(k.map)}</div><button class="findlink" data-find="${esc(k.name)}" hidden>Show on map →</button></td><td>${cell(k.opens)}</td><td>${cell(k.found)}</td><td>${cell(k.craft)}</td><td>${cell(k.loot)}</td><td>${cell(k.uses)}</td>` +
     `<td>${k.source ? `<a href="${esc(k.source)}" target="_blank" rel="noopener">wiki</a>` : ""}</td></tr>`).join("") ||
     `<tr><td colspan="7" class="unk">No keys match.</td></tr>`;
   document.getElementById("keycount").textContent = `${rows.length} of ${KEYS.length} keys`;
+  refreshFindLinks();
 }
 getJSON("data/keys.json").then(data => {
   KEYS = data.keys || [];
@@ -181,8 +189,9 @@ function drawTiers() {
     return `<div class="tierrow" data-t="${t}"><div class="tierlabel">${t === "?" ? "–" : t}</div><div class="tiercards">` + list.map(w =>
       `<div class="wcard"><div class="top"><b>${esc(w.name)}</b><span class="cls">${esc(w.class)}</span></div>` +
       `<div class="votes">${Object.entries(w.tiers).map(([s, v]) => `<a class="vote" href="${esc(srcs[s]?.url || "#")}" target="_blank" rel="noopener" title="${esc(srcs[s]?.name || s)}">${esc((srcs[s]?.name || s).replace(/\..*$/, ""))} <b>${esc(v)}</b></a>`).join("") || `<span class="vote">unranked</span>`}</div>` +
-      `<p>${esc(w.why)}</p></div>`).join("") + `</div></div>`;
+      `<p>${esc(w.why)}</p><button class="findlink" data-find="${esc(w.name)}" hidden>Find on map →</button></div>`).join("") + `</div></div>`;
   }).join("");
+  refreshFindLinks();
 }
 getJSON("data/tiers.json").then(data => {
   TIERS = data;
@@ -194,7 +203,97 @@ getJSON("data/tiers.json").then(data => {
   document.getElementById("patchbox").innerHTML = `<h3>Recent balance changes</h3><ul>` +
     (data.patchNotes || []).map(p => `<li><b>${esc(p.patch)}</b> — ${esc(p.change)}</li>`).join("") + `</ul>`;
   document.getElementById("lootcols").innerHTML = (data.loot || []).map((b, i) =>
-    `<div class="bucket" data-b="${i}"><h3>${esc(b.bucket)}</h3><ul>` + b.items.map(it => `<li><b>${esc(it.name)}</b><span>${esc(it.why)}</span></li>`).join("") + `</ul></div>`).join("");
+    `<div class="bucket" data-b="${i}"><h3>${esc(b.bucket)}</h3><ul>` + b.items.map(it => `<li><b>${esc(it.name)}</b><span>${esc(it.why)}</span>${it.find ? `<button class="findlink" data-find="${esc(it.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
   document.getElementById("gearcols").innerHTML = (data.gear || []).map(g =>
-    `<div class="bucket"><h3>${esc(g.group)}</h3><p class="eyebrow">Best first</p><ul class="gearlist">` + g.rows.map(r => `<li><b>${esc(r.name)}</b><span>${esc(r.note)}</span></li>`).join("") + `</ul></div>`).join("");
+    `<div class="bucket"><h3>${esc(g.group)}</h3><p class="eyebrow">Best first</p><ul class="gearlist">` + g.rows.map(r => `<li><b>${esc(r.name)}</b><span>${esc(r.note)}</span>${r.find ? `<button class="findlink" data-find="${esc(r.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
+  refreshFindLinks();
 }).catch(e => { document.getElementById("tierboard").textContent = "Couldn't load tier data: " + e.message; });
+
+
+/* ---------- Gear finder ---------- */
+const GROUPS = [
+  ["Weapons", it => /crate|PKM|Val|SVD|AKM|AKS|SMG|Molotov/i.test(it)],
+  ["Keys & locks", it => /key|board/i.test(it)],
+  ["Valuables & Active Matter", it => /valuable|high-tier|active matter/i.test(it)],
+  ["Gear & supplies", it => /backpack|equipment|medical|grenade|trunk|container/i.test(it)],
+  ["Other", () => true]
+];
+function renderFinder() {
+  const q = (document.getElementById("findq").value || "").trim().toLowerCase();
+  const items = Object.keys(INDEX).sort((a, b) => a.localeCompare(b)).filter(it => !q || it.toLowerCase().includes(q));
+  const used = new Set();
+  document.getElementById("findgroups").innerHTML = GROUPS.map(([g, test]) => {
+    const list = items.filter(it => !used.has(it) && test(it)); list.forEach(it => used.add(it));
+    if (!list.length) return "";
+    return `<div class="fgroup"><div class="eyebrow">${g}</div><div class="itemchips">${list.map(it =>
+      `<button class="ichip${it === HL ? " on" : ""}" data-find="${esc(it)}">${esc(it)} <span>${INDEX[it].length}</span></button>`).join("")}</div></div>`;
+  }).join("") || `<p class="unk">Nothing matches “${esc(q)}”.</p>`;
+}
+document.getElementById("findq").addEventListener("input", renderFinder);
+
+function findItem(item) {
+  const hits = INDEX[item];
+  show("map"); history.replaceState(null, "", "#map");
+  if (!hits) { HL = null; renderFindBar(item); return; }
+  HL = item;
+  hits.forEach(h => { if (!active.has(h.type)) { active.add(h.type); } });
+  [...fl.children].forEach((b, k) => b.setAttribute("aria-pressed", active.has(Object.keys(TYPES)[k])));
+  const here = hits.find(h => h.map === curMap?.id) || hits[0];
+  const m = MAPS.find(x => x.id === here.map);
+  if (m !== curMap) selectMap(m, here.i); else { sel = here.i; draw(); }
+  renderFinder(); renderFindBar();
+  canvas.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+}
+function renderFindBar(missing) {
+  const bar = document.getElementById("findbar");
+  if (missing) { bar.hidden = false; bar.innerHTML = `No map spots logged for <b>${esc(missing)}</b> yet. <button data-clear>Clear</button>`; return; }
+  if (!HL) { bar.hidden = true; return; }
+  const per = {}; INDEX[HL].forEach(h => (per[h.map] = per[h.map] || []).push(h.i));
+  bar.hidden = false;
+  bar.innerHTML = `Showing <b>${esc(HL)}</b> · ${INDEX[HL].length} spot${INDEX[HL].length > 1 ? "s" : ""}: ` +
+    Object.entries(per).map(([id, idx]) => { const m = MAPS.find(x => x.id === id);
+      return `<button class="mapjump${curMap && curMap.id === id ? " on" : ""}" data-jump="${id}" data-i="${idx[0]}">${esc(m.name)} (${idx.length})</button>`; }).join("") +
+    ` <button data-clear>Clear</button>`;
+}
+function refreshFindLinks() {
+  document.querySelectorAll("[data-find]").forEach(el => { if (!el.classList.contains("ichip")) el.hidden = !INDEX[el.dataset.find]; });
+}
+document.addEventListener("click", e => {
+  const f = e.target.closest("[data-find]");
+  if (f) { e.preventDefault(); findItem(f.dataset.find); return; }
+  const j = e.target.closest("[data-jump]");
+  if (j) { const m = MAPS.find(x => x.id === j.dataset.jump); selectMap(m, +j.dataset.i); renderFindBar(); return; }
+  if (e.target.closest("[data-clear]")) { HL = null; renderFindBar(); renderFinder(); draw(); return; }
+  const g = e.target.closest("[data-gomap]");
+  if (g) { const m = MAPS.find(x => x.id === g.dataset.gomap); if (m) { HL = null; renderFindBar(); show("map"); history.replaceState(null, "", "#map"); selectMap(m); canvas.scrollIntoView({ block: "center" }); } }
+});
+
+/* ---------- Threats ---------- */
+let THREATS = null, tCounter = "";
+const tq = document.getElementById("threatq");
+function drawThreats() {
+  const q = tq.value.trim().toLowerCase();
+  const list = THREATS.threats.filter(t => (!tCounter || t.counters.includes(tCounter)) && (!q || JSON.stringify(t).toLowerCase().includes(q)));
+  document.getElementById("threatcards").innerHTML = list.map(t =>
+    `<article class="tcard" data-kind="${esc(t.kind)}"><div class="ttop"><h3>${esc(t.name)}</h3><span class="kind">${esc(t.kind)}</span></div>` +
+    `<div class="danger" aria-label="Danger ${t.danger} of 4">${[1, 2, 3, 4].map(k => `<i class="${k <= t.danger ? "on" : ""}"></i>`).join("")}<span>Danger</span></div>` +
+    `<p class="does">${esc(t.does)}</p><div class="eyebrow">How to beat it</div><ul>${t.beat.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` +
+    `<div class="tcounters">${t.counters.map(c => `<span class="cchip">${esc(c)}</span>`).join("")}</div>` +
+    `<p class="drops"><b>Drops:</b> ${esc(t.drops)}</p>` +
+    (t.where.length ? `<div class="twhere">Seen on: ${t.where.map(id => { const m = MAPS.find(x => x.id === id); return m ? `<button data-gomap="${id}">${esc(m.name)}</button>` : ""; }).join("")}</div>` : "") +
+    `</article>`).join("") || `<p class="unk">No threats match.</p>`;
+}
+getJSON("data/threats.json").then(data => {
+  THREATS = data;
+  document.getElementById("threatStamp").textContent = data.updated || "";
+  document.getElementById("rules").innerHTML = data.rules.map(r => `<li>${esc(r)}</li>`).join("");
+  const counters = [...new Set(data.threats.flatMap(t => t.counters))].sort();
+  const box = document.getElementById("countchips");
+  box.innerHTML = `<button class="chip" aria-pressed="true" data-c="">All</button>` + counters.map(c => `<button class="chip" aria-pressed="false" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  box.addEventListener("click", e => { const b = e.target.closest("[data-c]"); if (!b) return; tCounter = b.dataset.c; box.querySelectorAll("[data-c]").forEach(x => x.setAttribute("aria-pressed", x === b)); drawThreats(); });
+  tq.addEventListener("input", drawThreats);
+  drawThreats();
+  const waitMaps = setInterval(() => { if (MAPS.length) { clearInterval(waitMaps); drawThreats(); } }, 200);
+}).catch(e => { document.getElementById("threatcards").textContent = "Couldn't load threat data: " + e.message; });
+
+window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "threats", "keys"].includes(v)) show(v); });

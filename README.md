@@ -10,6 +10,8 @@ Hosted with GitHub Pages.
 | News | `.github/workflows/update-news.yml` pulls Steam's news feed every 4 hours and commits `data/news.json` when something new is posted. You can also run it by hand from the **Actions** tab. |
 | Loot spots | `data/loot.json` — edit by hand or let the weekly research job commit new finds. |
 | Keys | `data/keys.json` — same. |
+| Tiers & priorities | `data/tiers.json` — same. |
+| Monsters & anomalies | `data/threats.json` — same. |
 
 The page reads these JSON files on load, so any commit shows up as soon as Pages redeploys (about a minute).
 
@@ -35,7 +37,7 @@ Marker type `exit` draws a green extraction square without a label.
   "links": [[0, 1]] }
 ```
 
-`type` is one of `wpn`, `med`, `val`, `key`, `boss`. `links` draws dashed route lines between node indexes.
+`type` is one of `wpn`, `med`, `val`, `key`, `boss`, `exit`. Optional `items` (list of gear names) powers the "Find gear on the map" panel; a key's spot should list the key's exact name from `keys.json`, and a weapon's spot its name from `tiers.json`, so their "Find on map" links appear. `links` draws dashed route lines between node indexes.
 
 `data/keys.json` → `keys[]`: `name, map, opens, found, craft, uses, loot, source`. Use `"?"` or `"Unconfirmed"` for unknowns; they render in gray.
 

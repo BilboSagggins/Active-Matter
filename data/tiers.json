@@ -1,95 +1,505 @@
 {
   "updated": "2026-10-22",
   "sources": {
-    "blog": {"name": "activematter.blog", "date": "2026", "url": "https://activematter.blog/en/weapons/active-matter-best-weapons"},
-    "overgear": {"name": "Overgear", "date": "2026-09-25", "url": "https://overgear.com/guides/active-matter/best-weapons-ranked/"},
-    "vgtimes": {"name": "VGTimes", "date": "2026-09-27", "url": "https://vgtimes.com/guides/168991-active-matter-best-weapons-tier-list-and-loadouts.html"}
+    "blog": {
+      "name": "activematter.blog",
+      "date": "2026",
+      "url": "https://activematter.blog/en/weapons/active-matter-best-weapons"
+    },
+    "overgear": {
+      "name": "Overgear",
+      "date": "2026-09-25",
+      "url": "https://overgear.com/guides/active-matter/best-weapons-ranked/"
+    },
+    "vgtimes": {
+      "name": "VGTimes",
+      "date": "2026-09-27",
+      "url": "https://vgtimes.com/guides/168991-active-matter-best-weapons-tier-list-and-loadouts.html"
+    }
   },
   "weapons": [
-    {"name":"M4A1","class":"Assault rifle","tiers":{"blog":"S","overgear":"A","vgtimes":"S"},"why":"Low recoil, common 5.56 ammo, lots of attachments. Best all-rounder to learn on."},
-    {"name":"M110A1","class":"DMR","tiers":{"blog":"A","overgear":"S","vgtimes":"S"},"why":"Semi-auto precision at mid–long range; takes suppressors. Also one of the most valuable guns to sell."},
-    {"name":"Origin-12","class":"Shotgun","tiers":{"blog":"B","overgear":"A","vgtimes":"S"},"why":"Box magazine means no shell-by-shell reloads. Best shotgun for repeat close fights."},
-    {"name":"Scorpion EVO 3","class":"SMG","tiers":{"blog":"S","overgear":"B","vgtimes":"S"},"why":"Very high fire rate with manageable recoil; shreds indoors. Light and sells well."},
-    {"name":"AEK-971","class":"Assault rifle","tiers":{"overgear":"S","vgtimes":"S"},"why":"Around 900 RPM with less recoil than the AK-12."},
-    {"name":"SCAR-L","class":"Assault rifle","tiers":{"blog":"S","overgear":"A","vgtimes":"A"},"why":"Very steady recoil; easy consecutive hits at mid range."},
-    {"name":"SCAR-H","class":"Battle rifle","tiers":{"overgear":"S","vgtimes":"A"},"why":"7.62×51 punch; a September update improved accuracy and added suppressor support."},
-    {"name":"M39 EMR","class":"DMR","tiers":{"overgear":"S","vgtimes":"A"},"why":"Less recoil than the M14 and a long rail."},
-    {"name":"SVDM","class":"DMR","tiers":{"overgear":"A","vgtimes":"S"},"why":"Accurate with quick follow-ups; integrated bipod."},
-    {"name":"PKM","class":"Machine gun","tiers":{"overgear":"A","vgtimes":"S"},"why":"Huge capacity for holding positions. Heavy, but sells for a lot. Can chamber a round since 0.4.0.201."},
-    {"name":"PP-2000","class":"SMG","tiers":{"blog":"B","vgtimes":"S"},"why":"Takes modern optics and high-capacity mags."},
-    {"name":"AR416A5","class":"Assault rifle","tiers":{"blog":"B","overgear":"S"},"why":"Fast cycle for close fights; bursts work at mid range."},
-    {"name":"MP5","class":"SMG","tiers":{"blog":"S","overgear":"B","vgtimes":"A"},"why":"Lowest recoil around and strong hipfire. Great cheap close-quarters gun."},
-    {"name":"UMP45","class":"SMG","tiers":{"blog":"A","overgear":"B","vgtimes":"A"},"why":"Solid .45 SMG; dependable mid-tier sell value."},
-    {"name":"AK-103","class":"Assault rifle","tiers":{"blog":"S","overgear":"A"},"why":"Hard-hitting 7.62×39 but you have to control the recoil."},
-    {"name":"AK-12","class":"Assault rifle","tiers":{"blog":"A","overgear":"A"},"why":"Competitive AR with minor handling trade-offs."},
-    {"name":"XV ACP","class":"SMG","tiers":{"blog":"A","overgear":"A"},"why":".45 ACP with rapid fire; a top SMG pick."},
-    {"name":"SPAS-12","class":"Shotgun","tiers":{"blog":"S","overgear":"B","vgtimes":"A"},"why":"Fast semi-auto follow-ups, but heavy with a very slow full reload."},
-    {"name":"DP-12","class":"Shotgun","tiers":{"blog":"B","overgear":"B","vgtimes":"A"},"why":"Holds up to 14 shells; slow full reload."},
-    {"name":"M249 Para","class":"Machine gun","tiers":{"blog":"B","overgear":"B","vgtimes":"A"},"why":"Big box for suppression and squad defense."},
-    {"name":"M24","class":"Sniper","tiers":{"overgear":"B","vgtimes":"A"},"why":"Practical bolt-action with a bipod."},
-    {"name":"SV-98","class":"Sniper","tiers":{"blog":"S","overgear":"B","vgtimes":"B"},"why":"Strong bolt-action for one-shot long-range picks."},
-    {"name":"ASh-12","class":"Assault rifle","tiers":{"blog":"B","overgear":"A"},"why":"Situational heavy-caliber option."},
-    {"name":"EV-MG","class":"Machine gun","tiers":{"blog":"B","overgear":"A"},"why":"Flexible attachment platform for sustained fire."},
-    {"name":"MB590","class":"Shotgun","tiers":{"blog":"S","overgear":"B","vgtimes":"B"},"why":"Cheap, reliable pump. Great PvE and Devourer-clearing backup; outclassed once you have an Origin-12."},
-    {"name":"SOK-94 Vepr","class":"Carbine","tiers":{"overgear":"B","vgtimes":"B"},"why":"Beginner-friendly semi-auto; aimed shots."},
-    {"name":"M14","class":"Battle rifle","tiers":{"overgear":"A","vgtimes":"B"},"why":"Powerful but outclassed by the M39 EMR."},
-    {"name":"AS Val","class":"Assault rifle","tiers":{"overgear":"A"},"why":"Integrally suppressed. Two of them sit in Military Base Armory #1."},
-    {"name":"VSS Vintorez","class":"DMR","tiers":{"overgear":"A"},"why":"Integrally suppressed marksman rifle."},
-    {"name":"M82A1","class":"Anti-materiel","tiers":{"blog":"C","overgear":"B"},"why":"Heavy with rare ammo. Lethality was boosted in 0.4.0.182, so it may be climbing."},
-    {"name":"Mosin Carbine","class":"Sniper","tiers":{"blog":"C","overgear":"C"},"why":"Budget backup; slow."},
-    {"name":"Hunting Crossbow","class":"Special","tiers":{"blog":"B"},"why":"Silent takedowns."},
-    {"name":"CF-400 Flamethrower","class":"Special","tiers":{"blog":"C"},"why":"Area denial with heavy movement penalty. Fire is excellent against Flowermen and Dendroids in Park."},
-    {"name":"RPG-7","class":"Launcher","tiers":{},"why":"Nerfed in 0.4.0.201: less projectile damage and rockets take more space. Not ranked by current lists."}
+    {
+      "name": "M4A1",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "S",
+        "overgear": "A",
+        "vgtimes": "S"
+      },
+      "why": "Low recoil, common 5.56 ammo, lots of attachments. Best all-rounder to learn on."
+    },
+    {
+      "name": "M110A1",
+      "class": "DMR",
+      "tiers": {
+        "blog": "A",
+        "overgear": "S",
+        "vgtimes": "S"
+      },
+      "why": "Semi-auto precision at mid–long range; takes suppressors. Also one of the most valuable guns to sell."
+    },
+    {
+      "name": "Origin-12",
+      "class": "Shotgun",
+      "tiers": {
+        "blog": "B",
+        "overgear": "A",
+        "vgtimes": "S"
+      },
+      "why": "Box magazine means no shell-by-shell reloads. Best shotgun for repeat close fights."
+    },
+    {
+      "name": "Scorpion EVO 3",
+      "class": "SMG",
+      "tiers": {
+        "blog": "S",
+        "overgear": "B",
+        "vgtimes": "S"
+      },
+      "why": "Very high fire rate with manageable recoil; shreds indoors. Light and sells well."
+    },
+    {
+      "name": "AEK-971",
+      "class": "Assault rifle",
+      "tiers": {
+        "overgear": "S",
+        "vgtimes": "S"
+      },
+      "why": "Around 900 RPM with less recoil than the AK-12."
+    },
+    {
+      "name": "SCAR-L",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "S",
+        "overgear": "A",
+        "vgtimes": "A"
+      },
+      "why": "Very steady recoil; easy consecutive hits at mid range."
+    },
+    {
+      "name": "SCAR-H",
+      "class": "Battle rifle",
+      "tiers": {
+        "overgear": "S",
+        "vgtimes": "A"
+      },
+      "why": "7.62×51 punch; a September update improved accuracy and added suppressor support."
+    },
+    {
+      "name": "M39 EMR",
+      "class": "DMR",
+      "tiers": {
+        "overgear": "S",
+        "vgtimes": "A"
+      },
+      "why": "Less recoil than the M14 and a long rail."
+    },
+    {
+      "name": "SVDM",
+      "class": "DMR",
+      "tiers": {
+        "overgear": "A",
+        "vgtimes": "S"
+      },
+      "why": "Accurate with quick follow-ups; integrated bipod."
+    },
+    {
+      "name": "PKM",
+      "class": "Machine gun",
+      "tiers": {
+        "overgear": "A",
+        "vgtimes": "S"
+      },
+      "why": "Huge capacity for holding positions. Heavy, but sells for a lot. Can chamber a round since 0.4.0.201."
+    },
+    {
+      "name": "PP-2000",
+      "class": "SMG",
+      "tiers": {
+        "blog": "B",
+        "vgtimes": "S"
+      },
+      "why": "Takes modern optics and high-capacity mags."
+    },
+    {
+      "name": "AR416A5",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "B",
+        "overgear": "S"
+      },
+      "why": "Fast cycle for close fights; bursts work at mid range."
+    },
+    {
+      "name": "MP5",
+      "class": "SMG",
+      "tiers": {
+        "blog": "S",
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Lowest recoil around and strong hipfire. Great cheap close-quarters gun."
+    },
+    {
+      "name": "UMP45",
+      "class": "SMG",
+      "tiers": {
+        "blog": "A",
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Solid .45 SMG; dependable mid-tier sell value."
+    },
+    {
+      "name": "AK-103",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "S",
+        "overgear": "A"
+      },
+      "why": "Hard-hitting 7.62×39 but you have to control the recoil."
+    },
+    {
+      "name": "AK-12",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "A",
+        "overgear": "A"
+      },
+      "why": "Competitive AR with minor handling trade-offs."
+    },
+    {
+      "name": "XV ACP",
+      "class": "SMG",
+      "tiers": {
+        "blog": "A",
+        "overgear": "A"
+      },
+      "why": ".45 ACP with rapid fire; a top SMG pick."
+    },
+    {
+      "name": "SPAS-12",
+      "class": "Shotgun",
+      "tiers": {
+        "blog": "S",
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Fast semi-auto follow-ups, but heavy with a very slow full reload."
+    },
+    {
+      "name": "DP-12",
+      "class": "Shotgun",
+      "tiers": {
+        "blog": "B",
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Holds up to 14 shells; slow full reload."
+    },
+    {
+      "name": "M249 Para",
+      "class": "Machine gun",
+      "tiers": {
+        "blog": "B",
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Big box for suppression and squad defense."
+    },
+    {
+      "name": "M24",
+      "class": "Sniper",
+      "tiers": {
+        "overgear": "B",
+        "vgtimes": "A"
+      },
+      "why": "Practical bolt-action with a bipod."
+    },
+    {
+      "name": "SV-98",
+      "class": "Sniper",
+      "tiers": {
+        "blog": "S",
+        "overgear": "B",
+        "vgtimes": "B"
+      },
+      "why": "Strong bolt-action for one-shot long-range picks."
+    },
+    {
+      "name": "ASh-12",
+      "class": "Assault rifle",
+      "tiers": {
+        "blog": "B",
+        "overgear": "A"
+      },
+      "why": "Situational heavy-caliber option."
+    },
+    {
+      "name": "EV-MG",
+      "class": "Machine gun",
+      "tiers": {
+        "blog": "B",
+        "overgear": "A"
+      },
+      "why": "Flexible attachment platform for sustained fire."
+    },
+    {
+      "name": "MB590",
+      "class": "Shotgun",
+      "tiers": {
+        "blog": "S",
+        "overgear": "B",
+        "vgtimes": "B"
+      },
+      "why": "Cheap, reliable pump. Great PvE and Devourer-clearing backup; outclassed once you have an Origin-12."
+    },
+    {
+      "name": "SOK-94 Vepr",
+      "class": "Carbine",
+      "tiers": {
+        "overgear": "B",
+        "vgtimes": "B"
+      },
+      "why": "Beginner-friendly semi-auto; aimed shots."
+    },
+    {
+      "name": "M14",
+      "class": "Battle rifle",
+      "tiers": {
+        "overgear": "A",
+        "vgtimes": "B"
+      },
+      "why": "Powerful but outclassed by the M39 EMR."
+    },
+    {
+      "name": "AS Val",
+      "class": "Assault rifle",
+      "tiers": {
+        "overgear": "A"
+      },
+      "why": "Integrally suppressed. Two of them sit in Military Base Armory #1."
+    },
+    {
+      "name": "VSS Vintorez",
+      "class": "DMR",
+      "tiers": {
+        "overgear": "A"
+      },
+      "why": "Integrally suppressed marksman rifle."
+    },
+    {
+      "name": "M82A1",
+      "class": "Anti-materiel",
+      "tiers": {
+        "blog": "C",
+        "overgear": "B"
+      },
+      "why": "Heavy with rare ammo. Lethality was boosted in 0.4.0.182, so it may be climbing."
+    },
+    {
+      "name": "Mosin Carbine",
+      "class": "Sniper",
+      "tiers": {
+        "blog": "C",
+        "overgear": "C"
+      },
+      "why": "Budget backup; slow."
+    },
+    {
+      "name": "Hunting Crossbow",
+      "class": "Special",
+      "tiers": {
+        "blog": "B"
+      },
+      "why": "Silent takedowns."
+    },
+    {
+      "name": "CF-400 Flamethrower",
+      "class": "Special",
+      "tiers": {
+        "blog": "C"
+      },
+      "why": "Area denial with heavy movement penalty. Fire is excellent against Flowermen and Dendroids in Park."
+    },
+    {
+      "name": "RPG-7",
+      "class": "Launcher",
+      "tiers": {},
+      "why": "Nerfed in 0.4.0.201: less projectile damage and rockets take more space. Not ranked by current lists."
+    }
   ],
   "loot": [
-    {"bucket":"Always take","items":[
-      {"name":"Active Matter","why":"Separate capacity, so it never costs backpack space. Fuels key and board crafting."},
-      {"name":"Investigation / objective items","why":"Progression is worth more than any one sale. Head for extraction once you have them."},
-      {"name":"Keys","why":"Turn a normal raid into a high-value one. Tiny (volume 10)."},
-      {"name":"Notes & documents","why":"Almost weightless; refine for about 50–65 Chronotraces each."},
-      {"name":"Cassette recorders & books","why":"Around 1,000 credits each for very little space."},
-      {"name":"Cassettes (Space Work Universe, Black Iron, Driving Home, Back Again, Blackmail)","why":"Ingredient for the Keys fuse recipe at Monolith Delta."},
-      {"name":"Accumulator batteries","why":"Needed for the Lock actuator board and the Keys fuse recipe."},
-      {"name":"High-value guns","why":"M110A1 (~13k), PKM (~11k, heavy), Scorpion EVO 3 (~5.5k, light)."}
-    ]},
-    {"bucket":"Take if you have room","items":[
-      {"name":"Ceramic / Titan plates","why":"Slot them into your armor first, then carry spares."},
-      {"name":"Electronics & circuit boards","why":"Good resale per slot."},
-      {"name":"Weapon recipe components","why":"Smaller than the finished gun; refine into Chronotraces."},
-      {"name":"Medications","why":"One pile restocks 100 medkit charges in one slot."},
-      {"name":"Fuses, damaged ammo, tools","why":"Fuse/craft ingredients (Keys recipe, Underground lab key)."},
-      {"name":"Gas cans","why":"About 1,000 credits but heavy. Only near your exit."}
-    ]},
-    {"bucket":"Leave behind","items":[
-      {"name":"Rusty AKM magazines","why":"Poor value for the space."},
-      {"name":"Combat and cooking knives","why":"Low return."},
-      {"name":"Generic VHS tapes","why":"Not the named cassettes; low value."},
-      {"name":"Binoculars, fire extinguishers, common scrap","why":"Filler only. Never detour for them."}
-    ]}
+    {
+      "bucket": "Always take",
+      "items": [
+        {
+          "name": "Active Matter",
+          "why": "Separate capacity, so it never costs backpack space. Fuels key and board crafting.",
+          "find": "Active Matter"
+        },
+        {
+          "name": "Investigation / objective items",
+          "why": "Progression is worth more than any one sale. Head for extraction once you have them."
+        },
+        {
+          "name": "Keys",
+          "why": "Turn a normal raid into a high-value one. Tiny (volume 10)."
+        },
+        {
+          "name": "Notes & documents",
+          "why": "Almost weightless; refine for about 50–65 Chronotraces each."
+        },
+        {
+          "name": "Cassette recorders & books",
+          "why": "Around 1,000 credits each for very little space."
+        },
+        {
+          "name": "Cassettes (Space Work Universe, Black Iron, Driving Home, Back Again, Blackmail)",
+          "why": "Ingredient for the Keys fuse recipe at Monolith Delta."
+        },
+        {
+          "name": "Accumulator batteries",
+          "why": "Needed for the Lock actuator board and the Keys fuse recipe."
+        },
+        {
+          "name": "High-value guns",
+          "why": "M110A1 (~13k), PKM (~11k, heavy), Scorpion EVO 3 (~5.5k, light).",
+          "find": "Weapon crates"
+        }
+      ]
+    },
+    {
+      "bucket": "Take if you have room",
+      "items": [
+        {
+          "name": "Ceramic / Titan plates",
+          "why": "Slot them into your armor first, then carry spares."
+        },
+        {
+          "name": "Electronics & circuit boards",
+          "why": "Good resale per slot."
+        },
+        {
+          "name": "Weapon recipe components",
+          "why": "Smaller than the finished gun; refine into Chronotraces."
+        },
+        {
+          "name": "Medications",
+          "why": "One pile restocks 100 medkit charges in one slot.",
+          "find": "Medical supplies"
+        },
+        {
+          "name": "Fuses, damaged ammo, tools",
+          "why": "Fuse/craft ingredients (Keys recipe, Underground lab key)."
+        },
+        {
+          "name": "Gas cans",
+          "why": "About 1,000 credits but heavy. Only near your exit."
+        }
+      ]
+    },
+    {
+      "bucket": "Leave behind",
+      "items": [
+        {
+          "name": "Rusty AKM magazines",
+          "why": "Poor value for the space."
+        },
+        {
+          "name": "Combat and cooking knives",
+          "why": "Low return."
+        },
+        {
+          "name": "Generic VHS tapes",
+          "why": "Not the named cassettes; low value."
+        },
+        {
+          "name": "Binoculars, fire extinguishers, common scrap",
+          "why": "Filler only. Never detour for them."
+        }
+      ]
+    }
   ],
   "gear": [
-    {"group":"Armor plates","rows":[
-      {"name":"Titan","note":"Most durable over a long fight and much lighter. Absorbs slightly less per hit than ceramic at first. Expensive."},
-      {"name":"Ceramic","note":"Highest initial absorption. Heavier than titan. Common at the Headquarters south gas station and signal posts."},
-      {"name":"Steel","note":"Very durable but heavy."},
-      {"name":"UHMWPE","note":"Basic. Matches steel against melee but wears out faster."},
-      {"name":"Assault plate (XL)","note":"Replaces two Large slots; slightly less protection than a pair of L plates."}
-    ]},
-    {"group":"Helmets","rows":[
-      {"name":"TFMK-I","note":"Most bullet-resistant helmet. Active headset built in. Late game."},
-      {"name":"EDH-Gen V","note":"Mid-game helmet with an active headset."},
-      {"name":"SF, A3, Tactical PASGT","note":"Edition and early helmets. No official ranking published."}
-    ]},
-    {"group":"Backpacks","rows":[
-      {"name":"Large Backpack","note":"Unlocked from the Monolith. The goal."},
-      {"name":"Hiking & climbing packs","note":"Factory garages and Chagulko houses. Use until you unlock the Large."},
-      {"name":"Small / Medium","note":"Starter kit."}
-    ]}
+    {
+      "group": "Armor plates",
+      "rows": [
+        {
+          "name": "Titan",
+          "note": "Most durable over a long fight and much lighter. Absorbs slightly less per hit than ceramic at first. Expensive."
+        },
+        {
+          "name": "Ceramic",
+          "note": "Highest initial absorption. Heavier than titan. Common at the Headquarters south gas station and signal posts."
+        },
+        {
+          "name": "Steel",
+          "note": "Very durable but heavy."
+        },
+        {
+          "name": "UHMWPE",
+          "note": "Basic. Matches steel against melee but wears out faster."
+        },
+        {
+          "name": "Assault plate (XL)",
+          "note": "Replaces two Large slots; slightly less protection than a pair of L plates."
+        }
+      ]
+    },
+    {
+      "group": "Helmets",
+      "rows": [
+        {
+          "name": "TFMK-I",
+          "note": "Most bullet-resistant helmet. Active headset built in. Late game."
+        },
+        {
+          "name": "EDH-Gen V",
+          "note": "Mid-game helmet with an active headset."
+        },
+        {
+          "name": "SF, A3, Tactical PASGT",
+          "note": "Edition and early helmets. No official ranking published."
+        }
+      ]
+    },
+    {
+      "group": "Backpacks",
+      "rows": [
+        {
+          "name": "Large Backpack",
+          "note": "Unlocked from the Monolith. The goal."
+        },
+        {
+          "name": "Hiking & climbing packs",
+          "note": "Factory garages and Chagulko houses. Use until you unlock the Large.",
+          "find": "Backpacks"
+        },
+        {
+          "name": "Small / Medium",
+          "note": "Starter kit."
+        }
+      ]
+    }
   ],
   "patchNotes": [
-    {"patch":"0.4.0.201","change":"RPG-7 nerfed; PKM can chamber a round; muzzle flash hiders work again."},
-    {"patch":"0.4.0.199","change":"Pistol recoil restored to intended values."},
-    {"patch":"0.4.0.182","change":"M82A1 lethality boosted; armor and helmets resist melee better; large medkits buffed."},
-    {"patch":"0.4.0.173","change":"Molotovs and incendiary grenades ignite instantly."}
+    {
+      "patch": "0.4.0.201",
+      "change": "RPG-7 nerfed; PKM can chamber a round; muzzle flash hiders work again."
+    },
+    {
+      "patch": "0.4.0.199",
+      "change": "Pistol recoil restored to intended values."
+    },
+    {
+      "patch": "0.4.0.182",
+      "change": "M82A1 lethality boosted; armor and helmets resist melee better; large medkits buffed."
+    },
+    {
+      "patch": "0.4.0.173",
+      "change": "Molotovs and incendiary grenades ignite instantly."
+    }
   ]
 }

@@ -15,7 +15,10 @@
           "loot": "Standard containers on the quieter side",
           "access": "None",
           "danger": "Other squads in Open Raids",
-          "tip": "Work the safer side first, then push toward the barges. Marker position is approximate."
+          "tip": "Work the safer side first, then push toward the barges. Marker position is approximate.",
+          "items": [
+            "General containers"
+          ]
         },
         {
           "x": 31.4,
@@ -25,7 +28,12 @@
           "loot": "Barge containers, military gear; small/big military crates on floating barges",
           "access": "Crate keys for the military crates",
           "danger": "Devourers guard the teleporters",
-          "tip": "Shotgun as secondary. Automatics burn too much ammo."
+          "tip": "Shotgun as secondary. Automatics burn too much ammo.",
+          "items": [
+            "Weapon crates",
+            "SMGs & pistols",
+            "Small military crate key"
+          ]
         },
         {
           "x": 46.4,
@@ -35,7 +43,10 @@
           "loot": "Route to the Weapon Barge",
           "access": "Port crane key",
           "danger": "Exposed travel between portals",
-          "tip": "Crane sits inside the barge gravity anomaly. Marker position is approximate."
+          "tip": "Crane sits inside the barge gravity anomaly. Marker position is approximate.",
+          "items": [
+            "Port crane key"
+          ]
         },
         {
           "x": 35.8,
@@ -45,7 +56,13 @@
           "loot": "Weapon crates; players report PKM, VAL, SVD",
           "access": "Port crane key + portal",
           "danger": "Devourers",
-          "tip": "Inside the \"Barge anomaly\" zone. Leave once you've hit it."
+          "tip": "Inside the \"Barge anomaly\" zone. Leave once you've hit it.",
+          "items": [
+            "Weapon crates",
+            "PKM",
+            "AS Val",
+            "SVD"
+          ]
         },
         {
           "x": 57.4,
@@ -55,7 +72,10 @@
           "loot": "Mixed containers to fill your pack on the way out",
           "access": "None",
           "danger": "Moderate",
-          "tip": "Top off here instead of detouring. Marker position is approximate."
+          "tip": "Top off here instead of detouring. Marker position is approximate.",
+          "items": [
+            "General containers"
+          ]
         },
         {
           "x": 26.0,
@@ -111,7 +131,10 @@
           "loot": "Many rifle and weapon crates",
           "access": "None",
           "danger": "Distorted packs",
-          "tip": "Clear only what blocks you. Save meds. Marker position is approximate."
+          "tip": "Clear only what blocks you. Save meds. Marker position is approximate.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 66.9,
@@ -121,7 +144,10 @@
           "loot": "Weapon crates",
           "access": "None",
           "danger": "Distorted packs",
-          "tip": "Check both before committing to barracks. Marker position is approximate."
+          "tip": "Check both before committing to barracks. Marker position is approximate.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 29.4,
@@ -131,7 +157,12 @@
           "loot": "2× AS Val, AKMs, mags (2F grate door)",
           "access": "Armory #1 key",
           "danger": "Distorted",
-          "tip": "Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F. Marker position is approximate."
+          "tip": "Key may spawn in the office opposite the barred room or a classroom. A classroom floor hole leads to 2F. Marker position is approximate.",
+          "items": [
+            "AS Val",
+            "AKM",
+            "Armory #1 key"
+          ]
         },
         {
           "x": 27.3,
@@ -141,7 +172,11 @@
           "loot": "Armory crates, same layout as #1",
           "access": "Armory #2 key",
           "danger": "Distorted on the upper floor",
-          "tip": "Same position as the armory in Barracks #1. Marker position is approximate."
+          "tip": "Same position as the armory in Barracks #1. Marker position is approximate.",
+          "items": [
+            "Weapon crates",
+            "Armory #2 key"
+          ]
         },
         {
           "x": 49.9,
@@ -151,7 +186,10 @@
           "loot": "Unconfirmed",
           "access": "Hangar 209 key",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 209 key"
+          ]
         },
         {
           "x": 49.9,
@@ -161,7 +199,10 @@
           "loot": "Unconfirmed",
           "access": "Hangar 148 key (Silent Observers raid only)",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 148 key"
+          ]
         },
         {
           "x": 62.2,
@@ -213,7 +254,10 @@
           "loot": "Rooftop loot",
           "access": "First entrance, climb to roof",
           "danger": "Devourers",
-          "tip": "Keep moving on the stairs. Marker position is approximate."
+          "tip": "Keep moving on the stairs. Marker position is approximate.",
+          "items": [
+            "General containers"
+          ]
         },
         {
           "x": 47.8,
@@ -223,7 +267,10 @@
           "loot": "Helicopter crates inside an anomaly",
           "access": "Climb the wall of House 2, drop to the other section",
           "danger": "Anomaly hazards",
-          "tip": "Main prize of the house route. Marker position is approximate."
+          "tip": "Main prize of the house route. Marker position is approximate.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 32.1,
@@ -233,7 +280,12 @@
           "loot": "Nearby event: helicopter ringed by Flowermen, or a checkpoint with weapon crates. Basement: high-tier loot",
           "access": "Lock actuator board for the basement",
           "danger": "Flowermen; the interior is deadly",
-          "tip": "Skip the interior if you're under-geared."
+          "tip": "Skip the interior if you're under-geared.",
+          "items": [
+            "Weapon crates",
+            "High-tier loot",
+            "Lock actuator board"
+          ]
         },
         {
           "x": 13.7,
@@ -243,7 +295,10 @@
           "loot": "Possible helicopter spawn",
           "access": "None",
           "danger": "Varies",
-          "tip": "Not every raid. Marker position is approximate."
+          "tip": "Not every raid. Marker position is approximate.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 75.8,
@@ -253,7 +308,10 @@
           "loot": "Unconfirmed",
           "access": "Cinema storage key",
           "danger": "Unknown",
-          "tip": ""
+          "tip": "",
+          "items": [
+            "Cinema storage key"
+          ]
         },
         {
           "x": 30.3,
@@ -263,7 +321,10 @@
           "loot": "Unconfirmed",
           "access": "Hangar 29 key",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 29 key"
+          ]
         },
         {
           "x": 68.3,
@@ -273,7 +334,10 @@
           "loot": "Unconfirmed",
           "access": "Hangar 35 key",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 35 key"
+          ]
         },
         {
           "x": 46.9,
@@ -341,7 +405,10 @@
           "loot": "Helicopter + three weapon crates (or ZIL convoy)",
           "access": "None",
           "danger": "Mines, Flowermen, Turned Soldiers",
-          "tip": "Approach slowly; watch for mines. Marker position is approximate."
+          "tip": "Approach slowly; watch for mines. Marker position is approximate.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 29.4,
@@ -351,7 +418,11 @@
           "loot": "Two ZIL trucks, 2–3 crates of weapons and meds",
           "access": "None",
           "danger": "Low–moderate",
-          "tip": "On the road by the Fire Station. Quick, low-commitment stop. Marker position is approximate."
+          "tip": "On the road by the Fire Station. Quick, low-commitment stop. Marker position is approximate.",
+          "items": [
+            "Weapon crates",
+            "Medical supplies"
+          ]
         },
         {
           "x": 58.7,
@@ -361,7 +432,10 @@
           "loot": "Boss encounter",
           "access": "Mostly with the Overgrowth modifier",
           "danger": "Boss",
-          "tip": "Only engage with a full kit. Marker position is approximate."
+          "tip": "Only engage with a full kit. Marker position is approximate.",
+          "items": [
+            "Boss"
+          ]
         },
         {
           "x": 74.9,
@@ -371,7 +445,10 @@
           "loot": "Safe spot: Swarms can't sting inside",
           "access": "None",
           "danger": "Low",
-          "tip": "Duck in here to heal when Swarms are out."
+          "tip": "Duck in here to heal when Swarms are out.",
+          "items": [
+            "Safe from Swarms"
+          ]
         },
         {
           "x": 77.9,
@@ -439,7 +516,10 @@
           "loot": "Two crates near the rear section",
           "access": "Oxygen",
           "danger": "Drowning",
-          "tip": "From the tail, crates are on the left; from the cockpit, on the right. Marker position is approximate; not yet confirmed on this map."
+          "tip": "From the tail, crates are on the left; from the cockpit, on the right. Marker position is approximate; not yet confirmed on this map.",
+          "items": [
+            "Weapon crates"
+          ]
         },
         {
           "x": 39.5,
@@ -449,7 +529,10 @@
           "loot": "Houses lifted by gravity anomalies",
           "access": "Usually a nearby portal",
           "danger": "Anomalies",
-          "tip": "Find the portal first. Marker position is approximate; not yet confirmed on this map."
+          "tip": "Find the portal first. Marker position is approximate; not yet confirmed on this map.",
+          "items": [
+            "General containers"
+          ]
         },
         {
           "x": 56,
@@ -459,7 +542,10 @@
           "loot": "Unconfirmed",
           "access": "Matching attic key",
           "danger": "Unknown",
-          "tip": "Keys come from the Keys fuse recipe. Marker position is approximate; not yet confirmed on this map."
+          "tip": "Keys come from the Keys fuse recipe. Marker position is approximate; not yet confirmed on this map.",
+          "items": [
+            "Shegolskoe attic keys (#4, #8, #11, #15)"
+          ]
         },
         {
           "x": 33.5,
@@ -469,7 +555,10 @@
           "loot": "Institute objective",
           "access": "Room key (3F apartment building, north)",
           "danger": "Unknown",
-          "tip": "3rd floor of the apartment building on the north side."
+          "tip": "3rd floor of the apartment building on the north side.",
+          "items": [
+            "Room key"
+          ]
         },
         {
           "x": 66.3,
@@ -498,7 +587,11 @@
           "loot": "Full rosin barrel + high-tier loot",
           "access": "Lock actuator board",
           "danger": "Flowermen, mines, Devourers",
-          "tip": "Needed for the Rosin Stockpile objective. Marker position is approximate."
+          "tip": "Needed for the Rosin Stockpile objective. Marker position is approximate.",
+          "items": [
+            "High-tier loot",
+            "Lock actuator board"
+          ]
         },
         {
           "x": 68.3,
@@ -508,7 +601,11 @@
           "loot": "Equipment",
           "access": "East storage key",
           "danger": "Moderate",
-          "tip": "Grab the key from the director's office first. Marker position is approximate."
+          "tip": "Grab the key from the director's office first. Marker position is approximate.",
+          "items": [
+            "Equipment",
+            "East storage key"
+          ]
         },
         {
           "x": 38.9,
@@ -518,7 +615,11 @@
           "loot": "Lots of containers",
           "access": "None",
           "danger": "Early player traffic; heavy monster presence on the dam",
-          "tip": "Good group target."
+          "tip": "Good group target.",
+          "items": [
+            "General containers",
+            "Safes & valuables"
+          ]
         },
         {
           "x": 57.1,
@@ -528,7 +629,13 @@
           "loot": "Captain's safe: AKS-74U, Molotovs, ammo, log page",
           "access": "Captain's key (from the Factory roof crate)",
           "danger": "Water approach",
-          "tip": "Front half of the sunken ship south of the dam. Marker position is approximate."
+          "tip": "Front half of the sunken ship south of the dam. Marker position is approximate.",
+          "items": [
+            "Safes & valuables",
+            "Captain's key",
+            "AKS-74U",
+            "Molotovs"
+          ]
         },
         {
           "x": 34.8,
@@ -538,7 +645,10 @@
           "loot": "East storage key on the desk",
           "access": "None",
           "danger": "Moderate",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "East storage key"
+          ]
         },
         {
           "x": 50.5,
@@ -594,7 +704,11 @@
           "loot": "Unconfirmed",
           "access": "Hangar 17 / Hangar 18 keys",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 17 key",
+            "Hangar 18 key"
+          ]
         },
         {
           "x": 42.3,
@@ -604,7 +718,11 @@
           "loot": "Garages here are a known spot for hiking and climbing backpacks; Captain's key crate is on the Factory roof",
           "access": "None",
           "danger": "Turned Soldiers, tight corridors",
-          "tip": "Grab the Captain's key for the Dam safe. Marker position is approximate."
+          "tip": "Grab the Captain's key for the Dam safe. Marker position is approximate.",
+          "items": [
+            "Backpacks",
+            "Captain's key"
+          ]
         },
         {
           "x": 25.3,
@@ -643,7 +761,10 @@
           "loot": "Unconfirmed",
           "access": "Hangar 84 key",
           "danger": "Unknown",
-          "tip": "Labeled on the in-game map."
+          "tip": "Labeled on the in-game map.",
+          "items": [
+            "Hangar 84 key"
+          ]
         },
         {
           "x": 54.6,
@@ -672,7 +793,11 @@
           "loot": "Weapon crates, equipment",
           "access": "None",
           "danger": "Enclosed fights",
-          "tip": "Quiet solo option."
+          "tip": "Quiet solo option.",
+          "items": [
+            "Weapon crates",
+            "Equipment"
+          ]
         },
         {
           "x": 28,
@@ -682,7 +807,11 @@
           "loot": "Weapon crates, equipment",
           "access": "None",
           "danger": "Enclosed fights",
-          "tip": "Driver's first aid kits are common on the southern edge."
+          "tip": "Driver's first aid kits are common on the southern edge.",
+          "items": [
+            "Weapon crates",
+            "Medical supplies"
+          ]
         },
         {
           "x": 62,
@@ -692,7 +821,10 @@
           "loot": "Safes and valuables",
           "access": "None",
           "danger": "Moderate",
-          "tip": ""
+          "tip": "",
+          "items": [
+            "Safes & valuables"
+          ]
         },
         {
           "x": 85,
@@ -702,7 +834,11 @@
           "loot": "Weapon crates, grenades",
           "access": "None",
           "danger": "Open sightlines",
-          "tip": ""
+          "tip": "",
+          "items": [
+            "Weapon crates",
+            "Grenades & consumables"
+          ]
         },
         {
           "x": 82,
@@ -712,7 +848,11 @@
           "loot": "Ammo, grenades, smoke",
           "access": "None",
           "danger": "Low",
-          "tip": "Sweep the road after a bunker."
+          "tip": "Sweep the road after a bunker.",
+          "items": [
+            "Grenades & consumables",
+            "Car trunks"
+          ]
         }
       ],
       "links": [
@@ -748,7 +888,11 @@
           "loot": "Weapon crates; backpacks around the trains",
           "access": "None",
           "danger": "Exposure while climbing",
-          "tip": "Open the backpacks: keys and valuables. Marker position is approximate."
+          "tip": "Open the backpacks: keys and valuables. Marker position is approximate.",
+          "items": [
+            "Weapon crates",
+            "Keys (random)"
+          ]
         },
         {
           "x": 57.4,
@@ -758,7 +902,10 @@
           "loot": "Floors of offices",
           "access": "None",
           "danger": "Room-to-room fights",
-          "tip": "Better as a team."
+          "tip": "Better as a team.",
+          "items": [
+            "Safes & valuables"
+          ]
         },
         {
           "x": 41.0,
@@ -768,7 +915,10 @@
           "loot": "Trunk loot",
           "access": "None",
           "danger": "Police/SWAT",
-          "tip": "Marker position is approximate."
+          "tip": "Marker position is approximate.",
+          "items": [
+            "Car trunks"
+          ]
         },
         {
           "x": 79.9,
@@ -826,7 +976,10 @@
           "loot": "Access to the underground lab",
           "access": "Underground laboratory key (Sokolov's suitcase, truck)",
           "danger": "Flowermen, Dendroids",
-          "tip": "Entrances: south planter grate and north-central stairs of the Greenhouse; also the Restaurant kitchen door."
+          "tip": "Entrances: south planter grate and north-central stairs of the Greenhouse; also the Restaurant kitchen door.",
+          "items": [
+            "Underground laboratory key"
+          ]
         },
         {
           "x": 49.2,
@@ -836,7 +989,11 @@
           "loot": "Reagents, several weapon crates",
           "access": "Lock actuator board",
           "danger": "Flowermen, Dendroids",
-          "tip": "At the south end of the underground lab. Fire works well here. Marker position is approximate."
+          "tip": "At the south end of the underground lab. Fire works well here. Marker position is approximate.",
+          "items": [
+            "Weapon crates",
+            "Lock actuator board"
+          ]
         },
         {
           "x": 38.9,
@@ -846,7 +1003,12 @@
           "loot": "Armory, AM vault",
           "access": "Armory key (Turned Soldier on lab steps), AM vault key (lab loot)",
           "danger": "High",
-          "tip": "Marker position is approximate."
+          "tip": "Marker position is approximate.",
+          "items": [
+            "Armory key",
+            "AM vault key",
+            "Active Matter"
+          ]
         },
         {
           "x": 34.2,
@@ -856,7 +1018,10 @@
           "loot": "Active Matter, creature parts",
           "access": "None",
           "danger": "Waking the nest",
-          "tip": "Leave lure flowers until you're ready. Marker position is approximate."
+          "tip": "Leave lure flowers until you're ready. Marker position is approximate.",
+          "items": [
+            "Active Matter"
+          ]
         },
         {
           "x": 70.6,
@@ -918,7 +1083,12 @@
           "loot": "60× Active Matter, 11× Fragment, 4× weapon crates",
           "access": "Storage room key (random world loot here)",
           "danger": "Getting lost",
-          "tip": "Run it in cheap gear until you know the landmarks."
+          "tip": "Run it in cheap gear until you know the landmarks.",
+          "items": [
+            "Active Matter",
+            "Weapon crates",
+            "Storage room key"
+          ]
         }
       ],
       "links": []
