@@ -581,5 +581,86 @@
       "patch": "0.4.0.173",
       "change": "Molotovs and incendiary grenades ignite instantly."
     }
-  ]
+  ],
+  "mods": {
+    "order": [
+      {
+        "slot": "Suppressor / muzzle",
+        "why": "Gunfire wakes Distorted and Flowermen and gives you away to players. A suppressor keeps fights small, and its weight and volume cost is tiny. Flash hiders hide your muzzle flash again since 0.4.0.201.",
+        "picks": [
+          "Mini 556 or VZ1: light, for 5.56 rifles",
+          "BN45: strongest common suppressor for SMGs",
+          "M110A1 QD: for the M110A1 marksman build"
+        ]
+      },
+      {
+        "slot": "Optic",
+        "why": "Match it to the range you fight at. Higher zoom adds weight and volume and slows aiming.",
+        "picks": [
+          "Close range: EXPS3 or M68 CCO collimator; PK-06 is the lightest",
+          "All-round: LPVO 101 (1–6×)",
+          "Mid range: TA31 or UTG T4 (4×)",
+          "Long range: 1P69 (6×) or SAB PM2 (4×/10×)",
+          "Night, fog or smoke: S350F thermal"
+        ]
+      },
+      {
+        "slot": "Stock",
+        "why": "The biggest recoil and aim-recovery change you can make. Light stocks recover aim faster; heavy ones cut more recoil but slow ADS.",
+        "picks": [
+          "F-Def GLC: best weight-to-recoil for AR-pattern rifles",
+          "MP PRS: most recoil reduction, slower aim",
+          "AK Tactical or PT-3: AK recoil",
+          "B-Link: mobility"
+        ]
+      },
+      {
+        "slot": "Light & laser",
+        "why": "Useful indoors and at night. Since 0.4.0.196 the flashlight and laser toggle separately (both on L by default; rebind one).",
+        "picks": [
+          "Run a flashlight for dark interiors",
+          "Laser for hipfire on SMGs and shotguns"
+        ]
+      },
+      {
+        "slot": "Grip",
+        "why": "Small handling tweak. Fit one if the slot is free; don't spend much on it.",
+        "picks": [
+          "F-Def RTK angled, Gunslinger and Kuvalda grips are available"
+        ]
+      },
+      {
+        "slot": "Magazine",
+        "why": "Most mags differ only in looks; capacity is what matters. Take the standard mag unless a bigger one is available.",
+        "picks": [
+          "M4 and M4A1 mags have the same stats"
+        ]
+      }
+    ],
+    "builds": [
+      {
+        "role": "Close quarters (SMG / shotgun)",
+        "build": "Suppressor, collimator, light stock, laser. Keep it light for fast aim."
+      },
+      {
+        "role": "All-round assault rifle",
+        "build": "Suppressor, LPVO or 4× scope, F-Def GLC stock, flashlight."
+      },
+      {
+        "role": "Marksman (M110A1, SVDM)",
+        "build": "QD suppressor, 6× or 10× scope, heavier stock for recoil. Thermal for night raids."
+      },
+      {
+        "role": "Secondary weapon",
+        "build": "Keep it light. Save heavy mods for your primary."
+      }
+    ],
+    "tips": [
+      "You can only change mods in the Shelter (inventory or weapon wall).",
+      "Right-click a gun and choose Buy Ammunition and Mods to see only parts that fit.",
+      "If you die with a gun, its mods are lost with it.",
+      "Test builds in the Shelter shooting range before a raid.",
+      "Bulky optics and stocks cost volume you could use for loot."
+    ]
+  }
 }

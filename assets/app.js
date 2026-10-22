@@ -189,7 +189,7 @@ function drawTiers() {
     const list = ws.filter(w => w.tier === t); if (!list.length) return "";
     return `<div class="tierrow" data-t="${t}"><div class="tierlabel">${t === "?" ? "–" : t}</div><div class="tiercards">` + list.map(w =>
       `<div class="wcard"><div class="top"><b>${esc(w.name)}</b><span class="cls">${esc(w.class)}</span></div>` +
-      `<div class="votes">${Object.entries(w.tiers).map(([s, v]) => `<a class="vote" href="${esc(srcs[s]?.url || "#")}" target="_blank" rel="noopener" title="${esc(srcs[s]?.name || s)}">${esc((srcs[s]?.name || s).replace(/\..*$/, ""))} <b>${esc(v)}</b></a>`).join("") || `<span class="vote">unranked</span>`}</div>` +
+      `<div class="votes">${Object.entries(w.tiers).map(([s, v]) => `<span class="vote">${esc((srcs[s]?.name || s).replace(/\..*$/, ""))} <b>${esc(v)}</b></span>`).join("") || `<span class="vote">unranked</span>`}</div>` +
       `<p>${esc(w.why)}</p><button class="findlink" data-find="${esc(w.name)}" hidden>Find on map →</button></div>`).join("") + `</div></div>`;
   }).join("");
   refreshFindLinks();
@@ -203,6 +203,12 @@ getJSON("data/tiers.json").then(data => {
   drawTiers();
   document.getElementById("patchbox").innerHTML = `<h3>Recent balance changes</h3><ul>` +
     (data.patchNotes || []).map(p => `<li><b>${esc(p.patch)}</b> — ${esc(p.change)}</li>`).join("") + `</ul>`;
+  const md = data.mods;
+  if (md) document.getElementById("mods").innerHTML =
+    `<p class="keynote">Fit mods in this order when credits are tight.</p><ol class="modlist">` +
+    md.order.map(o => `<li><h3>${esc(o.slot)}</h3><p>${esc(o.why)}</p><ul>${o.picks.map(p => `<li>${esc(p)}</li>`).join("")}</ul></li>`).join("") + `</ol>` +
+    `<div class="modbuilds"><h3>Builds by role</h3><table class="data"><tbody>${md.builds.map(b => `<tr><td>${esc(b.role)}</td><td>${esc(b.build)}</td></tr>`).join("")}</tbody></table></div>` +
+    `<div class="rules"><h3>Modding tips</h3><ul>${md.tips.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>`;
   document.getElementById("lootcols").innerHTML = (data.loot || []).map((b, i) =>
     `<div class="bucket" data-b="${i}"><h3>${esc(b.bucket)}</h3><ul>` + b.items.map(it => `<li><b>${esc(it.name)}</b><span>${esc(it.why)}</span>${it.find ? `<button class="findlink" data-find="${esc(it.find)}" hidden>Find on map →</button>` : ""}</li>`).join("") + `</ul></div>`).join("");
   document.getElementById("gearcols").innerHTML = (data.gear || []).map(g =>
@@ -283,18 +289,32 @@ document.addEventListener("click", e => {
 /* ---------- Threats ---------- */
 let THREATS = null, tCounter = "";
 const tq = document.getElementById("threatq");
+const openThreats = new Set();
 function drawThreats() {
   const q = tq.value.trim().toLowerCase();
   const list = THREATS.threats.filter(t => (!tCounter || t.counters.includes(tCounter)) && (!q || JSON.stringify(t).toLowerCase().includes(q)));
+  document.getElementById("threatcount").textContent = `${list.length} of ${THREATS.threats.length}`;
   document.getElementById("threatcards").innerHTML = list.map(t =>
-    `<article class="tcard" data-kind="${esc(t.kind)}"><div class="ttop"><h3>${esc(t.name)}</h3><span class="kind">${esc(t.kind)}</span></div>` +
-    `<div class="danger" aria-label="Danger ${t.danger} of 4">${[1, 2, 3, 4].map(k => `<i class="${k <= t.danger ? "on" : ""}"></i>`).join("")}<span>Danger</span></div>` +
-    `<p class="does">${esc(t.does)}</p><div class="eyebrow">How to beat it</div><ul>${t.beat.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` +
-    `<div class="tcounters">${t.counters.map(c => `<span class="cchip">${esc(c)}</span>`).join("")}</div>` +
+    `<details class="tcard" data-kind="${esc(t.kind)}" data-name="${esc(t.name)}"${openThreats.has(t.name) ? " open" : ""}>` +
+    `<summary><div class="ttop"><h3>${esc(t.name)}</h3><span class="kind">${esc(t.kind)}</span></div>` +
+    `<div class="tsum"><div class="danger" aria-label="Danger ${t.danger} of 4">${[1, 2, 3, 4].map(k => `<i class="${k <= t.danger ? "on" : ""}"></i>`).join("")}</div>` +
+    `<div class="tcounters">${t.counters.map(c => `<span class="cchip">${esc(c)}</span>`).join("")}</div></div></summary>` +
+    `<div class="tbody"><p class="does">${esc(t.does)}</p><div class="eyebrow">How to beat it</div><ul>${t.beat.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` +
     `<p class="drops"><b>Drops:</b> ${esc(t.drops)}</p>` +
     (t.where.length ? `<div class="twhere">Seen on: ${t.where.map(id => { const m = MAPS.find(x => x.id === id); return m ? `<button data-gomap="${id}">${esc(m.name)}</button>` : ""; }).join("")}</div>` : "") +
-    `</article>`).join("") || `<p class="unk">No threats match.</p>`;
+    `</div></details>`).join("") || `<p class="unk">No threats match.</p>`;
+  document.querySelectorAll("#threatcards details").forEach(d => d.addEventListener("toggle", () => { d.open ? openThreats.add(d.dataset.name) : openThreats.delete(d.dataset.name); syncExpand(); }));
+  syncExpand();
 }
+function syncExpand() {
+  const ds = [...document.querySelectorAll("#threatcards details")];
+  document.getElementById("expandall").textContent = ds.length && ds.every(d => d.open) ? "Collapse all" : "Expand all";
+}
+document.getElementById("expandall").addEventListener("click", () => {
+  const ds = [...document.querySelectorAll("#threatcards details")], open = !ds.every(d => d.open);
+  ds.forEach(d => { d.open = open; open ? openThreats.add(d.dataset.name) : openThreats.delete(d.dataset.name); });
+  syncExpand();
+});
 getJSON("data/threats.json").then(data => {
   THREATS = data;
   document.getElementById("threatStamp").textContent = data.updated || "";

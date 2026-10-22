@@ -198,3 +198,27 @@ footer.src{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;fon
 .fcount{font-size:11px;color:var(--muted)}
 .fgroup .itemchips{padding-bottom:6px}
 .fnote{flex-basis:100%;font-size:13px;color:var(--fg);margin-top:4px;max-width:80ch}
+
+/* compact threats */
+.threatgrid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));align-items:start}
+.tcard{padding:0;gap:0}
+.tcard summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;gap:6px}
+.tcard summary::-webkit-details-marker{display:none}
+.tcard .ttop h3{font-size:15px}
+.tcard .ttop{position:relative;padding-right:18px}
+.tcard .ttop::after{content:"+";position:absolute;right:0;top:-2px;font-size:16px;color:var(--accent)}
+.tcard[open] .ttop::after{content:"−"}
+.tsum{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.tsum .danger i{width:12px;height:4px}
+.tcard .cchip{font-size:10.5px;padding:1px 6px}
+.tbody{display:grid;gap:8px;padding:0 12px 12px;border-top:1px solid var(--line);padding-top:10px}
+.threatbar{display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px}
+.threatbar button{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);background:var(--panel);color:var(--accent);padding:5px 10px;border-radius:3px;cursor:pointer}
+/* mods */
+.modlist{list-style:none;counter-reset:mod;margin:10px 0 0;padding:0;display:grid;gap:14px}
+.modlist>li{counter-increment:mod;display:grid;grid-template-columns:40px 1fr;column-gap:12px;border-top:1px solid var(--line);padding-top:12px}
+.modlist>li::before{content:counter(mod);grid-row:span 3;font-family:var(--f-display);font-weight:700;font-size:26px;color:var(--accent);line-height:1}
+.modlist p{margin:4px 0 6px;color:var(--muted);max-width:75ch}
+.modlist ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:14px}
+.modbuilds{margin-top:22px;overflow-x:auto}
+.modbuilds td:first-child{white-space:normal;min-width:150px}

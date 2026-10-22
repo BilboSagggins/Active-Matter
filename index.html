@@ -30,10 +30,11 @@
 
   <section class="view" id="tiers" role="tabpanel" aria-labelledby="tab-tiers" hidden>
     <h2>What to Prioritize</h2>
-    <p class="lede">Weapon tiers blended from three community tier lists, what to keep in your bag, and which gear to chase. Updated <span id="tierStamp"></span>.</p>
+    <p class="lede">Weapon tiers, which mods to fit first, what to keep in your bag, and which gear to chase. Updated <span id="tierStamp"></span>.</p>
 
     <div class="subtabs" role="tablist" aria-label="Priority lists">
       <button role="tab" aria-selected="true" data-sub="pw">Weapons</button>
+      <button role="tab" aria-selected="false" data-sub="pm">Mods</button>
       <button role="tab" aria-selected="false" data-sub="pl">Loot</button>
       <button role="tab" aria-selected="false" data-sub="pg">Gear</button>
     </div>
@@ -42,10 +43,11 @@
       <div class="keytools">
         <select id="wclass" aria-label="Filter by weapon class"></select>
       </div>
-      <p class="keynote">The tier is the average of the lists that rank a weapon. The small letters show each list's call, so you can see where they disagree.</p>
+      <p class="keynote">Each tier blends several community tier lists. The small letters show how each list ranked the weapon, so you can see where they disagree.</p>
       <div class="tierboard" id="tierboard"></div>
       <div class="patchbox" id="patchbox"></div>
     </div>
+    <div id="pm" class="subview" hidden><div id="mods"></div></div>
     <div id="pl" class="subview" hidden><div class="lootcols" id="lootcols"></div></div>
     <div id="pg" class="subview" hidden><div class="gearcols" id="gearcols"></div></div>
   </section>
@@ -157,6 +159,7 @@
     <div class="rules"><h3>Rules of thumb</h3><ul id="rules"></ul></div>
     <div class="keytools"><input id="threatq" type="search" placeholder="Search threats…" aria-label="Search threats"></div>
     <div class="filters" id="countchips" aria-label="Filter by counter"></div>
+    <div class="threatbar"><span id="threatcount" class="eyebrow"></span><button id="expandall" type="button">Expand all</button></div>
     <div class="threatgrid" id="threatcards"></div>
   </section>
 
