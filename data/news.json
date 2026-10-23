@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-23T13:00:43.401Z",
+  "updated": "2026-10-23T16:52:49.552Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-23",
+      "title": "Test your perception",
+      "kind": "news",
+      "summary": "Operatives, time to test your attention to detail! The Agency has received two images of the same location, but the details don’t match. Spot five differences and report your findings in the comments. Take your time: some changes are easy to miss! [img src=\" [img src=\"",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114036982"
+    },
     {
       "date": "2026-10-23",
       "title": "Extinguish on Sight: Firestorm",
@@ -190,13 +197,6 @@
       "kind": "patch",
       "summary": "Improved performance, reworked several animations, fixed multiple bugs, and delivered important updates to the user interface and sound. Gameplay and Balance Fixed an issue that displayed an incorrect magazine round count when spawning into a raid. Fixed an animation glitch that could interrupt reloads.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010491563"
-    },
-    {
-      "date": "2026-09-15",
-      "title": "Active Matter Is Now Available On PC",
-      "kind": "news",
-      "summary": "Operatives, the door to the Multiverse is open! Active Matter is out now on Steam! If you purchased the early version from the Gaijin Store, you can get the Steam edition at no extra cost until November 23rd. New Harmonization Cycle With the release, the next Harmonization Cycle begins, featuring new rewards.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704000"
     }
   ]
 }
