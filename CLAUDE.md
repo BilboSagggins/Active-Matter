@@ -13,7 +13,7 @@ These instructions are the single source of truth for the scheduled update run. 
 - `data/keys.json` — keys: `name, map, opens, found, craft, uses, loot, source`. Unknowns are `"?"` or `"Unconfirmed"`.
 - `data/tiers.json` — `weapons` (tiers from several community lists in `sources`), `patchNotes`, `mods` (attachment slot priority, picks, builds by role, tips), `loot` (priority buckets), `gear` (plates, helmets, backpacks, rigs, safe containers, other ways to get gear).
 - `data/progress.json` — progression: `route` (ordered suggested steps; optional `find` links to a gear-finder item), `spending` tips, `currencies`, `monolith` levels (`level, tokens, needs, unlocks`), `reset` (what a new Personal Timeline keeps/loses), `investigations` (`name, cat, level, tokens`, optional `pick` = why it's worth doing early, optional `after` for chained ones).
-- `data/builds.json` — `skills` (how the level-up skill tree works, priorities by goal, Agency investigations), `chrono` (`how`, `tiered` chronogenes with I/II/III values, `abilities`), `builds` (4-slot chronogene builds with `swap`, `sleeve`, `why`), `tips`.
+- `data/builds.json` — `skills` (how the level-up skill tree works, priorities by goal, Agency investigations), `chrono` (`how`, `tiered` chronogenes with I/II/III values, `abilities`, `remains` = which creature remains fuse into which chronogenes: `source, threat` (exact name in threats.json), `item, rolls` ([chronogene tier, % chance]), `pristine` (signature chronogene), `url`; plus `remainsHow`), `builds` (4-slot chronogene builds with `swap`, `sleeve`, `why`), `tips`.
 - `data/threats.json` — monsters and anomalies: `name, kind, danger (1–4), counters, where (map ids from loot.json), does, beat, drops`, plus `rules`.
 - `data/last-run.json` — `{ "date": "YYYY-MM-DD", "model": "...", "changed": true|false }`. Written by every scheduled run so the backup run knows the update already happened.
 - `data/news.json` — **don't touch**; the `Update news` GitHub Action refreshes it from Steam.
@@ -32,7 +32,7 @@ These instructions are the single source of truth for the scheduled update run. 
    - Improve `common` notes when better info appears on where backpacks, rigs, plates, helmets or meds spawn, and tag confirmed hotspots.
 4. **tiers.json**: move weapons after buffs/nerfs if warranted, note the patch in the weapon's `why`, and add it to `patchNotes`. Update `mods` when attachments are added or rebalanced. Update loot priority and gear details when uses, stats or values change.
 5. **threats.json**: add new monsters/anomalies, update behavior or counters that patches changed, note drop buffs.
-   **builds.json**: add new chronogenes or skill-tree details, correct tier values when patches change them, and update the builds if a chronogene or body sleeve is buffed, nerfed or added.
+   **builds.json**: add new chronogenes or skill-tree details, new remains or changed roll chances, correct tier values when patches change them, and update the builds if a chronogene or body sleeve is buffed, nerfed or added.
    **progress.json**: fill in Monolith levels beyond Epsilon as they're documented, correct token costs and unlocks, add new investigations, and adjust the route and starred picks when patches change what's worth doing first.
 6. Set `updated` to today's date in each file you change. Validate every file parses as JSON.
 7. Only add facts backed by a source you read. Paraphrase; don't copy text. If nothing new was found, change nothing.

@@ -305,6 +305,7 @@ function drawThreats() {
     `<div class="tcounters">${t.counters.map(c => `<span class="cchip">${esc(c)}</span>`).join("")}</div></div></summary>` +
     `<div class="tbody"><p class="does">${esc(t.does)}</p><div class="eyebrow">How to beat it</div><ul>${t.beat.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` +
     `<p class="drops"><b>Drops:</b> ${esc(t.drops)}</p>` +
+    ((r => r ? `<p class="drops"><b>Remains fuse into:</b> ${[...new Set(r.rolls.map(([c]) => base(c)))].map(esc).join(", ")}. Pristine: ${esc(r.pristine)} II/III.</p>` : "")((BUILDS?.chrono?.remains || []).find(r => r.threat === t.name))) +
     (t.where.length ? `<div class="twhere">Seen on: ${t.where.map(id => { const m = MAPS.find(x => x.id === id); return m ? `<button data-gomap="${id}">${esc(m.name)}</button>` : ""; }).join("")}</div>` : "") +
     `</div></details>`).join("") || `<p class="unk">No threats match.</p>`;
   document.querySelectorAll("#threatcards details").forEach(d => d.addEventListener("toggle", () => { d.open ? openThreats.add(d.dataset.name) : openThreats.delete(d.dataset.name); syncExpand(); }));
@@ -386,6 +387,23 @@ getJSON("data/progress.json").then(d => {
 
 /* ---------- Builds ---------- */
 let BUILDS = null, chTag = "";
+const base = s => s.replace(/ (I|II|III)$/, "");
+function sourcesFor(name) {
+  const R = BUILDS?.chrono?.remains || [];
+  const from = R.filter(r => r.rolls.some(([c]) => base(c) === name)).map(r => r.source);
+  const pr = R.filter(r => r.pristine === name).map(r => r.source);
+  return { from, pr };
+}
+function drawRemains() {
+  const q = document.getElementById("remq").value.trim().toLowerCase();
+  const list = BUILDS.chrono.remains.filter(r => !q || JSON.stringify(r).toLowerCase().includes(q));
+  document.getElementById("remains").innerHTML = list.map(r =>
+    `<div class="remcard"><div class="ttop"><h3>${esc(r.source)}</h3><span class="kind">${esc(r.item)}</span></div>` +
+    `<ul class="rolls">${r.rolls.map(([c, p]) => `<li${q && c.toLowerCase().includes(q) ? ' class="hit"' : ""}><span>${esc(c)}</span><span class="pct"><i style="width:${Math.min(100, p * 1.6)}%"></i>${p}%</span></li>`).join("")}</ul>` +
+    `<p class="pris"><b>Pristine:</b> ${esc(r.pristine)} II (90%) or III (10%)</p>` +
+    (r.note ? `<p class="invwhy">${esc(r.note)}</p>` : "") +
+    (r.threat ? `<button class="findlink" data-threat="${esc(r.threat)}">How to kill it →</button>` : "") + `</div>`).join("") || `<p class="unk">Nothing matches.</p>`;
+}
 function drawChrono() {
   const q = document.getElementById("chq").value.trim().toLowerCase();
   const ok = c => (!chTag || c.tag === chTag) && (!q || JSON.stringify(c).toLowerCase().includes(q));
@@ -394,13 +412,16 @@ function drawChrono() {
   document.getElementById("abcount").textContent = ab.length;
   document.getElementById("stcount").textContent = tr.length;
   document.getElementById("abilities").innerHTML = ab.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span></li>`).join("") || `<li class="unk">None match.</li>`;
-  document.getElementById("tiered").innerHTML = tr.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span><div class="tiers3">${c.t.map((v, i) => `<span><i>${["I", "II", "III"][i]}</i>${esc(v)}</span>`).join("")}</div></li>`).join("") || `<li class="unk">None match.</li>`;
+  document.getElementById("tiered").innerHTML = tr.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span>${(s => s.from.length || s.pr.length ? `<span class="fromline">From: ${[...s.from.map(x => esc(x)), ...s.pr.filter(x => !s.from.includes(x)).map(x => esc(x) + " (pristine)")].join(", ")}${s.pr.length ? ` · Tier III via pristine ${s.pr.map(esc).join(", ")}` : ""}</span>` : "")(sourcesFor(c.name))}<div class="tiers3">${c.t.map((v, i) => `<span><i>${["I", "II", "III"][i]}</i>${esc(v)}</span>`).join("")}</div></li>`).join("") || `<li class="unk">None match.</li>`;
 }
 getJSON("data/builds.json").then(d => {
   BUILDS = d;
   document.getElementById("builds").innerHTML = d.builds.map(b => `<details class="tcard build"><summary><div class="ttop"><h3>${esc(b.name)}</h3></div><div class="bslots">${b.slots.map(x => `<span>${esc(x)}</span>`).join("")}</div></summary>` +
     `<div class="tbody"><p class="does">${esc(b.why)}</p><dl class="bdl"><dt>Swap in</dt><dd>${esc(b.swap)}</dd><dt>Body sleeve</dt><dd>${esc(b.sleeve)}</dd></dl></div></details>`).join("");
   document.getElementById("btips").innerHTML = d.tips.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("remhow").innerHTML = (d.chrono.remainsHow || []).map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("remq").addEventListener("input", drawRemains);
+  drawRemains();
   document.getElementById("chhow").innerHTML = d.chrono.how.map(x => `<li>${esc(x)}</li>`).join("");
   document.getElementById("skhow").innerHTML = d.skills.how.map(x => `<li>${esc(x)}</li>`).join("");
   document.getElementById("skpri").innerHTML = d.skills.priorities.map(p => `<tr><td>${esc(p.goal)}</td><td>${esc(p.pick)}</td></tr>`).join("");
@@ -412,3 +433,13 @@ getJSON("data/builds.json").then(d => {
   document.getElementById("chq").addEventListener("input", drawChrono);
   drawChrono();
 }).catch(e => { document.getElementById("builds").textContent = "Couldn't load build data: " + e.message; });
+
+/* threat links from remains + remains line on threat cards */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-threat]"); if (!t) return;
+  show("threats"); history.replaceState(null, "", "#threats");
+  tq.value = t.dataset.threat; tCounter = "";
+  document.querySelectorAll("#countchips [data-c]").forEach(x => x.setAttribute("aria-pressed", x.dataset.c === ""));
+  openThreats.add(t.dataset.threat); drawThreats();
+  document.getElementById("threatcards").scrollIntoView({ block: "start" });
+});

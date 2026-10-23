@@ -267,3 +267,15 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 .tipwide{grid-column:1/-1}
 .tipwide ul{columns:2 320px;column-gap:28px;display:block}
 .tipwide li{break-inside:avoid;margin-bottom:8px}
+
+/* remains */
+.remcard{border:1px solid var(--line);border-left:4px solid var(--anom);border-radius:4px;background:var(--panel);padding:12px;display:grid;gap:8px;align-content:start;min-width:0}
+.remcard .ttop h3{font-size:15px}
+.rolls{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.rolls li{display:grid;grid-template-columns:1fr 92px;gap:8px;align-items:center;font-size:13.5px}
+.rolls li.hit span:first-child{color:var(--accent);font-weight:600}
+.pct{position:relative;font-family:var(--f-mono);font-size:11.5px;text-align:right;padding:1px 4px;border-radius:2px;background:var(--bg);overflow:hidden;font-variant-numeric:tabular-nums}
+.pct i{position:absolute;inset:0 auto 0 0;background:var(--anom-soft)}
+.pct{z-index:0}.pct i{z-index:-1}
+.pris{margin:0;font-size:13px}
+.fromline{display:block;font-size:12.5px;color:var(--anom);margin-top:3px}
