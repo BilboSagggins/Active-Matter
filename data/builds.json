@@ -46,7 +46,8 @@
           "+25%",
           "+40%"
         ],
-        "what": "Active Matter gathering speed"
+        "what": "Active Matter gathering speed",
+        "detail": "Collect Active Matter faster, so you spend less time exposed at nests and deposits."
       },
       {
         "name": "Breath Control",
@@ -56,7 +57,8 @@
           "+1.5s",
           "+3.0s"
         ],
-        "what": "Hold breath longer while aiming"
+        "what": "Hold breath longer while aiming",
+        "detail": "Hold your breath longer while aiming down sights for steadier long shots."
       },
       {
         "name": "Bulletproof",
@@ -66,7 +68,8 @@
           "+3.8%",
           "+6%"
         ],
-        "what": "Bullet protection"
+        "what": "Bullet protection",
+        "detail": "Reduces damage you take from bullets."
       },
       {
         "name": "Carrying Capacity",
@@ -76,7 +79,8 @@
           "+20%",
           "+30%"
         ],
-        "what": "Less weight penalty"
+        "what": "Less weight penalty",
+        "detail": "Cuts the movement and stamina penalty from heavy loads, so you can carry more loot."
       },
       {
         "name": "Cold-blooded",
@@ -86,7 +90,8 @@
           "−50%",
           "−90%"
         ],
-        "what": "Body temperature"
+        "what": "Body temperature",
+        "detail": "Lowers your body temperature build-up; helps in hot zones and fire."
       },
       {
         "name": "Endurance",
@@ -96,7 +101,8 @@
           "−4%",
           "−7%"
         ],
-        "what": "Pulse escalation and stamina drain (fatigue threshold +3 / +5 / +7)"
+        "what": "Pulse escalation and stamina drain (fatigue threshold +3 / +5 / +7)",
+        "detail": "Your pulse climbs slower and stamina drains slower, and you can push harder before fatigue (+3/+5/+7 fatigue threshold)."
       },
       {
         "name": "Examination",
@@ -106,7 +112,8 @@
           "+40%",
           "+60%"
         ],
-        "what": "Item recognition speed"
+        "what": "Item recognition speed",
+        "detail": "Identify unknown items faster when searching containers and bodies."
       },
       {
         "name": "Fine Motor Skills",
@@ -116,7 +123,8 @@
           "+20%",
           "+30%"
         ],
-        "what": "Reload, mag stuffing and healing-item speed"
+        "what": "Reload, mag stuffing and healing-item speed",
+        "detail": "Faster reloading, magazine loading and healing-item use."
       },
       {
         "name": "Fire Resistance",
@@ -126,7 +134,8 @@
           "+20%",
           "+28.6%"
         ],
-        "what": "Fire damage protection"
+        "what": "Fire damage protection",
+        "detail": "Reduces fire damage from Molotovs, Scorch, fireballs and burning ground."
       },
       {
         "name": "Heal Efficiency",
@@ -136,7 +145,8 @@
           "+20%",
           "+40%"
         ],
-        "what": "Healing effectiveness"
+        "what": "Healing effectiveness",
+        "detail": "Medkits and healing items restore more health."
       },
       {
         "name": "Hit Stability",
@@ -146,7 +156,8 @@
           "−20%",
           "−35%"
         ],
-        "what": "View and aim shake when hit"
+        "what": "View and aim shake when hit",
+        "detail": "Less screen shake, aim shake and hand stamina loss when you get hit."
       },
       {
         "name": "Jump",
@@ -156,7 +167,8 @@
           "+20%",
           "+30%"
         ],
-        "what": "Jump height (fall damage resistance +3 / +5 / +7%)"
+        "what": "Jump height (fall damage resistance +3 / +5 / +7%)",
+        "detail": "Jump higher and take a little less fall damage (+3/+5/+7%)."
       },
       {
         "name": "Melee",
@@ -166,7 +178,8 @@
           "+25%",
           "+40%"
         ],
-        "what": "Melee strength"
+        "what": "Melee strength",
+        "detail": "More melee damage."
       },
       {
         "name": "Overflow Healing",
@@ -176,7 +189,8 @@
           "+10%",
           "+20%"
         ],
-        "what": "Extra healing spread to all body parts"
+        "what": "Extra healing spread to all body parts",
+        "detail": "Part of each healing ampule also heals your other body parts."
       },
       {
         "name": "Pain Shock",
@@ -186,7 +200,8 @@
           "−5s",
           "−7s"
         ],
-        "what": "Shock time"
+        "what": "Shock time",
+        "detail": "Recover from pain shock faster after heavy hits."
       },
       {
         "name": "Resilience",
@@ -196,7 +211,8 @@
           "+16.7%",
           "+23.1%"
         ],
-        "what": "Melee protection"
+        "what": "Melee protection",
+        "detail": "Reduces melee damage you take from monsters and players."
       },
       {
         "name": "Serenity",
@@ -206,7 +222,8 @@
           "+4%",
           "+7%"
         ],
-        "what": "Stamina and pulse recovery"
+        "what": "Stamina and pulse recovery",
+        "detail": "Stamina and pulse recover faster, and activity raises your heart rate less."
       },
       {
         "name": "Speed",
@@ -216,7 +233,8 @@
           "+5%",
           "+7%"
         ],
-        "what": "Move speed"
+        "what": "Move speed",
+        "detail": "Move faster at all times."
       },
       {
         "name": "Sprint",
@@ -226,7 +244,8 @@
           "+6%",
           "+10%"
         ],
-        "what": "Sprint speed"
+        "what": "Sprint speed",
+        "detail": "Sprint faster."
       },
       {
         "name": "Sprint Duration",
@@ -236,7 +255,8 @@
           "+6.4%",
           "+10%"
         ],
-        "what": "Sprint duration"
+        "what": "Sprint duration",
+        "detail": "Sprint for longer before running out of stamina."
       },
       {
         "name": "Steady Hand",
@@ -246,7 +266,8 @@
           "−20%",
           "−35%"
         ],
-        "what": "Hand stamina drain while aiming"
+        "what": "Hand stamina drain while aiming",
+        "detail": "Your arms tire slower while aiming, so you can hold aim longer."
       }
     ],
     "abilities": [
@@ -616,7 +637,9 @@
       "Pristine remains drop rarely and always roll the creature's signature chronogene at Tier II (90%) or Tier III (10%).",
       "Ability chronogenes (Tenacity, Observation and the rest) don't come from normal remains. The Distorted Chronogene Study investigation unlocks a recipe for Rare chronogenes from Distorted.",
       "Remains you don't need refine for 40 credits each (pristine ones for 120)."
-    ]
+    ],
+    "abilitySource": "Ability chronogenes don't drop from normal monster remains. They come from Tier III random synthesis (20 Active Matter + 3 Tier II chronogenes, unlocked at Monolith Epsilon) and the Rare chronogene recipe from the Distorted Chronogene Study investigation.",
+    "noRemains": "Not tied to any monster's remains. Get it from random Tier II/III synthesis."
   },
   "builds": [
     {

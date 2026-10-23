@@ -290,3 +290,12 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 .ukind.limited{background:var(--bg);color:var(--boss);border:1px solid var(--boss)}
 @media (max-width:640px){ nav.tabs{grid-template-columns:repeat(4,1fr)} nav.tabs button{font-size:11.5px;letter-spacing:.02em;padding:8px 2px} }
 .flabel{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+.srcbox{margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+.srcbox ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:4px}
+.srcbox li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;border:0;padding:0;background:none}
+.srcname{font:inherit;font-size:13px;font-weight:600;background:var(--anom-soft);color:var(--anom);border:0;border-radius:3px;padding:2px 8px;cursor:pointer}
+.srcname[disabled]{cursor:default}
+.srcodds{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.srcodds b{color:var(--accent);font-weight:500}
+.srcbox p{margin:4px 0 0;font-size:13px}
+li.absrc{border:0!important;background:none!important;padding:0 0 4px!important;font-size:13px;color:var(--muted)}

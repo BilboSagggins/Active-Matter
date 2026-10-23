@@ -390,9 +390,20 @@ let BUILDS = null, chTag = "";
 const base = s => s.replace(/ (I|II|III)$/, "");
 function sourcesFor(name) {
   const R = BUILDS?.chrono?.remains || [];
-  const from = R.filter(r => r.rolls.some(([c]) => base(c) === name)).map(r => r.source);
-  const pr = R.filter(r => r.pristine === name).map(r => r.source);
-  return { from, pr };
+  const rows = [];
+  R.forEach(r => {
+    const t1 = r.rolls.find(([c]) => c === name + " I"), t2 = r.rolls.find(([c]) => c === name + " II");
+    if (t1 || t2) rows.push({ src: r.source, threat: r.threat, item: r.item, t1: t1 ? t1[1] : 0, t2: t2 ? t2[1] : 0, pristine: r.pristine === name });
+    else if (r.pristine === name) rows.push({ src: r.source, threat: r.threat, item: r.item, t1: 0, t2: 0, pristine: true });
+  });
+  return rows.sort((a, b) => (b.t1 + b.t2) - (a.t1 + a.t2));
+}
+function sourceBlock(name) {
+  const rows = sourcesFor(name);
+  if (!rows.length) return `<div class="srcbox"><span class="eyebrow">Dropped by</span><p class="unk">${esc(BUILDS.chrono.noRemains || "Not tied to a monster.")}</p></div>`;
+  return `<div class="srcbox"><span class="eyebrow">Dropped by (fuse their remains)</span><ul>` + rows.map(r =>
+    `<li><button class="srcname"${r.threat ? ` data-threat="${esc(r.threat)}"` : " disabled"}>${esc(r.src)}</button>` +
+    `<span class="srcodds">${r.t1 ? `I ${r.t1}%` : ""}${r.t2 ? ` · II ${r.t2}%` : ""}${r.pristine ? `${r.t1 || r.t2 ? " · " : ""}<b>pristine: II 90% / III 10%</b>` : ""}</span></li>`).join("") + `</ul></div>`;
 }
 function drawRemains() {
   const q = document.getElementById("remq").value.trim().toLowerCase();
@@ -411,8 +422,8 @@ function drawChrono() {
   const ab = BUILDS.chrono.abilities.filter(ok), tr = BUILDS.chrono.tiered.filter(ok);
   document.getElementById("abcount").textContent = ab.length;
   document.getElementById("stcount").textContent = tr.length;
-  document.getElementById("abilities").innerHTML = ab.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span></li>`).join("") || `<li class="unk">None match.</li>`;
-  document.getElementById("tiered").innerHTML = tr.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span>${(s => s.from.length || s.pr.length ? `<span class="fromline">From: ${[...s.from.map(x => esc(x)), ...s.pr.filter(x => !s.from.includes(x)).map(x => esc(x) + " (pristine)")].join(", ")}${s.pr.length ? ` · Tier III via pristine ${s.pr.map(esc).join(", ")}` : ""}</span>` : "")(sourcesFor(c.name))}<div class="tiers3">${c.t.map((v, i) => `<span><i>${["I", "II", "III"][i]}</i>${esc(v)}</span>`).join("")}</div></li>`).join("") || `<li class="unk">None match.</li>`;
+  document.getElementById("abilities").innerHTML = (ab.length ? `<li class="absrc">${esc(BUILDS.chrono.abilitySource || "")}</li>` : "") + ab.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.what)}</span></li>`).join("") || `<li class="unk">None match.</li>`;
+  document.getElementById("tiered").innerHTML = tr.map(c => `<li class="${used.has(c.name) ? "star" : ""}"><div class="invtop"><b>${esc(c.name)}</b><span class="eyebrow">${esc(c.tag)}</span></div><span class="invwhy">${esc(c.detail || c.what)}</span><div class="tiers3">${c.t.map((v, i) => `<span><i>${["I", "II", "III"][i]}</i>${esc(v)}</span>`).join("")}</div>${sourceBlock(c.name)}</li>`).join("") || `<li class="unk">None match.</li>`;
 }
 getJSON("data/builds.json").then(d => {
   BUILDS = d;
