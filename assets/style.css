@@ -279,3 +279,14 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 .pct{z-index:0}.pct i{z-index:-1}
 .pris{margin:0;font-size:13px}
 .fromline{display:block;font-size:12.5px;color:var(--anom);margin-top:3px}
+
+/* sleeves */
+.tcard.sleeve{border-left-color:var(--line)}
+.tcard.sleeve[data-r="Epic"]{border-left-color:var(--anom)}
+.tcard.sleeve[data-r="Rare"]{border-left-color:var(--accent)}
+.tcard.sleeve[data-r="Uncommon"]{border-left-color:var(--med)}
+.ukind{font-family:var(--f-mono);font-size:10.5px;padding:1px 6px;border-radius:2px;background:var(--accent-soft);color:var(--accent)}
+.ukind.unconfirmed{background:var(--bg);color:var(--muted);border:1px dashed var(--line)}
+.ukind.limited{background:var(--bg);color:var(--boss);border:1px solid var(--boss)}
+@media (max-width:640px){ nav.tabs{grid-template-columns:repeat(4,1fr)} nav.tabs button{font-size:11.5px;letter-spacing:.02em;padding:8px 2px} }
+.flabel{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}

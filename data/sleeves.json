@@ -1,0 +1,636 @@
+{
+  "updated": "2026-10-23",
+  "how": [
+    "You pick a starting operative at the start of each Personal Timeline. Each operative has a starter investigation that unlocks a sleeve and opens a second one: Steel and Analysis → Guardian → To Serve and Protect → Vanguard (Mariko Sato); Field Work Protocol → Pulse → Bulwark on the Frontline → Bulwark (Genevieve Brennan); Rock of Solitude → Rock → Predator's Trail (Kwame Mensah); The Price of Progress → Fugitive → Strategist Protocol → Fuse (Joris van Dijk).",
+    "Other operatives' starter chains open after you complete a Monolith Cycle, and finishing a cycle lets you pick a new default sleeve.",
+    "Most later sleeves come from Journey of Consciousness investigations that unlock at a Monolith level and cost tokens to start.",
+    "Raids with Provided (rental) Equipment don't count toward investigation progress, so use your own gear.",
+    "Locked sleeves still show their full stats on the select screen, so you can plan before spending tokens.",
+    "Plate slots are torso / hands / legs. XL torso sleeves trade −10% jump and −5% move speed for an XL torso plate."
+  ],
+  "best": [
+    {
+      "goal": "Survival (Isolated / PvE)",
+      "pick": "Beast or Rock early; Knight once you have it"
+    },
+    {
+      "goal": "Open Raids",
+      "pick": "Knight (large plates on every limb)"
+    },
+    {
+      "goal": "Looting",
+      "pick": "Viper (550 volume, the most of any combat sleeve)"
+    },
+    {
+      "goal": "Stay hidden in PvP",
+      "pick": "Ghost or Shadow"
+    },
+    {
+      "goal": "Win fights in PvP",
+      "pick": "Knight"
+    },
+    {
+      "goal": "Squad healer",
+      "pick": "Paladin, Bulwark, Angel or Pulse"
+    },
+    {
+      "goal": "Melee",
+      "pick": "Reaper, Warlord or Mirage"
+    }
+  ],
+  "note": "Stats are from the launch build (0.4.0.93); Guts and Ghost were reworked in 0.4.0.182. Unconfirmed unlocks will be filled in by the scheduled update as guides document them.",
+  "sleeves": [
+    {
+      "name": "Knight",
+      "rarity": "Epic",
+      "role": "Armour",
+      "vol": 525,
+      "plates": "L / LL / LL",
+      "mods": [
+        "Bullet proof +6%",
+        "Explosion +50%",
+        "Melee proof +35.5%",
+        "Jump −10%",
+        "Move −5%",
+        "Medicine volume −20%"
+      ],
+      "how": "Deluxe or Elite Squad edition",
+      "kind": "Edition",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "confirmed"
+    },
+    {
+      "name": "Beast",
+      "rarity": "Uncommon",
+      "role": "Armour",
+      "vol": 300,
+      "plates": "L / – / SS",
+      "mods": [
+        "Bullet proof +9.5%",
+        "Medicine volume −10%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Rock",
+      "rarity": "Uncommon",
+      "role": "Armour",
+      "vol": 300,
+      "plates": "L / – / SS",
+      "mods": [
+        "Bullet proof +6%",
+        "Medicine volume −10%"
+      ],
+      "how": "Rock of Solitude investigation",
+      "kind": "Starter chain",
+      "detail": "Available at timeline start if Kwame Mensah was your starting operative, otherwise after completing a Monolith Cycle. Also unlocks Predator's Trail.",
+      "char": "Kwame Mensah",
+      "source": "https://activematter.wiki.gg/wiki/Rock_of_Solitude",
+      "status": "confirmed"
+    },
+    {
+      "name": "Mermaid",
+      "rarity": "Rare",
+      "role": "Armour",
+      "vol": 400,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Bullet proof +6%",
+        "Explosion +50%",
+        "Grenade volume −20%"
+      ],
+      "how": "Mermaid's Concerns investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Theta, 4,000 tokens. The wiki also calls this sleeve \"Night Witch\".",
+      "char": "Genevieve Brennan",
+      "source": "https://activematter.wiki.gg/wiki/Mermaid%27s_Concerns",
+      "status": "confirmed"
+    },
+    {
+      "name": "Rebel",
+      "rarity": "Rare",
+      "role": "Armour",
+      "vol": 400,
+      "plates": "L / SS / LL",
+      "mods": [
+        "Explosion +50%",
+        "Healing +10% all parts",
+        "Grenade volume −10%",
+        "Medicine volume −10%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Alfa",
+      "rarity": "Rare",
+      "role": "Armour",
+      "vol": 400,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Bullet proof +6%",
+        "Move +10%",
+        "Grenade volume −10%",
+        "Medicine volume −10%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Rhino",
+      "rarity": "Rare",
+      "role": "XL torso",
+      "vol": 450,
+      "plates": "XL / LL / SS",
+      "mods": [
+        "Physical activity heart-rate impact −30%",
+        "Weight penalty −20%",
+        "Jump −10%",
+        "Move −5%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Bulwark",
+      "rarity": "Rare",
+      "role": "XL torso",
+      "vol": 400,
+      "plates": "XL / SS / LL",
+      "mods": [
+        "Healing +20%",
+        "Heart-rate impact −30%",
+        "Jump −10%",
+        "Move −5%",
+        "Medicine volume −20%"
+      ],
+      "how": "Bulwark on the Frontline investigation",
+      "kind": "Starter chain",
+      "detail": "Unlocks after finishing Field Work Protocol.",
+      "char": "Genevieve Brennan",
+      "source": "https://activematter.wiki.gg/wiki/Bulwark_on_the_Frontline",
+      "status": "confirmed"
+    },
+    {
+      "name": "Fuse",
+      "rarity": "Rare",
+      "role": "XL torso",
+      "vol": 425,
+      "plates": "XL / SS / LL",
+      "mods": [
+        "Pulse escalation −30%",
+        "Reload / mag / healing-item speed +25%",
+        "Jump −10%",
+        "Move −5%",
+        "Grenade volume −10%"
+      ],
+      "how": "Strategist Protocol investigation",
+      "kind": "Starter chain",
+      "detail": "Unlocks after The Price of Progress. Stages include fusing 10 F-1 grenades, 5 Devourer shotgun kills at Headquarters, 25 Distorted AR kills in Dogorsk and 10 Statues in Military Base: Silent Observers.",
+      "char": "Joris van Dijk",
+      "source": "https://activematter.wiki.gg/wiki/Strategist_Protocol",
+      "status": "confirmed"
+    },
+    {
+      "name": "Vanguard",
+      "rarity": "Rare",
+      "role": "XL torso",
+      "vol": 400,
+      "plates": "XL / LL / SS",
+      "mods": [
+        "Fire protection +30%",
+        "Item recognition +30%",
+        "Jump −10%",
+        "Move −5%",
+        "Ammo volume −20%"
+      ],
+      "how": "To Serve and Protect investigation",
+      "kind": "Starter chain",
+      "detail": "Unlocks after Steel and Analysis. Five stages on the Dam: fuse 5 PP-19-01s, extract 10 Enriched clocks and 20 Enriched VHS tapes, kill 15 Dendroids with shotguns and 20 Distorted with ARs.",
+      "char": "Mariko Sato",
+      "source": "https://activematter.wiki.gg/wiki/To_Serve_and_Protect",
+      "status": "confirmed"
+    },
+    {
+      "name": "Guts",
+      "rarity": "Epic",
+      "role": "XL torso",
+      "vol": 400,
+      "plates": "XL / SS / LL",
+      "mods": [
+        "Reworked in 0.4.0.182 to match Knight's stats; older stats: melee proof +20%, recoil −5%"
+      ],
+      "how": "Breaking Point investigation",
+      "kind": "Investigation",
+      "detail": "Sergei Volkov's investigation at Monolith Lambda. Reaching Lambda only opens it; you still have to finish it.",
+      "char": "",
+      "source": "",
+      "status": "confirmed"
+    },
+    {
+      "name": "Hunter",
+      "rarity": "Rare",
+      "role": "XL torso",
+      "vol": 425,
+      "plates": "XL / LL / SS",
+      "mods": [
+        "Stamina drain −30%",
+        "Melee proof +20%",
+        "Jump −10%",
+        "Move −5%",
+        "Medicine volume −10%"
+      ],
+      "how": "Black Hat, White Hat investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Iota, 7,000 tokens. Stages: 50 Active Matter in Dogorsk, 30 Enriched electronic components, refine 12 Enriched tape recorders, 15 Enriched radios, 15 Turned Soldiers in Cargo Port: Darkness.",
+      "char": "Alexander Arkhangelsky",
+      "source": "https://activematter.wiki.gg/wiki/Black_Hat,_White_Hat",
+      "status": "confirmed"
+    },
+    {
+      "name": "Viper",
+      "rarity": "Epic",
+      "role": "Speed",
+      "vol": 550,
+      "plates": "L / LL / SS",
+      "mods": [
+        "Hand stamina drain −65%",
+        "Jump +20%",
+        "Recoil −5%",
+        "Ammo volume −10%"
+      ],
+      "how": "Unconfirmed (possibly Serpent's Bite, Monolith Lambda)",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Psychologist",
+      "rarity": "Rare",
+      "role": "Speed",
+      "vol": 400,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Move +10%",
+        "Recoil −5%",
+        "Ammo volume −10%",
+        "Medicine volume −10%"
+      ],
+      "how": "Psychologist's Gambit investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Zeta, 2,200 tokens. Stages: 25 Enriched electronic components, 10 Invisibles with pistols, 20 Hellhounds with shotguns, 20 Turned Soldiers with SMGs in Factory, 10 Enriched books in Dogorsk.",
+      "char": "Joris van Dijk",
+      "source": "https://activematter.wiki.gg/wiki/Psychologist%27s_Gambit",
+      "status": "confirmed"
+    },
+    {
+      "name": "Jay",
+      "rarity": "Rare",
+      "role": "Speed",
+      "vol": 425,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Jump +20%",
+        "Recoil −5%",
+        "Ammo volume −10%"
+      ],
+      "how": "Jay's Negotiations investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Epsilon, 1,500 tokens.",
+      "char": "Mariko Sato",
+      "source": "https://activematter.wiki.gg/wiki/Jay%27s_Negotiations",
+      "status": "confirmed"
+    },
+    {
+      "name": "Warlord",
+      "rarity": "Rare",
+      "role": "Speed",
+      "vol": 400,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Jump +20%",
+        "Melee strength +30%",
+        "Ammo volume −10%",
+        "Grenade volume −10%"
+      ],
+      "how": "Monolith Delta",
+      "kind": "Monolith",
+      "detail": "Buy at Delta for 700 tokens.",
+      "char": "Si Chen",
+      "source": "https://activematter.wiki.gg/wiki/Monolith",
+      "status": "confirmed"
+    },
+    {
+      "name": "Fugitive",
+      "rarity": "Uncommon",
+      "role": "Speed",
+      "vol": 300,
+      "plates": "L / SS / –",
+      "mods": [
+        "Move +10%",
+        "Grenade volume −10%"
+      ],
+      "how": "The Price of Progress investigation",
+      "kind": "Starter chain",
+      "detail": "Available at timeline start if Joris van Dijk was your starting operative, otherwise after a Monolith Cycle. Also unlocks Strategist Protocol.",
+      "char": "Joris van Dijk",
+      "source": "https://activematter.wiki.gg/wiki/The_Price_of_Progress",
+      "status": "confirmed"
+    },
+    {
+      "name": "Liquidator",
+      "rarity": "Uncommon",
+      "role": "Speed",
+      "vol": 325,
+      "plates": "S / SS / SS",
+      "mods": [
+        "Weight penalty −20%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Ghost",
+      "rarity": "Epic",
+      "role": "Stealth",
+      "vol": 425,
+      "plates": "L / LL / SS",
+      "mods": [
+        "Reworked in 0.4.0.182 to match Paladin's stats; older stats: hand stamina drain −35%, move noise −20%"
+      ],
+      "how": "Ghost investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Kappa, 9,000 tokens, and needs the Harmonization Protocol at its second stage.",
+      "char": "Si Chen",
+      "source": "https://activematter.wiki.gg/wiki/Ghost",
+      "status": "confirmed"
+    },
+    {
+      "name": "Shadow",
+      "rarity": "Rare",
+      "role": "Stealth",
+      "vol": 425,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Move noise −10%",
+        "Recoil −5%",
+        "Ammo volume −10%"
+      ],
+      "how": "Twitch Drops (Sept 18–25, 2026)",
+      "kind": "Event",
+      "detail": "Was a limited stream-watching reward; may not be obtainable now.",
+      "char": "",
+      "source": "",
+      "status": "limited"
+    },
+    {
+      "name": "Phantom",
+      "rarity": "Rare",
+      "role": "Stealth",
+      "vol": 400,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Hand stamina drain −35%",
+        "Reload / mag / healing-item speed +25%",
+        "Ammo volume −20%"
+      ],
+      "how": "Phantom's Frequency investigation",
+      "kind": "Investigation",
+      "detail": "Monolith Kappa, 9,000 tokens.",
+      "char": "Nikolai Mensah",
+      "source": "https://activematter.wiki.gg/wiki/Phantom%27s_Frequency",
+      "status": "confirmed"
+    },
+    {
+      "name": "Guardian",
+      "rarity": "Uncommon",
+      "role": "Stealth",
+      "vol": 300,
+      "plates": "L / – / SS",
+      "mods": [
+        "Recoil −5%",
+        "Ammo volume −10%"
+      ],
+      "how": "Steel and Analysis investigation",
+      "kind": "Starter chain",
+      "detail": "Available at timeline start if Mariko Sato was your starting operative, otherwise after a Monolith Cycle. Also unlocks To Serve and Protect.",
+      "char": "Mariko Sato",
+      "source": "https://activematter.wiki.gg/wiki/Steel_and_Analysis",
+      "status": "confirmed"
+    },
+    {
+      "name": "Old Man",
+      "rarity": "Rare",
+      "role": "Stealth",
+      "vol": 400,
+      "plates": "L / – / SS",
+      "mods": [
+        "Item recognition +30%",
+        "Recoil −5%",
+        "Ammo volume −20%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Breach",
+      "rarity": "Uncommon",
+      "role": "Stealth",
+      "vol": 300,
+      "plates": "S / SS / SS",
+      "mods": [
+        "Item recognition +30%",
+        "Ammo volume −10%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Paladin",
+      "rarity": "Epic",
+      "role": "Healing",
+      "vol": 525,
+      "plates": "L / SS / LL",
+      "mods": [
+        "Body temperature −90%",
+        "Fire protection +30%",
+        "Healing +30%",
+        "Ammo volume −10%",
+        "Medicine volume −10%"
+      ],
+      "how": "Paladin's Crusade investigation",
+      "kind": "Edition",
+      "detail": "Needs the Advanced Edition (or higher) to unlock the investigation.",
+      "char": "Gerhardt Müller",
+      "source": "https://activematter.wiki.gg/wiki/Paladin%27s_Crusade",
+      "status": "confirmed"
+    },
+    {
+      "name": "Reaper",
+      "rarity": "Epic",
+      "role": "Healing",
+      "vol": 500,
+      "plates": "L / SS / SS",
+      "mods": [
+        "Reload / mag / healing-item speed +25%",
+        "Melee strength +50%",
+        "Shock time −10s",
+        "Ammo volume −20%",
+        "Grenade volume −10%"
+      ],
+      "how": "Deluxe or Elite Squad edition",
+      "kind": "Edition",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "confirmed"
+    },
+    {
+      "name": "Angel",
+      "rarity": "Uncommon",
+      "role": "Healing",
+      "vol": 300,
+      "plates": "S / SS / SS",
+      "mods": [
+        "Healing +20%",
+        "Medicine volume −10%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Pulse",
+      "rarity": "Uncommon",
+      "role": "Healing",
+      "vol": 325,
+      "plates": "L / SS / –",
+      "mods": [
+        "Healing +10% all body parts"
+      ],
+      "how": "Field Work Protocol investigation",
+      "kind": "Starter chain",
+      "detail": "Available at timeline start if Genevieve Brennan was your starting operative, otherwise after a Monolith Cycle. Also unlocks Bulwark on the Frontline.",
+      "char": "Genevieve Brennan",
+      "source": "https://activematter.wiki.gg/wiki/Field_Work_Protocol",
+      "status": "confirmed"
+    },
+    {
+      "name": "Wizard",
+      "rarity": "Uncommon",
+      "role": "Melee",
+      "vol": 325,
+      "plates": "S / SS / SS",
+      "mods": [
+        "Melee proof +20%"
+      ],
+      "how": "Unconfirmed",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Mirage",
+      "rarity": "Uncommon",
+      "role": "Melee",
+      "vol": 300,
+      "plates": "S / SS / SS",
+      "mods": [
+        "Melee strength +30%",
+        "Grenade volume −10%"
+      ],
+      "how": "Monolith Gamma",
+      "kind": "Monolith",
+      "detail": "Buy at Gamma for 300 tokens.",
+      "char": "Alexander Arkhangelsky",
+      "source": "https://activematter.wiki.gg/wiki/Monolith",
+      "status": "confirmed"
+    },
+    {
+      "name": "Ph.D. Brennan",
+      "rarity": "Epic",
+      "role": "Civilian",
+      "vol": 500,
+      "plates": "none",
+      "mods": [
+        "Flavor stats only (no combat bonuses), no plate slots"
+      ],
+      "how": "Unconfirmed (Harmonization reward)",
+      "kind": "Unknown",
+      "detail": "Civilian sleeves reportedly unlock after Harmonization.",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Prof. Arkhangelsky",
+      "rarity": "Epic",
+      "role": "Civilian",
+      "vol": 500,
+      "plates": "none",
+      "mods": [
+        "Flavor stats only (no combat bonuses), no plate slots"
+      ],
+      "how": "Unconfirmed (Harmonization reward)",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Ph.D. Chen",
+      "rarity": "Epic",
+      "role": "Civilian",
+      "vol": 500,
+      "plates": "none",
+      "mods": [
+        "Flavor stats only (no combat bonuses), no plate slots"
+      ],
+      "how": "Unconfirmed (Harmonization reward)",
+      "kind": "Unknown",
+      "detail": "",
+      "char": "",
+      "source": "",
+      "status": "unconfirmed"
+    }
+  ]
+}

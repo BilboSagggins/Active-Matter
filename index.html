@@ -23,7 +23,7 @@
   <header class="top">
     <div class="brand">
       <h1>Active Matter<br>Field Guide</h1>
-      <div class="sub">PATCH INTEL · TIPS · LOOT MAP · TIERS · THREATS · KEYS</div>
+      <div class="sub">PATCH INTEL · TIPS · LOOT MAP · TIERS · SLEEVES · THREATS · KEYS</div>
     </div>
     <div class="headright">
       <button id="installBtn" class="installbtn" type="button" hidden>Install app</button>
@@ -37,6 +37,7 @@
     <button role="tab" id="tab-guide" aria-controls="guide" aria-selected="false" data-view="guide">Tips &amp; Gear</button>
     <button role="tab" id="tab-map" aria-controls="map" aria-selected="false" data-view="map">Loot Map</button>
     <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="false" data-view="tiers">Priorities</button>
+    <button role="tab" id="tab-sleeves" aria-controls="sleeves" aria-selected="false" data-view="sleeves">Sleeves</button>
     <button role="tab" id="tab-threats" aria-controls="threats" aria-selected="false" data-view="threats">Threats</button>
     <button role="tab" id="tab-keys" aria-controls="keys" aria-selected="false" data-view="keys">Keys</button>
   </nav>
@@ -220,6 +221,19 @@
       <div class="detail" id="detail" aria-live="polite"></div>
     </div>
     <p class="legendnote">Spawns vary by raid modifier and patch; helicopter and convoy events can swap between locations. Dashed lines are routes players commonly run.</p>
+  </section>
+
+  <section class="view" id="sleeves" role="tabpanel" aria-labelledby="tab-sleeves" hidden>
+    <h2>Body Sleeves</h2>
+    <p class="lede">How to unlock every sleeve, its plate slots, volume and perks. Tap a sleeve for details. Updated <span id="sleeveStamp"></span>.</p>
+    <div class="tablewrap" style="margin-top:0"><table class="data"><thead><tr><th>If you want</th><th>Wear</th></tr></thead><tbody id="sbest"></tbody></table></div>
+    <div class="keytools" style="margin-top:16px"><input id="sleeveq" type="search" placeholder="Search sleeves, perks, operatives…" aria-label="Search sleeves"></div>
+    <div class="filters" id="srole" aria-label="Filter by role"></div>
+    <div class="filters" id="skind" aria-label="Filter by how it's unlocked"></div>
+    <div class="threatbar"><span id="sleevecount" class="eyebrow"></span><button id="sexpand" type="button">Expand all</button></div>
+    <div class="threatgrid" id="sleevecards"></div>
+    <p class="keynote" id="snote" style="margin-top:12px"></p>
+    <div class="rules" style="margin-top:18px"><h3>How unlocking works</h3><ul id="show"></ul></div>
   </section>
 
   <section class="view" id="threats" role="tabpanel" aria-labelledby="tab-threats" hidden>

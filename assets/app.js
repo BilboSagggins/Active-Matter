@@ -19,7 +19,7 @@ function show(v) {
 tabs.forEach(t => t.addEventListener("click", () => { show(t.dataset.view); history.replaceState(null, "", "#" + t.dataset.view); }));
 const PICK = location.hash === "#pick";
 const startView = PICK ? "map" : location.hash.slice(1);
-if (["news", "guide", "map", "tiers", "threats", "keys"].includes(startView)) show(startView);
+if (["news", "guide", "map", "tiers", "sleeves", "threats", "keys"].includes(startView)) show(startView);
 
 /* ---------- News ---------- */
 getJSON("data/news.json").then(data => {
@@ -333,7 +333,7 @@ getJSON("data/threats.json").then(data => {
   const waitMaps = setInterval(() => { if (MAPS.length) { clearInterval(waitMaps); drawThreats(); } }, 200);
 }).catch(e => { document.getElementById("threatcards").textContent = "Couldn't load threat data: " + e.message; });
 
-window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "threats", "keys"].includes(v)) show(v); });
+window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "sleeves", "threats", "keys"].includes(v)) show(v); });
 
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 
@@ -443,3 +443,43 @@ document.addEventListener("click", e => {
   openThreats.add(t.dataset.threat); drawThreats();
   document.getElementById("threatcards").scrollIntoView({ block: "start" });
 });
+
+/* ---------- Sleeves ---------- */
+let SLEEVES = null, sRole = "", sKind = "";
+const openSleeves = new Set();
+function drawSleeves() {
+  const q = document.getElementById("sleeveq").value.trim().toLowerCase();
+  const list = SLEEVES.sleeves.filter(x => (!sRole || x.role === sRole) && (!sKind || x.kind === sKind) && (!q || JSON.stringify(x).toLowerCase().includes(q)));
+  document.getElementById("sleevecount").textContent = `${list.length} of ${SLEEVES.sleeves.length}`;
+  document.getElementById("sleevecards").innerHTML = list.map(x =>
+    `<details class="tcard sleeve" data-r="${esc(x.rarity)}" data-name="${esc(x.name)}"${openSleeves.has(x.name) ? " open" : ""}>` +
+    `<summary><div class="ttop"><h3>${esc(x.name)}</h3><span class="kind">${esc(x.rarity)} · ${esc(x.role)}</span></div>` +
+    `<div class="tsum"><span class="cchip">${esc(x.plates)}</span><span class="cchip">${x.vol} vol</span><span class="ukind ${x.status}">${esc(x.kind)}</span></div></summary>` +
+    `<div class="tbody"><div class="eyebrow">Perks</div><ul>${x.mods.map(m => `<li>${esc(m)}</li>`).join("")}</ul>` +
+    `<dl class="bdl"><dt>Unlock</dt><dd${x.status === "unconfirmed" ? ' class="unk"' : ""}>${esc(x.how)}</dd>${x.detail ? `<dt>Details</dt><dd>${esc(x.detail)}</dd>` : ""}${x.char ? `<dt>Operative</dt><dd>${esc(x.char)}</dd>` : ""}</dl>` +
+    `${x.source ? `<a class="findlink" href="${esc(x.source)}" target="_blank" rel="noopener">Wiki page →</a>` : ""}</div></details>`).join("") || `<p class="unk">No sleeves match.</p>`;
+  document.querySelectorAll("#sleevecards details").forEach(d => d.addEventListener("toggle", () => { d.open ? openSleeves.add(d.dataset.name) : openSleeves.delete(d.dataset.name); syncS(); }));
+  syncS();
+}
+function syncS() { const ds = [...document.querySelectorAll("#sleevecards details")]; document.getElementById("sexpand").textContent = ds.length && ds.every(d => d.open) ? "Collapse all" : "Expand all"; }
+document.getElementById("sexpand").addEventListener("click", () => {
+  const ds = [...document.querySelectorAll("#sleevecards details")], open = !ds.every(d => d.open);
+  ds.forEach(d => { d.open = open; open ? openSleeves.add(d.dataset.name) : openSleeves.delete(d.dataset.name); }); syncS();
+});
+function chipRow(id, values, get, set) {
+  const box = document.getElementById(id);
+  box.innerHTML = `<span class="flabel">${id === "srole" ? "Role" : "Unlocked by"}</span><button class="chip" aria-pressed="true" data-v="">All</button>` + values.map(v => `<button class="chip" aria-pressed="false" data-v="${esc(v)}">${esc(v)}</button>`).join("");
+  box.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (!b) return; const v = get() === b.dataset.v ? "" : b.dataset.v; set(v);
+    box.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === v)); drawSleeves(); });
+}
+getJSON("data/sleeves.json").then(d => {
+  SLEEVES = d;
+  document.getElementById("sleeveStamp").textContent = d.updated || "";
+  document.getElementById("sbest").innerHTML = d.best.map(b => `<tr><td>${esc(b.goal)}</td><td>${esc(b.pick)}</td></tr>`).join("");
+  document.getElementById("show").innerHTML = d.how.map(x => `<li>${esc(x)}</li>`).join("");
+  document.getElementById("snote").textContent = d.note || "";
+  chipRow("srole", [...new Set(d.sleeves.map(x => x.role))], () => sRole, v => sRole = v);
+  chipRow("skind", ["Edition", "Monolith", "Starter chain", "Investigation", "Event", "Unknown"].filter(k => d.sleeves.some(x => x.kind === k)), () => sKind, v => sKind = v);
+  document.getElementById("sleeveq").addEventListener("input", drawSleeves);
+  drawSleeves();
+}).catch(e => { document.getElementById("sleevecards").textContent = "Couldn't load sleeve data: " + e.message; });
