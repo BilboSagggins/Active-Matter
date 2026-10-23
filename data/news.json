@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-22T20:49:57.033Z",
+  "updated": "2026-10-23T13:00:43.401Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-23",
+      "title": "Extinguish on Sight: Firestorm",
+      "kind": "news",
+      "summary": "Site Status: Fully engulfed in flames. Clearance: Open Raid, solo only. Threats: Burning Devourers, Scorches, fire anomalies, and hostile rival Operatives. Objective: Track the anomalous signals, locate the sources of ignition, and extract alive. Equipment: Got a fire extinguisher? Equip it in a weapon slot.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114035718"
+    },
     {
       "date": "2026-10-22",
       "title": "Update 0.4.0.205",
@@ -190,13 +197,6 @@
       "kind": "news",
       "summary": "Operatives, the door to the Multiverse is open! Active Matter is out now on Steam! If you purchased the early version from the Gaijin Store, you can get the Steam edition at no extra cost until November 23rd. New Harmonization Cycle With the release, the next Harmonization Cycle begins, featuring new rewards.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704000"
-    },
-    {
-      "date": "2026-09-14",
-      "title": "Harmonization Cycles Q&A",
-      "kind": "news",
-      "summary": "How can we earn Merits? You can earn Merits from daily \"Priority Raid\" objectives and from Monolith Access Levels, but only while a Harmonization Cycle is active. If I gain a Monolith Access Level between cycles, will I receive those Merits once the next Cycle starts? No.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262702675"
     }
   ]
 }
