@@ -19,7 +19,7 @@ function show(v) {
 tabs.forEach(t => t.addEventListener("click", () => { show(t.dataset.view); history.replaceState(null, "", "#" + t.dataset.view); }));
 const PICK = location.hash === "#pick";
 const startView = PICK ? "map" : location.hash.slice(1);
-if (["news", "guide", "map", "tiers", "sleeves", "threats", "keys"].includes(startView)) show(startView);
+if (["news", "guide", "map", "tiers", "planner", "sleeves", "threats", "keys"].includes(startView)) show(startView);
 
 /* ---------- News ---------- */
 getJSON("data/news.json").then(data => {
@@ -333,7 +333,7 @@ getJSON("data/threats.json").then(data => {
   const waitMaps = setInterval(() => { if (MAPS.length) { clearInterval(waitMaps); drawThreats(); } }, 200);
 }).catch(e => { document.getElementById("threatcards").textContent = "Couldn't load threat data: " + e.message; });
 
-window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "sleeves", "threats", "keys"].includes(v)) show(v); });
+window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (["news", "guide", "map", "tiers", "planner", "sleeves", "threats", "keys"].includes(v)) show(v); });
 
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 
@@ -494,3 +494,158 @@ getJSON("data/sleeves.json").then(d => {
   document.getElementById("sleeveq").addEventListener("input", drawSleeves);
   drawSleeves();
 }).catch(e => { document.getElementById("sleevecards").textContent = "Couldn't load sleeve data: " + e.message; });
+
+/* ---------- Build planner ---------- */
+(() => {
+  const VIEWS = ["news", "guide", "map", "tiers", "planner", "sleeves", "threats", "keys"];
+  const h = location.hash.slice(1); if (h === "planner") show("planner");
+  window.addEventListener("hashchange", () => { if (location.hash === "#planner") show("planner"); });
+  const KEY = "am-planner-v1";
+  let P = null, B = null, SL = null, state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+  const lvl = l => P.order.indexOf(l);
+  const INV = () => P.investigations;
+  const opt = (v, label, sel) => `<option value="${esc(v)}"${sel ? " selected" : ""}>${esc(label)}</option>`;
+  const ATT = ["Muzzle", "Optic", "Stock", "Grip", "Light / laser"];
+  const GEAR = ["Helmet", "Armor plate", "Rig", "Backpack", "Safe container"];
+
+  function itemReq(it) {
+    if (!it) return null;
+    if (it.kind === "Investigation") { const v = INV()[it.inv]; return { kind: "inv", inv: it.inv, level: v ? v.level : "", text: `${it.inv} investigation${v ? ` (${v.level}${v.tokens ? ", " + v.tokens.toLocaleString() + " tokens" : ""})` : ""}` }; }
+    if (it.kind === "Monolith") return { kind: "mono", level: it.level, text: it.note || `Monolith ${it.level}` };
+    return { kind: "shop", text: it.note || "Shop or raid loot." };
+  }
+  function sleeveReq(x) {
+    if (!x) return null;
+    const m = (x.how || "").match(/^(.*) investigation$/);
+    if (m && INV()[m[1]]) { const v = INV()[m[1]]; return { kind: "inv", inv: m[1], level: v.level, text: x.how + (x.detail ? ". " + x.detail : "") }; }
+    if (x.kind === "Monolith") return { kind: "mono", level: x.how.replace("Monolith ", ""), text: x.how + (x.detail ? ". " + x.detail : "") };
+    return { kind: x.kind === "Edition" ? "edition" : "shop", text: x.how + (x.detail ? ". " + x.detail : "") };
+  }
+  const chronoAll = () => [...B.chrono.abilities.map(c => ({ ...c, ability: true })), ...B.chrono.tiered];
+  function chronoReq(name, tier) {
+    const c = chronoAll().find(x => x.name === name); if (!c) return null;
+    const out = { mobs: [], notes: [], level: "" };
+    if (c.ability) { out.notes.push("Ability chronogenes come from Tier III random synthesis (Monolith Epsilon) or the Rare Distorted recipe from Distorted Chronogene Study."); out.level = "Epsilon"; out.inv = "Distorted Chronogene Study"; return out; }
+    const src = sourcesFor(name);
+    if (!src.length) out.notes.push("No monster drops it. Use random Tier II/III synthesis.");
+    src.forEach(r => {
+      if (tier === "III") { if (r.pristine) out.mobs.push([r.threat || r.src, `pristine remains → ${name} III (10%)`]); }
+      else if ((tier === "I" && r.t1) || (tier === "II" && (r.t2 || r.pristine))) out.mobs.push([r.threat || r.src, `${r.item} → ${name} ${tier} (${tier === "I" ? r.t1 + "%" : [r.t2 ? r.t2 + "% normal" : "", r.pristine ? "90% pristine" : ""].filter(Boolean).join(", ")})`]);
+    });
+    if (tier === "III") { out.notes.push(`Tier III: ${src.some(r => r.pristine) ? "rare roll from pristine remains, or " : ""}Tier III synthesis (20 Active Matter + 3 Tier II, Monolith Epsilon).`); out.level = src.some(r => r.pristine) ? "" : "Epsilon"; }
+    return out;
+  }
+
+  function slotHTML(slot) {
+    const v = state[slot] || "";
+    if (slot === "sleeve") {
+      const x = SL.sleeves.find(s => s.name === v);
+      return `<label>Sleeve<select data-k="sleeve">${opt("", "— none —")}${["Armour", "XL torso", "Speed", "Stealth", "Healing", "Melee"].map(r => `<optgroup label="${r}">${SL.sleeves.filter(s => s.role === r).map(s => opt(s.name, `${s.name} (${s.rarity})`, s.name === v)).join("")}</optgroup>`).join("")}</select></label>` +
+        (x ? `<div class="pinfo"><div class="tsum"><span class="cchip">${esc(x.plates)}</span><span class="cchip">${x.vol} vol</span></div><ul>${x.mods.map(m => `<li>${esc(m)}</li>`).join("")}</ul><p class="preq ${sleeveReq(x).kind}"><b>Get it:</b> ${esc(sleeveReq(x).text)}</p></div>` : "");
+    }
+    if (slot.startsWith("chrono")) {
+      const t = state[slot + "t"] || "I";
+      const c = chronoAll().find(x => x.name === v);
+      const taken = [0, 1, 2, 3].map(i => state["chrono" + i]).filter((n, i) => n && "chrono" + i !== slot);
+      const sel = `<select data-k="${slot}">${opt("", "— empty slot —")}<optgroup label="Abilities">${B.chrono.abilities.filter(c => !taken.includes(c.name)).map(c => opt(c.name, c.name, c.name === v)).join("")}</optgroup><optgroup label="Stat (Tier I–III)">${B.chrono.tiered.filter(c => !taken.includes(c.name)).map(c => opt(c.name, c.name, c.name === v)).join("")}</optgroup></select>`;
+      const tierSel = c && !c.ability ? `<select data-k="${slot}t" class="tiersel" aria-label="Tier">${["I", "II", "III"].map(x => opt(x, "Tier " + x, x === t)).join("")}</select>` : "";
+      let info = "";
+      if (c) {
+        const r = chronoReq(c.name, t);
+        const val = c.ability ? "" : `<span class="cchip">Tier ${t}: ${esc(c.t[["I", "II", "III"].indexOf(t)])}</span>`;
+        info = `<div class="pinfo"><p class="pdesc">${esc(c.detail || c.what)}</p><div class="tsum"><span class="eyebrow">${esc(c.tag)}</span>${val}</div>` +
+          (r.mobs.length ? `<p class="preq"><b>Farm:</b> ${r.mobs.map(([m, why]) => `<button class="srcname" data-threat="${esc(m)}">${esc(m)}</button> <span class="srcodds">${esc(why)}</span>`).join("<br>")}</p>` : "") +
+          r.notes.map(n => `<p class="preq">${esc(n)}</p>`).join("") + `</div>`;
+      }
+      return `<label>Slot ${+slot.slice(-1) + 1}<span class="selrow">${sel}${tierSel}</span></label>${info}`;
+    }
+    if (slot === "w1" || slot === "w2") {
+      const ws = P.items.filter(i => i.type === "weapon");
+      const classes = [...new Set(ws.map(w => w.sub))].sort();
+      const it = ws.find(w => w.name === v), tr = (TIERS?.weapons || []).find(w => w.name === v);
+      return `<label>${slot === "w1" ? "Primary" : "Secondary"}<select data-k="${slot}">${opt("", "— none —")}${classes.map(c => `<optgroup label="${esc(c)}">${ws.filter(w => w.sub === c).map(w => opt(w.name, w.name, w.name === v)).join("")}</optgroup>`).join("")}</select></label>` +
+        (it ? `<div class="pinfo">${tr ? `<p class="pdesc">${esc(tr.why)}</p>` : ""}<p class="preq ${itemReq(it).kind}"><b>Get it:</b> ${esc(itemReq(it).text)}</p></div>` : "");
+    }
+    const [w, att] = slot.includes("-") ? slot.split(/-(.+)/) : [null, null];
+    if (att) {
+      const list = P.items.filter(i => i.type === "attachment" && i.sub === att), it = list.find(i => i.name === v);
+      return `<label>${esc(att)}<select data-k="${slot}">${opt("", "— none —")}${list.map(i => opt(i.name, i.name + (i.kind === "Investigation" ? " ★" : ""), i.name === v)).join("")}</select></label>` +
+        (it ? `<p class="preq small ${itemReq(it).kind}">${esc(itemReq(it).text)}</p>` : "");
+    }
+    const list = P.items.filter(i => i.type === "gear" && i.sub === slot), it = list.find(i => i.name === v);
+    return `<label>${esc(slot)}<select data-k="${slot}">${opt("", "— none —")}${list.map(i => opt(i.name, i.name, i.name === v)).join("")}</select></label>` +
+      (it ? `<p class="preq small ${itemReq(it).kind}">${esc(itemReq(it).text)}</p>` : "");
+  }
+
+  function renderSlots() { document.querySelectorAll("#planner .slot").forEach(el => el.innerHTML = slotHTML(el.dataset.slot)); }
+
+  function renderPlan() {
+    const reqs = []; // {why, req}
+    const add = (why, req) => req && reqs.push({ why, req });
+    const sx = SL.sleeves.find(s => s.name === state.sleeve); if (sx) add(sx.name + " sleeve", sleeveReq(sx));
+    const mobs = {}; // name -> [reasons]
+    const addMob = (m, why) => (mobs[m] ||= new Set()).add(why);
+    const notes = new Set(); let minLvl = "Alpha";
+    const bump = l => { if (l && lvl(l) > lvl(minLvl) && lvl(l) <= lvl("Mu")) minLvl = l; };
+    [0, 1, 2, 3].forEach(i => {
+      const n = state["chrono" + i]; if (!n) return;
+      const t = state["chrono" + i + "t"] || "I", r = chronoReq(n, t);
+      r.mobs.forEach(([m, why]) => addMob(m, why)); r.notes.forEach(x => notes.add(x)); bump(r.level);
+      if (r.inv) add(n + " (ability)", { kind: "inv", inv: r.inv, level: INV()[r.inv].level, optional: true });
+    });
+    ["w1", "w2", ...["w1", "w2"].flatMap(w => ATT.map(a => w + "-" + a)), ...GEAR].forEach(k => {
+      const it = P.items.find(i => i.name === state[k] && (k.includes("-") ? i.type === "attachment" : k.startsWith("w") ? i.type === "weapon" : i.type === "gear"));
+      if (it) add(it.name, itemReq(it));
+    });
+    const invs = {}, buys = [], editions = [];
+    reqs.forEach(({ why, req }) => {
+      if (req.kind === "inv") { (invs[req.inv] ||= { why: new Set(), optional: true }).why.add(why); if (!req.optional) invs[req.inv].optional = false; bump(req.level); }
+      else if (req.kind === "mono") { bump(req.level); buys.push([why, req.text]); }
+      else if (req.kind === "edition") editions.push([why, req.text]);
+      else buys.push([why, req.text]);
+    });
+    const maps = new Set();
+    Object.entries(invs).forEach(([name, o]) => { const v = INV()[name]; if (!v) return; if (!o.optional) v.mobs.forEach(([m, c, w]) => addMob(m, `${c ? c + " kills " : ""}${w} (${name})`)); v.maps.forEach(m => maps.add(m)); });
+    const invList = Object.entries(invs).sort((a, b) => lvl(INV()[a[0]]?.level) - lvl(INV()[b[0]]?.level));
+    const tokens = invList.filter(([, o]) => !o.optional).reduce((s, [n]) => s + (INV()[n]?.tokens || 0), 0);
+    const empty = !reqs.length && !Object.keys(mobs).length;
+    document.getElementById("plan").innerHTML = empty ? `<h3>Your plan</h3><p class="unk">Pick a sleeve, chronogenes, weapons or gear and your to-do list shows up here.</p>` :
+      `<h3>Your plan</h3>
+      <div class="pstats"><div><span class="eyebrow">Monolith level</span><b>${esc(minLvl)}</b></div><div><span class="eyebrow">Investigations</span><b>${invList.filter(([, o]) => !o.optional).length}</b></div><div><span class="eyebrow">Tokens to start them</span><b>${tokens.toLocaleString()}</b></div></div>` +
+      (invList.length ? `<h4>Investigations to complete</h4><ol class="pinv">${invList.map(([n, o]) => { const v = INV()[n] || {};
+        return `<li${o.optional ? ' class="opt"' : ""}><details><summary><b>${esc(n)}</b> <span class="eyebrow">${esc(v.level || "")}${v.tokens ? " · " + v.tokens.toLocaleString() + " tokens" : ""}${o.optional ? " · optional" : ""}</span><span class="pfor">For: ${[...o.why].map(esc).join(", ")}</span></summary>` +
+          (v.steps?.length ? `<ol class="psteps">${v.steps.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : `<p class="unk">Stages not documented yet.</p>`) +
+          (v.gives ? `<p class="pdesc"><b>Also gives:</b> ${esc(v.gives)}</p>` : "") + (v.url ? `<a class="findlink" href="${esc(v.url)}" target="_blank" rel="noopener">Wiki page →</a>` : "") + `</details></li>`; }).join("")}</ol>` : "") +
+      (Object.keys(mobs).length ? `<h4>Monsters to hunt</h4><ul class="pmobs">${Object.entries(mobs).map(([m, w]) => `<li><button class="srcname" data-threat="${esc(m)}">${esc(m)}</button><span>${[...w].map(esc).join("; ")}</span></li>`).join("")}</ul>` : "") +
+      (maps.size ? `<h4>Maps you'll visit</h4><div class="tsum">${[...maps].map(m => { const mm = MAPS.find(x => x.name === m); return mm ? `<button class="cchip mapbtn" data-gomap="${mm.id}">${esc(m)}</button>` : `<span class="cchip">${esc(m)}</span>`; }).join("")}</div>` : "") +
+      (buys.length ? `<h4>Buy, loot or unlock</h4><ul class="pbuy">${buys.map(([w, t]) => `<li><b>${esc(w)}:</b> ${esc(t)}</li>`).join("")}</ul>` : "") +
+      (editions.length ? `<h4>Needs an edition</h4><ul class="pbuy">${editions.map(([w, t]) => `<li><b>${esc(w)}:</b> ${esc(t)}</li>`).join("")}</ul>` : "") +
+      (notes.size ? `<h4>Notes</h4><ul class="pbuy">${[...notes].map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : "");
+  }
+  const renderAll = () => { renderSlots(); renderPlan(); };
+
+  document.getElementById("planner").addEventListener("change", e => {
+    const k = e.target.dataset.k; if (!k) return;
+    state[k] = e.target.value; if (!e.target.value) delete state[k];
+    if (k === "w1" || k === "w2") {} // keep attachments
+    save(); renderAll();
+  });
+  document.getElementById("pl-reset").addEventListener("click", () => { state = {}; save(); document.getElementById("pl-preset").value = ""; renderAll(); });
+  document.getElementById("pl-preset").addEventListener("change", e => {
+    const b = B.builds.find(x => x.name === e.target.value); if (!b) return;
+    b.slots.forEach((n, i) => { state["chrono" + i] = n; delete state["chrono" + i + "t"]; });
+    const sn = (b.sleeve.match(/\b(Knight|Beast|Rock|Viper|Ghost|Shadow|Paladin|Reaper|Warlord|Mirage|Bulwark|Angel|Pulse)\b/) || [])[1];
+    if (sn) state.sleeve = sn;
+    save(); renderAll();
+  });
+
+  Promise.all([getJSON("data/planner.json"), getJSON("data/builds.json"), getJSON("data/sleeves.json"), getJSON("data/tiers.json")]).then(([p, b, sl, t]) => {
+    P = p; B = b; SL = sl; if (!BUILDS) BUILDS = b; if (!TIERS) TIERS = t;
+    document.getElementById("pl-preset").innerHTML = opt("", "A suggested build…") + b.builds.map(x => opt(x.name, x.name)).join("");
+    document.getElementById("pl-notes").innerHTML = p.notes.map(n => `<li>${esc(n)}</li>`).join("");
+    renderAll();
+    const w = setInterval(() => { if (MAPS.length) { clearInterval(w); renderPlan(); } }, 300);
+  }).catch(e => { document.getElementById("plan").textContent = "Couldn't load planner data: " + e.message; });
+})();

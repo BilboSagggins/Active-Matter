@@ -1,0 +1,1661 @@
+{
+  "updated": "2026-10-23",
+  "order": [
+    "Default",
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "Delta",
+    "Epsilon",
+    "Zeta",
+    "Eta",
+    "Theta",
+    "Iota",
+    "Kappa",
+    "Lambda",
+    "Mu",
+    "Chain",
+    "Edition"
+  ],
+  "investigations": {
+    "Night Courier's SMG": {
+      "level": "Beta",
+      "tokens": 100,
+      "mobs": [
+        [
+          "Distorted",
+          8,
+          "near the Ozernoe bus terminal"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Ozernoe",
+        "Cargo Port"
+      ],
+      "steps": [
+        "Refine 10 Enriched SMGs",
+        "Extract the Courier manifest (Factory workshop #2)",
+        "Kill 8 Distorted near the Ozernoe bus terminal",
+        "Extract the SMG parts crate (Cargo Port warehouse #4)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Night_Courier%27s_SMG",
+      "gives": "PP-19-01 blueprint, PP-19-01 Suppressor, AK tactical stock"
+    },
+    "Outer Perimeter": {
+      "level": "Beta",
+      "tokens": 75,
+      "mobs": [],
+      "maps": [],
+      "steps": [
+        "Refine 2 Enriched Rusty Mosin carbines",
+        "Refine 2 Enriched Rusty SKS carbines",
+        "Refine 2 Enriched Rusty Mosin rifles"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Outer_Perimeter",
+      "gives": "Mosin carbine, SKS, Mosin sniper recipes, Thermal Scope SHA 3.6x"
+    },
+    "Dangerous Medicine": {
+      "level": "Beta",
+      "tokens": 50,
+      "mobs": [],
+      "maps": [
+        "Factory",
+        "Ozernoe",
+        "Shegolskoe"
+      ],
+      "steps": [
+        "Extract 10 medicine (Factory)",
+        "Refine 5 Enriched AI-2 kits",
+        "Photograph the medical cache near the Ozernoe power station",
+        "Extract the Medic's field log (Shegolskoe house #2)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Dangerous_Medicine",
+      "gives": "Regeneration injector, Medium Backpack"
+    },
+    "Distorted Chronogene Study": {
+      "level": "Beta",
+      "tokens": 75,
+      "mobs": [
+        [
+          "Distorted",
+          0,
+          "for 1 pristine + 20 remains (Factory and Dogorsk)"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Ozernoe",
+        "Dogorsk"
+      ],
+      "steps": [
+        "Refine 10 Enriched Distorted remains",
+        "Extract 1 Distorted pristine remains",
+        "Extract 10 Distorted remains in Factory",
+        "Extract the Researcher's notebook (Ozernoe house #6)",
+        "Extract 10 Distorted remains in Dogorsk"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Distorted_Chronogene_Study",
+      "gives": "Rare chronogene recipe from Distorted, BN9 Suppressor"
+    },
+    "Urban Withdrawal": {
+      "level": "Gamma",
+      "tokens": 150,
+      "mobs": [],
+      "maps": [],
+      "steps": [
+        "Refine 2 Enriched Rusty AKS-74Us",
+        "Refine 5 Enriched Rusty Makarovs",
+        "Refine 2 Enriched Rusty AKMs"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Urban_Withdrawal",
+      "gives": "AKM, AKS-74U, Makarov recipes, 1P63 Collimator, PBS-1 Suppressor"
+    },
+    "American Classics": {
+      "level": "Delta",
+      "tokens": 350,
+      "mobs": [
+        [
+          "Distorted",
+          10,
+          "with bolt-action rifles in Dogorsk"
+        ]
+      ],
+      "maps": [
+        "Park",
+        "Headquarters",
+        "Dogorsk"
+      ],
+      "steps": [
+        "Refine 15 Enriched industrial items",
+        "Place and protect a sensor in Park",
+        "Drive the vehicle to the delivery point in Headquarters",
+        "Kill 10 Distorted with bolt-action rifles in Dogorsk"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/American_Classics",
+      "gives": "M24 blueprint, SAB PM2 5-25x scope"
+    },
+    "Natural Link": {
+      "level": "Epsilon",
+      "tokens": 500,
+      "mobs": [
+        [
+          "Dendroid",
+          10,
+          "with SMGs in Park"
+        ]
+      ],
+      "maps": [
+        "Park",
+        "Dam",
+        "Cargo Port"
+      ],
+      "steps": [
+        "Refine 5 Enriched SMGs",
+        "Kill 10 Dendroids with SMGs in Park",
+        "Place the sensor in Dam",
+        "Drive the vehicle to the delivery point in Cargo Port"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Natural_Link",
+      "gives": "PP-2000 blueprint, EXPS3 Collimator, PP-2000 Suppressor"
+    },
+    "The Helmet Field Trials": {
+      "level": "Epsilon",
+      "tokens": 500,
+      "mobs": [
+        [
+          "Turned Soldier",
+          12,
+          "in Ozernoe"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Dam",
+        "Ozernoe"
+      ],
+      "steps": [
+        "Refine 20 Enriched helmets",
+        "Extract a Helmet liner fragment (Factory dormitory)",
+        "Photograph the Dam checkpoint",
+        "Kill 12 Turned Soldiers in Ozernoe"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/The_Helmet_Field_Trials",
+      "gives": "EDH-Gen V helmet blueprint, USSR Hiking Backpack"
+    },
+    "Double Accounting": {
+      "level": "Eta",
+      "tokens": 800,
+      "mobs": [
+        [
+          "Turned Soldier",
+          15,
+          "in Park"
+        ],
+        [
+          "Distorted",
+          0,
+          "waves while defending a sensor in Dam"
+        ]
+      ],
+      "maps": [
+        "Ozernoe",
+        "Factory",
+        "Dogorsk",
+        "Park",
+        "Dam"
+      ],
+      "steps": [
+        "Find Morozov's note (Ozernoe)",
+        "Photograph the old factory building",
+        "Find the test journal page (Dogorsk)",
+        "Refine 5 Enriched pistols",
+        "Kill 15 Turned Soldiers in Park",
+        "Defend the sensor in Dam"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Double_Accounting",
+      "gives": "RSh-12 blueprint, PK-06 Collimator, K2D Flashlight, Dlan-3, 3 Ceramic (L) plates"
+    },
+    "The Link for a Better Stock": {
+      "level": "Eta",
+      "tokens": 1350,
+      "mobs": [
+        [
+          "Distorted",
+          10,
+          "near cottages in Shegolskoe"
+        ]
+      ],
+      "maps": [
+        "Cargo Port",
+        "Shegolskoe"
+      ],
+      "steps": [
+        "Extract a Handyman's receipt (Cargo Port)",
+        "Extract 10 Enriched pins albums",
+        "Refine 25 Enriched tools",
+        "Kill 10 Distorted near the Shegolskoe cottages"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/The_Link_for_a_Better_Stock",
+      "gives": "M249 Para blueprint, M249 collapsible stock, TA31 4x"
+    },
+    "The Watchman's Footsteps": {
+      "level": "Theta",
+      "tokens": 1700,
+      "mobs": [
+        [
+          "Distorted",
+          20,
+          "with shotguns in Shegolskoe"
+        ]
+      ],
+      "maps": [
+        "Shegolskoe"
+      ],
+      "steps": [
+        "Extract the Watchman's keyring (house #8)",
+        "Extract 10 Flashlights",
+        "Photograph the house during the gravity anomaly",
+        "Kill 20 Distorted with shotguns"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/The_Watchman%27s_Footsteps",
+      "gives": "Origin-12 blueprint, Moosemark Collimator"
+    },
+    "Controlled Impulse": {
+      "level": "Iota",
+      "tokens": 2800,
+      "mobs": [
+        [
+          "Turned Soldier",
+          40,
+          "with assault rifles in Headquarters"
+        ],
+        [
+          "Devourer",
+          15,
+          "in Factory"
+        ]
+      ],
+      "maps": [
+        "Park",
+        "Headquarters",
+        "Factory",
+        "Dam",
+        "Dogorsk"
+      ],
+      "steps": [
+        "Refine 20 Enriched assault rifles",
+        "Extract the gas-system documents (Park)",
+        "Kill 40 Turned Soldiers with ARs (HQ)",
+        "Kill 15 Devourers (Factory)",
+        "Extract 25 Enriched tools (Dam)",
+        "Drive the car to delivery (Dogorsk)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Controlled_Impulse",
+      "gives": "AR416A5 blueprint, F-Def GLC stock, EXPS3, Dlan-3, Eclipse Suppressor"
+    },
+    "Trial by Fire": {
+      "level": "Iota",
+      "tokens": 3100,
+      "mobs": [
+        [
+          "Turned Soldier",
+          10,
+          "with a machine gun in Factory"
+        ],
+        [
+          "Flowerman",
+          8,
+          "with a machine gun in Shegolskoe"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Ozernoe",
+        "Shegolskoe",
+        "Cargo Port",
+        "Dogorsk"
+      ],
+      "steps": [
+        "Kill 10 Turned Soldiers with an MG (Factory)",
+        "Extract soil samples (Ozernoe)",
+        "Kill 8 Flowermen with an MG (Shegolskoe)",
+        "Activate the switches (Cargo Port)",
+        "Drive the vehicle to delivery (Cargo Port)",
+        "Extract the RPL-20 documents (Dogorsk)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Trial_by_Fire",
+      "gives": "RPL-20 blueprint, RPK-16 bipod, Z-KO RK2 grip, Dlan-3, K2D, 1P69 1-10x"
+    },
+    "A Scope in the Ashes": {
+      "level": "Iota",
+      "tokens": 3600,
+      "mobs": [
+        [
+          "Flowerman",
+          10,
+          "near the Euclid anomaly in Factory"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Ozernoe",
+        "Shegolskoe"
+      ],
+      "steps": [
+        "Kill 10 Flowermen near the Euclid anomaly (Factory)",
+        "Extract the Pallet tracking slip (Ozernoe admin)",
+        "Photograph house #13 (Shegolskoe)",
+        "Refine 10 Enriched Zenit cameras"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/A_Scope_in_the_Ashes",
+      "gives": "SVDM blueprint, SVDM suppressor, PPO 5-15x"
+    },
+    "Suppressor's Whisper": {
+      "level": "Iota",
+      "tokens": 1400,
+      "mobs": [
+        [
+          "Invisible",
+          5,
+          "in the Factory military hangar area"
+        ]
+      ],
+      "maps": [
+        "Factory"
+      ],
+      "steps": [
+        "Photograph Factory hangar #17",
+        "Refine 10 Enriched cassettes",
+        "Extract 10 electronic components",
+        "Kill 5 Invisibles in the military hangar area"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Suppressor%27s_Whisper",
+      "gives": "Suppressor for SVDM blueprint"
+    },
+    "The Impact That Came From Above": {
+      "level": "Iota",
+      "tokens": 2500,
+      "mobs": [],
+      "maps": [
+        "Ozernoe",
+        "Shegolskoe"
+      ],
+      "steps": [
+        "Refine 15 Enriched armor plates",
+        "Extract 20 Enriched industrial items (Ozernoe)",
+        "Photograph the embedded titan plate (Shegolskoe)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/The_Impact_That_Came_From_Above",
+      "gives": "Titan (S) plate blueprint, Large Rig"
+    },
+    "Patterns In the Rust": {
+      "level": "Kappa",
+      "tokens": 3200,
+      "mobs": [],
+      "maps": [
+        "Dogorsk",
+        "Cargo Port"
+      ],
+      "steps": [
+        "Refine 25 Enriched tools",
+        "Extract 20 rusty items (Dogorsk)",
+        "Photograph the barges anomaly (Cargo Port)",
+        "Extract 50 industrial items (Cargo Port)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Patterns_In_the_Rust",
+      "gives": "Titan (L) plate blueprint, USSR Climber's Backpack"
+    },
+    "Helmet of the Vanishing Soldier": {
+      "level": "Kappa",
+      "tokens": 3700,
+      "mobs": [
+        [
+          "Turned Soldier",
+          6,
+          "at the Ozernoe fire station"
+        ]
+      ],
+      "maps": [
+        "Shegolskoe",
+        "Ozernoe"
+      ],
+      "steps": [
+        "Extract the Helmet liner (Shegolskoe house #11)",
+        "Extract 15 Enriched vinyl disks",
+        "Photograph the Ozernoe fire station garage",
+        "Kill 6 Turned Soldiers at the fire station"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Helmet_of_the_Vanishing_Soldier",
+      "gives": "TFMK-I helmet blueprint"
+    },
+    "Hope for the Wicked": {
+      "level": "Kappa",
+      "tokens": 7500,
+      "mobs": [
+        [
+          "Turned Soldier",
+          30,
+          "in Park"
+        ]
+      ],
+      "maps": [
+        "Park",
+        "Headquarters",
+        "Factory"
+      ],
+      "steps": [
+        "Kill 30 Turned Soldiers (Park)",
+        "Place and protect a sensor (HQ)",
+        "Drive the vehicle to delivery (Factory)",
+        "Refine 20 Enriched electronics"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Hope_for_the_Wicked",
+      "gives": "EV-MG blueprint, EXPS3"
+    },
+    "Cold Trail": {
+      "level": "Lambda",
+      "tokens": 2800,
+      "mobs": [
+        [
+          "Turned Soldier",
+          20,
+          "in Headquarters"
+        ]
+      ],
+      "maps": [
+        "Airport",
+        "Downtown",
+        "Headquarters"
+      ],
+      "steps": [
+        "Extract the transport manifest (Airport)",
+        "Photograph the convoy attack site (Downtown)",
+        "Find the convoy's fate (Downtown)",
+        "Kill 20 Turned Soldiers (HQ)",
+        "Extract the SCAR-H document (HQ)",
+        "Place a sensor by the container (Airport)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Cold_Trail",
+      "gives": "SCAR-H blueprint, DBAL-A2, Gunslinger Grip, Tyr grip, M600 light, SAB PM2"
+    },
+    "Large Caliber": {
+      "level": "Lambda",
+      "tokens": 8000,
+      "mobs": [
+        [
+          "Distorted",
+          50,
+          "in Dogorsk"
+        ],
+        [
+          "Turned Soldier",
+          20,
+          "with semi-auto rifles in Cargo Port"
+        ]
+      ],
+      "maps": [
+        "Park",
+        "Headquarters",
+        "Ozernoe",
+        "Dogorsk",
+        "Cargo Port"
+      ],
+      "steps": [
+        "Refine 15 Enriched semi-auto rifles",
+        "Photograph 3 distorted military vehicles (Park)",
+        "Extract the M82A1 test documents (HQ)",
+        "Drive the car to delivery (Ozernoe)",
+        "Kill 50 Distorted (Dogorsk)",
+        "Kill 20 Turned Soldiers with semi-autos (Cargo Port)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Large_Caliber",
+      "gives": "M82A1 blueprint, IHPS helmet, PPO 5-15x, M82A1 cheek pad, Tyr grip"
+    },
+    "Jay's Negotiations": {
+      "level": "Epsilon",
+      "tokens": 1500,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Jay%27s_Negotiations",
+      "gives": "Jay sleeve"
+    },
+    "Psychologist's Gambit": {
+      "level": "Zeta",
+      "tokens": 2200,
+      "mobs": [
+        [
+          "Invisible",
+          10,
+          "with pistols"
+        ],
+        [
+          "Hellhounds",
+          20,
+          "with shotguns"
+        ],
+        [
+          "Turned Soldier",
+          20,
+          "with SMGs in Factory"
+        ]
+      ],
+      "maps": [
+        "Factory",
+        "Dogorsk"
+      ],
+      "steps": [
+        "Extract 25 Enriched electronic components",
+        "Kill 10 Invisibles with pistols",
+        "Kill 20 Hellhounds with shotguns",
+        "Kill 20 Turned Soldiers with SMGs (Factory)",
+        "Extract 10 Enriched books (Dogorsk)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Psychologist%27s_Gambit",
+      "gives": "Psychologist sleeve"
+    },
+    "Mermaid's Concerns": {
+      "level": "Theta",
+      "tokens": 4000,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Mermaid%27s_Concerns",
+      "gives": "Mermaid sleeve"
+    },
+    "Black Hat, White Hat": {
+      "level": "Iota",
+      "tokens": 7000,
+      "mobs": [
+        [
+          "Turned Soldier",
+          15,
+          "in Cargo Port: Darkness"
+        ]
+      ],
+      "maps": [
+        "Dogorsk",
+        "Cargo Port"
+      ],
+      "steps": [
+        "Extract 50 Active Matter in Dogorsk",
+        "Extract 30 Enriched electronic components",
+        "Refine 12 Enriched tape recorders",
+        "Extract 15 Enriched radios",
+        "Kill 15 Turned Soldiers in Cargo Port: Darkness"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Black_Hat,_White_Hat",
+      "gives": "Hunter sleeve"
+    },
+    "Phantom's Frequency": {
+      "level": "Kappa",
+      "tokens": 9000,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Phantom%27s_Frequency",
+      "gives": "Phantom sleeve"
+    },
+    "Ghost": {
+      "level": "Kappa",
+      "tokens": 9000,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Ghost",
+      "gives": "Ghost sleeve (needs Harmonization stage 2)"
+    },
+    "Breaking Point": {
+      "level": "Lambda",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "",
+      "gives": "Guts sleeve"
+    },
+    "Steel and Analysis": {
+      "level": "Default",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Steel_and_Analysis",
+      "gives": "Guardian sleeve (Mariko Sato start, or after a Monolith Cycle)"
+    },
+    "To Serve and Protect": {
+      "level": "Chain",
+      "tokens": 0,
+      "mobs": [
+        [
+          "Dendroid",
+          15,
+          "with shotguns"
+        ],
+        [
+          "Distorted",
+          20,
+          "with assault rifles in Dam"
+        ]
+      ],
+      "maps": [
+        "Dam"
+      ],
+      "steps": [
+        "Fuse 5 PP-19-01s",
+        "Extract 10 Enriched clocks",
+        "Kill 15 Dendroids with shotguns",
+        "Extract 20 Enriched VHS tapes",
+        "Kill 20 Distorted with ARs in Dam"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/To_Serve_and_Protect",
+      "gives": "Vanguard sleeve (after Steel and Analysis)"
+    },
+    "Field Work Protocol": {
+      "level": "Default",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Field_Work_Protocol",
+      "gives": "Pulse sleeve (Genevieve Brennan start, or after a Monolith Cycle)"
+    },
+    "Bulwark on the Frontline": {
+      "level": "Chain",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Bulwark_on_the_Frontline",
+      "gives": "Bulwark sleeve (after Field Work Protocol)"
+    },
+    "Rock of Solitude": {
+      "level": "Default",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Rock_of_Solitude",
+      "gives": "Rock sleeve (Kwame Mensah start, or after a Monolith Cycle)"
+    },
+    "The Price of Progress": {
+      "level": "Default",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/The_Price_of_Progress",
+      "gives": "Fugitive sleeve (Joris van Dijk start, or after a Monolith Cycle)"
+    },
+    "Strategist Protocol": {
+      "level": "Chain",
+      "tokens": 0,
+      "mobs": [
+        [
+          "Devourer",
+          5,
+          "with shotguns in Headquarters"
+        ],
+        [
+          "Distorted",
+          25,
+          "with assault rifles in Dogorsk"
+        ],
+        [
+          "Statue",
+          10,
+          "in Military Base: Silent Observers"
+        ]
+      ],
+      "maps": [
+        "Headquarters",
+        "Dogorsk",
+        "Military Base"
+      ],
+      "steps": [
+        "Fuse 10 F-1 grenades",
+        "Extract 10 Enriched pipe wrenches",
+        "Kill 5 Devourers with shotguns (HQ)",
+        "Kill 25 Distorted with ARs (Dogorsk)",
+        "Kill 10 Statues (Silent Observers)"
+      ],
+      "url": "https://activematter.wiki.gg/wiki/Strategist_Protocol",
+      "gives": "Fuse sleeve (after The Price of Progress)"
+    },
+    "Paladin's Crusade": {
+      "level": "Edition",
+      "tokens": 0,
+      "mobs": [],
+      "maps": [],
+      "steps": [],
+      "url": "https://activematter.wiki.gg/wiki/Paladin%27s_Crusade",
+      "gives": "Paladin sleeve (needs Advanced Edition)"
+    }
+  },
+  "items": [
+    {
+      "name": "M4A1",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Monolith",
+      "inv": null,
+      "level": "Gamma",
+      "note": "Blueprint unlocks at Monolith Gamma. Also included in Advanced/Deluxe editions."
+    },
+    {
+      "name": "M110A1",
+      "type": "weapon",
+      "sub": "DMR",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "Origin-12",
+      "type": "weapon",
+      "sub": "Shotgun",
+      "kind": "Investigation",
+      "inv": "The Watchman's Footsteps",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Scorpion EVO 3",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "AEK-971",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "SCAR-L",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "SCAR-H",
+      "type": "weapon",
+      "sub": "Battle rifle",
+      "kind": "Investigation",
+      "inv": "Cold Trail",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "M39 EMR",
+      "type": "weapon",
+      "sub": "DMR",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "SVDM",
+      "type": "weapon",
+      "sub": "DMR",
+      "kind": "Investigation",
+      "inv": "A Scope in the Ashes",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "PKM",
+      "type": "weapon",
+      "sub": "Machine gun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "PP-2000",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Investigation",
+      "inv": "Natural Link",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "AR416A5",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Investigation",
+      "inv": "Controlled Impulse",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "MP5",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "UMP45",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "AK-103",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Monolith",
+      "inv": null,
+      "level": "Epsilon",
+      "note": "Unlocks at Monolith Epsilon."
+    },
+    {
+      "name": "AK-12",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "XV ACP",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "SPAS-12",
+      "type": "weapon",
+      "sub": "Shotgun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "DP-12",
+      "type": "weapon",
+      "sub": "Shotgun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "M249 Para",
+      "type": "weapon",
+      "sub": "Machine gun",
+      "kind": "Investigation",
+      "inv": "The Link for a Better Stock",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "M24",
+      "type": "weapon",
+      "sub": "Sniper",
+      "kind": "Investigation",
+      "inv": "American Classics",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "SV-98",
+      "type": "weapon",
+      "sub": "Sniper",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "ASh-12",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "EV-MG",
+      "type": "weapon",
+      "sub": "Machine gun",
+      "kind": "Investigation",
+      "inv": "Hope for the Wicked",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "MB590",
+      "type": "weapon",
+      "sub": "Shotgun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "SOK-94 Vepr",
+      "type": "weapon",
+      "sub": "Carbine",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "M14",
+      "type": "weapon",
+      "sub": "Battle rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "AS Val",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "VSS Vintorez",
+      "type": "weapon",
+      "sub": "DMR",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "M82A1",
+      "type": "weapon",
+      "sub": "Anti-materiel",
+      "kind": "Investigation",
+      "inv": "Large Caliber",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Mosin Carbine",
+      "type": "weapon",
+      "sub": "Sniper",
+      "kind": "Investigation",
+      "inv": "Outer Perimeter",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Hunting Crossbow",
+      "type": "weapon",
+      "sub": "Special",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "CF-400 Flamethrower",
+      "type": "weapon",
+      "sub": "Special",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "RPG-7",
+      "type": "weapon",
+      "sub": "Launcher",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "PP-19-01",
+      "type": "weapon",
+      "sub": "SMG",
+      "kind": "Investigation",
+      "inv": "Night Courier's SMG",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "SKS carbine",
+      "type": "weapon",
+      "sub": "Carbine",
+      "kind": "Investigation",
+      "inv": "Outer Perimeter",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Mosin Sniper",
+      "type": "weapon",
+      "sub": "Sniper",
+      "kind": "Investigation",
+      "inv": "Outer Perimeter",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "AKM",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Investigation",
+      "inv": "Urban Withdrawal",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "AKS-74U",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Investigation",
+      "inv": "Urban Withdrawal",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Makarov",
+      "type": "weapon",
+      "sub": "Pistol",
+      "kind": "Investigation",
+      "inv": "Urban Withdrawal",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "RPL-20",
+      "type": "weapon",
+      "sub": "Machine gun",
+      "kind": "Investigation",
+      "inv": "Trial by Fire",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "RSh-12",
+      "type": "weapon",
+      "sub": "Pistol",
+      "kind": "Investigation",
+      "inv": "Double Accounting",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "M9",
+      "type": "weapon",
+      "sub": "Pistol",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "MP-443",
+      "type": "weapon",
+      "sub": "Pistol",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot. Extracting one unlocks its Replicator recipe."
+    },
+    {
+      "name": "Mini 556 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "VZ1 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "BN45 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "HX-QD Suppressor (M110A1)",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "PP-19-01 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Night Courier's SMG",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "PBS-1 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Urban Withdrawal",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "PP-2000 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Natural Link",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Eclipse Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Controlled Impulse",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Suppressor for SVDM",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Suppressor's Whisper",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "BN9 Suppressor",
+      "type": "attachment",
+      "sub": "Muzzle",
+      "kind": "Investigation",
+      "inv": "Distorted Chronogene Study",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "EXPS3 Collimator",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "M68 CCO Collimator",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "PK-06 Collimator",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "Double Accounting",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Moosemark Collimator",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "The Watchman's Footsteps",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "1P63 Collimator",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "Urban Withdrawal",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "LPVO 101 (1–6×)",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "TA31 Scope 4×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "UTG T4 4×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "1P69 Scope 1–10×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "Trial by Fire",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "SAB PM2 Scope 5–25×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "American Classics",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "PPO Scope 5–15×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "A Scope in the Ashes",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "S350F Thermal 2×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "Thermal Scope SHA 3.6×",
+      "type": "attachment",
+      "sub": "Optic",
+      "kind": "Investigation",
+      "inv": "Outer Perimeter",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "F-Def GLC Stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Investigation",
+      "inv": "Controlled Impulse",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "MP PRS Stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "AK tactical stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Investigation",
+      "inv": "Night Courier's SMG",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "PT-3 Stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "B-Link Stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "M249 collapsible stock",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Investigation",
+      "inv": "The Link for a Better Stock",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "M82A1 cheek pad",
+      "type": "attachment",
+      "sub": "Stock",
+      "kind": "Investigation",
+      "inv": "Large Caliber",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Gunslinger Grip",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Investigation",
+      "inv": "Cold Trail",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Tyr LWP Black Pistol Grip",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Investigation",
+      "inv": "Cold Trail",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Z-KO RK2 Vertical Grip",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Investigation",
+      "inv": "Trial by Fire",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "RPK-16 bipod",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Investigation",
+      "inv": "Trial by Fire",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "F-Def RTK Angled Grip",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "Kuvalda Grip",
+      "type": "attachment",
+      "sub": "Grip",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "DBAL-A2 Tactical Device",
+      "type": "attachment",
+      "sub": "Light / laser",
+      "kind": "Investigation",
+      "inv": "Cold Trail",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Dlan-3 Tactical Device",
+      "type": "attachment",
+      "sub": "Light / laser",
+      "kind": "Investigation",
+      "inv": "Controlled Impulse",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "M600 Scout Flashlight",
+      "type": "attachment",
+      "sub": "Light / laser",
+      "kind": "Investigation",
+      "inv": "Cold Trail",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "K2D Flashlight",
+      "type": "attachment",
+      "sub": "Light / laser",
+      "kind": "Investigation",
+      "inv": "Double Accounting",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "C5 Laser Sight",
+      "type": "attachment",
+      "sub": "Light / laser",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop or raid loot."
+    },
+    {
+      "name": "Ballistic helmet TFMK-I",
+      "type": "gear",
+      "sub": "Helmet",
+      "kind": "Investigation",
+      "inv": "Helmet of the Vanishing Soldier",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Enhanced Helmet EDH-Gen V",
+      "type": "gear",
+      "sub": "Helmet",
+      "kind": "Investigation",
+      "inv": "The Helmet Field Trials",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "IHPS Helmet",
+      "type": "gear",
+      "sub": "Helmet",
+      "kind": "Investigation",
+      "inv": "Large Caliber",
+      "level": null,
+      "note": "Stage reward; also raid loot."
+    },
+    {
+      "name": "SF / A3 / PASGT Helmet",
+      "type": "gear",
+      "sub": "Helmet",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop, editions or raid loot."
+    },
+    {
+      "name": "Tank crew helmet",
+      "type": "gear",
+      "sub": "Helmet",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Raid loot everywhere; Replicator."
+    },
+    {
+      "name": "Titan armor plate (L)",
+      "type": "gear",
+      "sub": "Armor plate",
+      "kind": "Investigation",
+      "inv": "Patterns In the Rust",
+      "level": null,
+      "note": ""
+    },
+    {
+      "name": "Titan armor plate (S)",
+      "type": "gear",
+      "sub": "Armor plate",
+      "kind": "Investigation",
+      "inv": "The Impact That Came From Above",
+      "level": null,
+      "note": "Or fuse 1 Ceramic (S) + chronotraces."
+    },
+    {
+      "name": "Ceramic armor plates",
+      "type": "gear",
+      "sub": "Armor plate",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Raid loot (Headquarters south gas station); Double Accounting gives 3 Ceramic (L)."
+    },
+    {
+      "name": "Steel armor plates",
+      "type": "gear",
+      "sub": "Armor plate",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Sold at the Market."
+    },
+    {
+      "name": "Large Magazine Rig",
+      "type": "gear",
+      "sub": "Rig",
+      "kind": "Monolith",
+      "inv": null,
+      "level": "Theta",
+      "note": "Shop 4,500 credits or 1,500 tokens at Theta; Replicator."
+    },
+    {
+      "name": "Large Rig",
+      "type": "gear",
+      "sub": "Rig",
+      "kind": "Investigation",
+      "inv": "The Impact That Came From Above",
+      "level": null,
+      "note": "Stage 2 reward."
+    },
+    {
+      "name": "Small Rig",
+      "type": "gear",
+      "sub": "Rig",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Raid loot and army crates; Shop 500 credits."
+    },
+    {
+      "name": "Large Backpack",
+      "type": "gear",
+      "sub": "Backpack",
+      "kind": "Monolith",
+      "inv": null,
+      "level": "Gamma",
+      "note": "Unlocked from the Monolith (exact level not documented)."
+    },
+    {
+      "name": "USSR Hiking Backpack",
+      "type": "gear",
+      "sub": "Backpack",
+      "kind": "Investigation",
+      "inv": "The Helmet Field Trials",
+      "level": null,
+      "note": "Also raid loot (Factory garages)."
+    },
+    {
+      "name": "USSR Climber's Backpack",
+      "type": "gear",
+      "sub": "Backpack",
+      "kind": "Investigation",
+      "inv": "Patterns In the Rust",
+      "level": null,
+      "note": "Also raid loot."
+    },
+    {
+      "name": "Medium Backpack",
+      "type": "gear",
+      "sub": "Backpack",
+      "kind": "Investigation",
+      "inv": "Dangerous Medicine",
+      "level": null,
+      "note": "Also editions and loot."
+    },
+    {
+      "name": "Safe container",
+      "type": "gear",
+      "sub": "Safe container",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Shop (Prime) or editions."
+    }
+  ],
+  "notes": [
+    "Weapons and gear not tied to an investigation can be bought in the Shop or found in raids; extracting one unlocks its Replicator recipe.",
+    "Attachment fit depends on the weapon. Check which slots your gun has in the Shelter.",
+    "Tier III of a stat chronogene needs pristine remains or Tier III synthesis (Monolith Epsilon). Ability chronogenes come from synthesis or the Distorted Chronogene Study recipe."
+  ]
+}
