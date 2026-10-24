@@ -566,12 +566,14 @@ getJSON("data/sleeves.json").then(d => {
       const classes = [...new Set(ws.map(w => w.sub))].sort();
       const it = ws.find(w => w.name === v), tr = (TIERS?.weapons || []).find(w => w.name === v);
       return `<label>${slot === "w1" ? "Primary" : "Secondary"}<select data-k="${slot}">${opt("", "— none —")}${classes.map(c => `<optgroup label="${esc(c)}">${ws.filter(w => w.sub === c).map(w => opt(w.name, w.name, w.name === v)).join("")}</optgroup>`).join("")}</select></label>` +
-        (it ? `<div class="pinfo">${tr ? `<p class="pdesc">${esc(tr.why)}</p>` : ""}<p class="preq ${itemReq(it).kind}"><b>Get it:</b> ${esc(itemReq(it).text)}</p></div>` : "");
+        (it ? `<div class="pinfo">${tr ? `<p class="pdesc">${esc(tr.why)}</p>` : ""}<p class="preq ${itemReq(it).kind}"><b>Get it:</b> ${esc(itemReq(it).text)}</p>` +
+          ((r => r ? `<p class="preq"><b>Mods:</b> ${esc(r.why)} <button type="button" class="ghostbtn small" data-rec="${slot}">Use suggested mods</button></p>` : "")(recFor(v))) + `</div>` : "");
     }
     const [w, att] = slot.includes("-") ? slot.split(/-(.+)/) : [null, null];
     if (att) {
       const list = P.items.filter(i => i.type === "attachment" && i.sub === att), it = list.find(i => i.name === v);
-      return `<label>${esc(att)}<select data-k="${slot}">${opt("", "— none —")}${list.map(i => opt(i.name, i.name + (i.kind === "Investigation" ? " ★" : ""), i.name === v)).join("")}</select></label>` +
+      const rec = recFor(state[w]); const isRec = rec && v && rec[att] === v;
+      return `<label><span>${esc(att)}${isRec ? ' <span class="sugg">suggested</span>' : ""}</span><select data-k="${slot}">${opt("", "— none —")}${list.map(i => opt(i.name, i.name + (i.kind === "Investigation" ? " ★" : ""), i.name === v)).join("")}</select></label>` +
         (it ? `<p class="preq small ${itemReq(it).kind}">${esc(itemReq(it).text)}</p>` : "");
     }
     const list = P.items.filter(i => i.type === "gear" && i.sub === slot), it = list.find(i => i.name === v);
@@ -579,6 +581,16 @@ getJSON("data/sleeves.json").then(d => {
       (it ? `<p class="preq small ${itemReq(it).kind}">${esc(itemReq(it).text)}</p>` : "");
   }
 
+  function recFor(wname) {
+    const it = P.items.find(i => i.type === "weapon" && i.name === wname); if (!it || !P.modRec) return null;
+    const R = P.modRec, cls = new RegExp(R.akPattern).test(wname) && it.sub === "Assault rifle" ? "AK" : it.sub;
+    const base = R.byClass[cls]; if (!base) return null;
+    return { ...base, ...(R.byWeapon[wname] || {}), cls };
+  }
+  function applyRec(w) {
+    const r = recFor(state[w]);
+    ATT.forEach(a => { const k = w + "-" + a; if (r && r[a]) state[k] = r[a]; else delete state[k]; });
+  }
   function renderSlots() { document.querySelectorAll("#planner .slot").forEach(el => el.innerHTML = slotHTML(el.dataset.slot)); }
 
   function renderPlan() {
@@ -629,8 +641,12 @@ getJSON("data/sleeves.json").then(d => {
   document.getElementById("planner").addEventListener("change", e => {
     const k = e.target.dataset.k; if (!k) return;
     state[k] = e.target.value; if (!e.target.value) delete state[k];
-    if (k === "w1" || k === "w2") {} // keep attachments
+    if (k === "w1" || k === "w2") applyRec(k);
     save(); renderAll();
+  });
+  document.getElementById("planner").addEventListener("click", e => {
+    const b = e.target.closest("[data-rec]"); if (!b) return;
+    applyRec(b.dataset.rec); save(); renderAll();
   });
   document.getElementById("pl-reset").addEventListener("click", () => { state = {}; save(); document.getElementById("pl-preset").value = ""; renderAll(); });
   document.getElementById("pl-preset").addEventListener("change", e => {
@@ -644,7 +660,7 @@ getJSON("data/sleeves.json").then(d => {
   Promise.all([getJSON("data/planner.json"), getJSON("data/builds.json"), getJSON("data/sleeves.json"), getJSON("data/tiers.json")]).then(([p, b, sl, t]) => {
     P = p; B = b; SL = sl; if (!BUILDS) BUILDS = b; if (!TIERS) TIERS = t;
     document.getElementById("pl-preset").innerHTML = opt("", "A suggested build…") + b.builds.map(x => opt(x.name, x.name)).join("");
-    document.getElementById("pl-notes").innerHTML = p.notes.map(n => `<li>${esc(n)}</li>`).join("");
+    document.getElementById("pl-notes").innerHTML = [...p.notes, p.modRec?.note].filter(Boolean).map(n => `<li>${esc(n)}</li>`).join("");
     renderAll();
     const w = setInterval(() => { if (MAPS.length) { clearInterval(w); renderPlan(); } }, 300);
   }).catch(e => { document.getElementById("plan").textContent = "Couldn't load planner data: " + e.message; });

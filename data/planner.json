@@ -1657,5 +1657,129 @@
     "Weapons and gear not tied to an investigation can be bought in the Shop or found in raids; extracting one unlocks its Replicator recipe.",
     "Attachment fit depends on the weapon. Check which slots your gun has in the Shelter.",
     "Tier III of a stat chronogene needs pristine remains or Tier III synthesis (Monolith Epsilon). Ability chronogenes come from synthesis or the Distorted Chronogene Study recipe."
-  ]
+  ],
+  "modRec": {
+    "byClass": {
+      "SMG": {
+        "Muzzle": "BN45 Suppressor",
+        "Optic": "EXPS3 Collimator",
+        "Stock": "B-Link Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "C5 Laser Sight",
+        "why": "Close quarters: suppressor, collimator, light stock and a laser for hipfire. Keep it light for fast aiming."
+      },
+      "Shotgun": {
+        "Muzzle": "",
+        "Optic": "EXPS3 Collimator",
+        "Stock": "B-Link Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "C5 Laser Sight",
+        "why": "Close quarters: collimator, light stock and a laser for hipfire."
+      },
+      "Assault rifle": {
+        "Muzzle": "Mini 556 Suppressor",
+        "Optic": "LPVO 101 (1–6×)",
+        "Stock": "F-Def GLC Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "Dlan-3 Tactical Device",
+        "why": "All-round: suppressor, LPVO 1–6×, F-Def GLC stock (best weight-to-recoil) and a light for interiors."
+      },
+      "AK": {
+        "Muzzle": "PBS-1 Suppressor",
+        "Optic": "LPVO 101 (1–6×)",
+        "Stock": "AK tactical stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "Dlan-3 Tactical Device",
+        "why": "AK-pattern rifle: PBS-1 suppressor, AK tactical stock for recoil, LPVO for range flexibility."
+      },
+      "Battle rifle": {
+        "Muzzle": "VZ1 Suppressor",
+        "Optic": "TA31 Scope 4×",
+        "Stock": "MP PRS Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "Dlan-3 Tactical Device",
+        "why": "Mid range: suppressor, 4× scope and a heavy stock to tame 7.62×51 recoil."
+      },
+      "DMR": {
+        "Muzzle": "VZ1 Suppressor",
+        "Optic": "1P69 Scope 1–10×",
+        "Stock": "MP PRS Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "",
+        "why": "Marksman: suppressor, 1–10× scope and a heavy stock for recoil."
+      },
+      "Sniper": {
+        "Muzzle": "VZ1 Suppressor",
+        "Optic": "SAB PM2 Scope 5–25×",
+        "Stock": "MP PRS Stock",
+        "Grip": "",
+        "Light / laser": "",
+        "why": "Long range: suppressor, high-zoom scope, heavy stock."
+      },
+      "Anti-materiel": {
+        "Muzzle": "",
+        "Optic": "PPO Scope 5–15×",
+        "Stock": "M82A1 cheek pad",
+        "Grip": "",
+        "Light / laser": "",
+        "why": "Long range: 5–15× scope and the M82A1 cheek pad."
+      },
+      "Machine gun": {
+        "Muzzle": "",
+        "Optic": "TA31 Scope 4×",
+        "Stock": "MP PRS Stock",
+        "Grip": "F-Def RTK Angled Grip",
+        "Light / laser": "",
+        "why": "Sustained fire: 4× scope, heavy stock and a grip to hold bursts on target."
+      },
+      "Carbine": {
+        "Muzzle": "",
+        "Optic": "TA31 Scope 4×",
+        "Stock": "PT-3 Stock",
+        "Grip": "",
+        "Light / laser": "",
+        "why": "Aimed semi-auto shots: 4× scope and a recoil stock."
+      },
+      "Pistol": {
+        "Muzzle": "",
+        "Optic": "",
+        "Stock": "",
+        "Grip": "",
+        "Light / laser": "C5 Laser Sight",
+        "why": "Sidearm: keep it light; a laser helps hipfire."
+      }
+    },
+    "byWeapon": {
+      "PP-19-01": {
+        "Muzzle": "PP-19-01 Suppressor"
+      },
+      "PP-2000": {
+        "Muzzle": "PP-2000 Suppressor"
+      },
+      "SVDM": {
+        "Muzzle": "Suppressor for SVDM",
+        "Optic": "PPO Scope 5–15×"
+      },
+      "M110A1": {
+        "Muzzle": "HX-QD Suppressor (M110A1)"
+      },
+      "M249 Para": {
+        "Stock": "M249 collapsible stock"
+      },
+      "RPL-20": {
+        "Grip": "RPK-16 bipod"
+      },
+      "SOK-94 Vepr": {
+        "Stock": "AK tactical stock"
+      },
+      "Origin-12": {
+        "Optic": "Moosemark Collimator"
+      },
+      "AR416A5": {
+        "Stock": "F-Def GLC Stock"
+      }
+    },
+    "akPattern": "^(AK|AEK|AKS)",
+    "note": "Suggested mods follow the Mods guide (Priorities → Mods). Check in-game that each part fits your gun; change any slot freely."
+  }
 }
