@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-23T16:52:49.552Z",
+  "updated": "2026-10-25T16:48:33.141Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-25",
+      "title": "Over 500,000 Copies of Active Matter!",
+      "kind": "news",
+      "summary": "“Half a million copies is a very strong result for a hardcore game like ours,” says Anton Yudintsev, co-founder of Gaijin Entertainment. “What is especially encouraging is that sales have remained remarkably steady since launch.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114042101"
+    },
     {
       "date": "2026-10-23",
       "title": "Test your perception",
@@ -190,13 +197,6 @@
       "kind": "news",
       "summary": "To celebrate the launch of Active Matter on Steam, Xbox Series X|S, and PlayStation 5, tune in to Active Matter live streams on Twitch from September 18th (15:00 UTC) to September 25th (15:00 UTC) and earn new rewards for your loadout! Drops run for a full three weeks; we’ll reveal the rewards for Weeks 2 and 3 soon!",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010494363"
-    },
-    {
-      "date": "2026-09-17",
-      "title": "Update 0.4.0.115",
-      "kind": "patch",
-      "summary": "Improved performance, reworked several animations, fixed multiple bugs, and delivered important updates to the user interface and sound. Gameplay and Balance Fixed an issue that displayed an incorrect magazine round count when spawning into a raid. Fixed an animation glitch that could interrupt reloads.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010491563"
     }
   ]
 }
