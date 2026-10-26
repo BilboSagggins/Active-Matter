@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-26T17:00:25.023Z",
+  "updated": "2026-10-26T20:52:47.823Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-26",
+      "title": "Frightfully Good Deal: Active Matter at the \"Steam Scream V\" Festival!",
+      "kind": "news",
+      "summary": "Eyeing the Advanced or Deluxe Edition? They'll get cheaper too: both editions include the Standard Edition. Call your friends and dive into anomalous zones you wouldn't dare raid alone.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114045839"
+    },
     {
       "date": "2026-10-26",
       "title": "Active Matter on Steam Deck!",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Gameplay and Balance Increased the number of the stronger Distorted variants in areas marked with a threat of Distorted. Updated level 2-5 rewards to no longer require a specific edition; all players now receive them. Added loot to Ural truck cargo. Disabled the use of items while in monster form.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010502163"
-    },
-    {
-      "date": "2026-09-21",
-      "title": "The Agency Is Recruiting Content Creators!",
-      "kind": "news",
-      "summary": "We’ve completely reworked our Content Partnership Program for video makers, streamers, and other creators. Participants can now receive regular in-game bonuses plus support to grow their channels. Constant supply: regular distribution of in-game resources, so you’re always equipped both in the raid and on camera.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010501308"
     }
   ]
 }
