@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-26T09:02:27.894Z",
+  "updated": "2026-10-26T17:00:25.023Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-26",
+      "title": "Active Matter on Steam Deck!",
+      "kind": "news",
+      "summary": "Thanks to every Operative playing the game on these devices and sharing their impressions. We’ll see you in the Multiverse!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114045537"
+    },
     {
       "date": "2026-10-25",
       "title": "Over 500,000 Copies of Active Matter!",
@@ -183,13 +190,6 @@
       "kind": "news",
       "summary": "We’ve completely reworked our Content Partnership Program for video makers, streamers, and other creators. Participants can now receive regular in-game bonuses plus support to grow their channels. Constant supply: regular distribution of in-game resources, so you’re always equipped both in the raid and on camera.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010501308"
-    },
-    {
-      "date": "2026-09-18",
-      "title": "Update 0.4.0.122",
-      "kind": "patch",
-      "summary": "By order of the Agency, an experimental Body Sleeve appearance-correction mode has been activated. Spatial distortions may occur; further adjustments are planned in subsequent updates. Character Customization Added Body Sleeve customization (BETA), available on the Sleeve selection screen.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495607"
     }
   ]
 }
