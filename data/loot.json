@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-29",
   "maps": [
     {
       "id": "cargo",
@@ -639,12 +639,13 @@
           "y": 43.9,
           "type": "key",
           "label": "Administration (director's office)",
-          "loot": "East storage key on the desk",
+          "loot": "East and West storage keys on the desk",
           "access": "None",
           "danger": "Moderate",
-          "tip": "Labeled on the in-game map.",
+          "tip": "Labeled on the in-game map. The West storage key opens the locked doors on the western side of the Dam interior (lock position not documented).",
           "items": [
-            "East storage key"
+            "East storage key",
+            "West storage key"
           ]
         },
         {

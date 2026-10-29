@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-29",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
@@ -30,7 +30,7 @@
      "drops":"Dendroid remains (recipes, Underground lab key)."},
     {"name":"Devourer","kind":"Monster","danger":3,"counters":["Shotgun","Rifle","Cover"],"where":["cargo","dog"],
      "does":"Turret-like monster whose ranged attack goes through walls. Guards Cargo Port's barges and teleporters.",
-     "beat":["Wait for its attack behind cover, then return fire, and repeat.","Each wall its shot passes through cuts the damage, so cover still helps.","Pump shotgun (MB590/SPAS-12) up close saves ammo versus automatics."],
+     "beat":["Wait for its attack behind cover, then return fire, and repeat.","Each wall its shot passes through cuts the damage, so cover still helps.","Pump shotgun (MB590/SPAS-12) up close saves ammo versus automatics.","In Ozernoe: Firestorm, burning Devourers can be neutralized quickly with a fire extinguisher."],
      "drops":"About 25–30 Active Matter and Devourer remains."},
     {"name":"Hellhounds","kind":"Monster","danger":2,"counters":["Melee","Shotgun","Fire"],"where":[],
      "does":"Fast packs that try to surround you. Dens are marked by vertical tears in space.",
@@ -56,9 +56,9 @@
      "does":"A car that turns into a giant walker. Explodes when it dies.",
      "beat":["Don't walk up to suspicious cars.","Shoot through the windshield.","Back away as its health drops, and stay clear of fuel tanks and other cars."],
      "drops":"About 10× more Active Matter since 0.4.0.156; random weapons, armor and rare attachments."},
-    {"name":"Scorch","kind":"Monster","danger":2,"counters":["Rifle","Shotgun"],"where":[],
-     "does":"Glowing fire creature that charges and throws a fireball.",
-     "beat":["Shoot it while it's charging, or in the gap right after it fires.","Don't stand in the leftover fire."],
+    {"name":"Scorch","kind":"Monster","danger":2,"counters":["Fire extinguisher","Rifle","Shotgun"],"where":[],
+     "does":"Glowing fire creature that charges and throws a fireball. Main threat in the Ozernoe: Firestorm Overtime Raid.",
+     "beat":["Shoot it while it's charging, or in the gap right after it fires.","Don't stand in the leftover fire.","A fire extinguisher (equip it in a weapon slot) neutralizes it within seconds so it doesn't explode."],
      "drops":"Standard anomalous loot."},
     {"name":"Swarm","kind":"Monster","danger":2,"counters":["Fire","Get under a roof"],"where":["ozer"],
      "does":"Cloud of small flying creatures.",

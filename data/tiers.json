@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-29",
   "sources": {
     "blog": {
       "name": "activematter.blog",
@@ -423,7 +423,7 @@
         },
         {
           "name": "Binoculars, fire extinguishers, common scrap",
-          "why": "Filler only. Never detour for them."
+          "why": "Filler only. Never detour for them. Exception: carry a fire extinguisher into Ozernoe: Firestorm, where it neutralizes Scorches and burning Devourers."
         }
       ]
     }
@@ -565,6 +565,14 @@
     }
   ],
   "patchNotes": [
+    {
+      "patch": "0.4.0.208",
+      "change": "Fall damage restored to intended values (a three-story roof drop is likely fatal); laser sights no longer point the wrong way during extraction."
+    },
+    {
+      "patch": "0.4.0.205",
+      "change": "Repair All also fixes spare armor in your rig, backpack or safe container; reloads can no longer exceed magazine capacity; map loot zones are colored by their rarest loot."
+    },
     {
       "patch": "0.4.0.201",
       "change": "RPG-7 nerfed; PKM can chamber a round; muzzle flash hiders work again."
