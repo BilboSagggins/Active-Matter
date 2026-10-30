@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-30T13:14:34.173Z",
+  "updated": "2026-10-30T16:59:40.695Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-30",
+      "title": "Armored Support: BTR-80A",
+      "kind": "news",
+      "summary": "raids. For those not up to speed: the BTR-80A has eight wheels, a 30 mm autocannon and armor that shrugs off bullets and claws alike. Finding one is easy. But without fuel and ammo it’s dead weight, so you’ll also have to scavenge a fuel canister and ammunition. Whoever pulls it off first takes the wheel.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302239086"
+    },
     {
       "date": "2026-10-30",
       "title": "The Agency’s Readings Have Breached Critical Thresholds!",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Raids and Profile Restored the unlocking of a Devourer’s journal entry in the Notes upon defeating one. Harmonization Fixed incorrect dog tag issuance when purchasing during Harmonization Cycle 2.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498218156"
-    },
-    {
-      "date": "2026-09-22",
-      "title": "Update 0.4.0.135",
-      "kind": "patch",
-      "summary": "Improved the ability to reconnect to a raid after a connection loss. Fixed a bug where items in containers (e.g., in chests and bags) occupied space but were not displayed. Fixed a rare server freeze. Fixed a bug where some players did not appear in the Playstation® 5 friends list.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010504721"
     }
   ]
 }
