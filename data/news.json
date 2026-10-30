@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-27T13:06:38.659Z",
+  "updated": "2026-10-30T09:07:01.367Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-10-30",
+      "title": "The Agency’s Readings Have Breached Critical Thresholds!",
+      "kind": "news",
+      "summary": "Through these fractures, \"residual imprints\" are leaking into our quantum-unstable zones — echoes of entities erased from alternate timelines. But hostiles aren’t the only things crossing over. Unique crops awaits those willing to harvest them to outfit their Shelter with a darker, brooding atmosphere.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302237742"
+    },
     {
       "date": "2026-10-27",
       "title": "Update 0.4.0.208",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Improved the ability to reconnect to a raid after a connection loss. Fixed a bug where items in containers (e.g., in chests and bags) occupied space but were not displayed. Fixed a rare server freeze. Fixed a bug where some players did not appear in the Playstation® 5 friends list.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010504721"
-    },
-    {
-      "date": "2026-09-21",
-      "title": "Scheduled Maintenance on Active Matter Servers",
-      "kind": "news",
-      "summary": "Hello, Operatives! On September 22nd, from 07:00 UTC to approximately 07:30 UTC, we will be performing scheduled maintenance on the Active Matter servers. The Agency apologizes for any inconvenience this may cause and appreciates your patience during the calibration of portals to the Multiverse.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010502308"
     }
   ]
 }
