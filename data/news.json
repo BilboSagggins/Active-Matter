@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-30T16:59:40.695Z",
+  "updated": "2026-11-02T09:23:06.214Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-02",
+      "title": "To hell: \"Factory: Bloodbath\"",
+      "kind": "news",
+      "summary": "Infiltrate the blood-soaked factory, track down encrypted data drives, and carve through rampaging hostiles. Secure your haul, extract to the Shelter - and the Agency will make it worth your while with generous rewards.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302247469"
+    },
     {
       "date": "2026-10-30",
       "title": "Armored Support: BTR-80A",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Rewards in this Protocol can be redeemed with Merits at any time, whether or not you’re currently participating in a Harmonization Cycle! Rewards include consumables, unique decorations, Credits, and Monolith Tokens — everything you need to accelerate your push toward establishing your new Personal Timeline.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498221246"
-    },
-    {
-      "date": "2026-09-23",
-      "title": "Update 0.4.0.137",
-      "kind": "patch",
-      "summary": "Raids and Profile Restored the unlocking of a Devourer’s journal entry in the Notes upon defeating one. Harmonization Fixed incorrect dog tag issuance when purchasing during Harmonization Cycle 2.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498218156"
     }
   ]
 }
