@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-02",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
@@ -8,6 +8,10 @@
     "Statues freeze while watched; Shy Girl attacks if you stare. Know which is which."
   ],
   "threats": [
+    {"name":"BTR-80A","kind":"Vehicle","danger":4,"counters":["Listen","Avoid","Cover","Explosives"],"where":[],
+     "does":"Abandoned eight-wheeled armored carrier with a 30 mm autocannon, spotted on Dalniy Island and in Anguka Anga during special raids (added Oct 30, 2026). Its armor stops bullets and claws. It needs a scavenged fuel canister and ammunition to run; whoever gets it going first drives it.",
+     "beat":["Listen for engine noise or cannon fire and reroute.","If you can't avoid it, get into hard cover fast.","An RPG-7 can destroy it."],
+     "drops":"Unconfirmed.","source":"https://activematter.game/en/news/374"},
     {"name":"Distorted","kind":"Monster","danger":2,"counters":["Suppressed","Headshot","Shotgun"],"where":["mil","dog","dam"],
      "does":"Lies dormant like a pile of clothes until noise wakes it, then dashes and short-teleports at you.",
      "beat":["Suppressed headshot while it's still asleep is the safest kill.","Don't open up on a sleeping group with a loud rifle; it wakes the rest.","Lair variants scream to summon more. Kill the screamer first."],
