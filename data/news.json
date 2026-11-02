@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-02T09:23:06.214Z",
+  "updated": "2026-11-02T17:16:40.464Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-02",
+      "title": "Update 0.4.0.215",
+      "kind": "patch",
+      "summary": "Investigations and Items Anomalous Biomass now drops from Swarm Hives and the Alpha Flowerman. The volume of Anomalous Biomass has been reduced so that more can be carried in the inventory. Interface Fixed incorrect tooltip text regarding the reward for a kill made by a Distorted Hunter.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302248164"
+    },
     {
       "date": "2026-11-02",
       "title": "To hell: \"Factory: Bloodbath\"",
