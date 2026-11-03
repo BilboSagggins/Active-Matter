@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-02T17:16:40.464Z",
+  "updated": "2026-11-03T17:13:45.103Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-03",
+      "title": "New Body Sleeve: Cicada",
+      "kind": "news",
+      "summary": "",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302252153"
+    },
     {
       "date": "2026-11-02",
       "title": "Update 0.4.0.215",
@@ -190,13 +197,6 @@
       "kind": "news",
       "summary": "We’re continuing to celebrate the release of Active Matter on Steam, Xbox Series X|S, and PlayStation 5, so tune in to more Active Matter live streams on Twitch from September 25th (15:00 UTC) to October 2nd (15:00 UTC) and earn fresh rewards for your loadout!",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498224300"
-    },
-    {
-      "date": "2026-09-24",
-      "title": "Update \"The Fundamental Protocol\"",
-      "kind": "patch",
-      "summary": "Rewards in this Protocol can be redeemed with Merits at any time, whether or not you’re currently participating in a Harmonization Cycle! Rewards include consumables, unique decorations, Credits, and Monolith Tokens — everything you need to accelerate your push toward establishing your new Personal Timeline.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498221246"
     }
   ]
 }
