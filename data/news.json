@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-03T17:13:45.103Z",
+  "updated": "2026-11-04T17:12:00.619Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-04",
+      "title": "Developer Q&A: November 2026",
+      "kind": "news",
+      "summary": "Squad & Matchmaking Will Isolated Raids receive matchmaking or auto-fill options so solo players can group up with random operatives, or so duos can queue with a third teammate? Are there any other improvements planned for the auto-fill squad system? We are actively working on expanding our squad functionality and…",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880479612"
+    },
     {
       "date": "2026-11-03",
       "title": "New Body Sleeve: Cicada",
@@ -190,13 +197,6 @@
       "kind": "patch",
       "summary": "Creating Personal Timelines Placed all equipped gear to a temporary stash after creating a new Personal Timeline; equipped chronogenes, as before, are discarded.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498226745"
-    },
-    {
-      "date": "2026-09-25",
-      "title": "Earn More Rewards For Watching Active Matter Streams!",
-      "kind": "news",
-      "summary": "We’re continuing to celebrate the release of Active Matter on Steam, Xbox Series X|S, and PlayStation 5, so tune in to more Active Matter live streams on Twitch from September 25th (15:00 UTC) to October 2nd (15:00 UTC) and earn fresh rewards for your loadout!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498224300"
     }
   ]
 }
