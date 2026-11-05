@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-04T17:12:00.619Z",
+  "updated": "2026-11-05T17:26:14.489Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-05",
+      "title": "Upcoming Raid \"Icarus Offices\": America is Going Higher",
+      "kind": "news",
+      "summary": "Operatives are already familiar with these colossal towers looming on the horizon in the \"Downtown\"' raid. The Agency has long suspected this district was the epicenter of the incident in a different timeline.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643342194"
+    },
     {
       "date": "2026-11-04",
       "title": "Developer Q&A: November 2026",
@@ -190,13 +197,6 @@
       "kind": "patch",
       "summary": "Enemies Reduced the pursuit range of Seeds: they now give up the chase sooner. Fixed an issue where Hellhounds could spawn on rooftops. Distorted that are already chasing a fleeing target will now occasionally teleport ahead of it.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656377486"
-    },
-    {
-      "date": "2026-09-26",
-      "title": "Update 0.4.0.156",
-      "kind": "patch",
-      "summary": "Creating Personal Timelines Placed all equipped gear to a temporary stash after creating a new Personal Timeline; equipped chronogenes, as before, are discarded.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498226745"
     }
   ]
 }
