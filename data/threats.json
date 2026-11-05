@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-05",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
@@ -27,7 +27,7 @@
     {"name":"Alpha Flowerman","kind":"Boss","danger":4,"counters":["Fire","Rifle"],"where":["park"],
      "does":"Huge, slow Flowerman guarding a big nest with an escort.",
      "beat":["Burn the escort first, then focus the Alpha.","Its head armor comes off last, so headshots aren't the quick win.","Use its slowness to keep distance."],
-     "drops":"About 10× more Active Matter since 0.4.0.156."},
+     "drops":"About 10× more Active Matter since 0.4.0.156; Anomalous Biomass since 0.4.0.215.","source":"https://activematter.game/en/news/376"},
     {"name":"Dendroid","kind":"Monster","danger":2,"counters":["Fire","Rifle"],"where":["park"],
      "does":"Tree-like humanoid; some melee, some carry guns.",
      "beat":["Set them on fire; a burning Dendroid tries to flee.","Fight armed ones from cover like a soldier."],
@@ -67,7 +67,7 @@
     {"name":"Swarm","kind":"Monster","danger":2,"counters":["Fire","Get under a roof"],"where":["ozer"],
      "does":"Cloud of small flying creatures.",
      "beat":["Get under any roof or into a closed vehicle cab. The Ozernoe church is safe.","A flamethrower clears them; shotguns are weak."],
-     "drops":"None."},
+     "drops":"Their hives drop Anomalous Biomass since 0.4.0.215; the swarm itself drops nothing.","source":"https://activematter.game/en/news/376"},
     {"name":"Poltergeist","kind":"Monster","danger":2,"counters":["Close doors","Grenades"],"where":[],
      "does":"Rattles doors and moves objects, waking nearby monsters.",
      "beat":["Close doors behind you.","Deal with whatever it wakes before chasing it.","Players report mixed results with flamethrowers; grenades work."],

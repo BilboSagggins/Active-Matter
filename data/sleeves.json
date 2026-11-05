@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-11-05",
   "how": [
     "You pick a starting operative at the start of each Personal Timeline. Each operative has a starter investigation that unlocks a sleeve and opens a second one: Steel and Analysis → Guardian → To Serve and Protect → Vanguard (Mariko Sato); Field Work Protocol → Pulse → Bulwark on the Frontline → Bulwark (Genevieve Brennan); Rock of Solitude → Rock → Predator's Trail (Kwame Mensah); The Price of Progress → Fugitive → Strategist Protocol → Fuse (Joris van Dijk).",
     "Other operatives' starter chains open after you complete a Monolith Cycle, and finishing a cycle lets you pick a new default sleeve.",
@@ -630,6 +630,22 @@
       "detail": "",
       "char": "",
       "source": "",
+      "status": "unconfirmed"
+    },
+    {
+      "name": "Cicada",
+      "rarity": "?",
+      "role": "Monster handler",
+      "vol": "?",
+      "plates": "?",
+      "mods": [
+        "Stats not published yet"
+      ],
+      "how": "Unconfirmed (announced Nov 3, 2026)",
+      "kind": "Unknown",
+      "detail": "Announced as a monster specialist: she can trap zone creatures, hold them and release them at rival operatives or into rooms to flush out campers. Released creatures attack everyone except her. Other sleeves will get a lighter version of this, but some monster types can only be caught by Cicada. Full dossier still to come.",
+      "char": "",
+      "source": "https://activematter.game/en/news/379",
       "status": "unconfirmed"
     }
   ]
