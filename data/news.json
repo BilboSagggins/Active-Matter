@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-09T17:23:08.733Z",
+  "updated": "2026-11-09T21:07:37.089Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-09",
+      "title": "New Calibers and Weapons: Expanding the Arsenal",
+      "kind": "news",
+      "summary": ".300 BLK: For the Quiet Professionals A new subsonic round in the Agency’s arsenal. Paired with a suppressor, it makes for truly quiet shooting. – a familiar bullpup in a new variation. Unlike the A1, it trades the built-in optic for a rail that takes any scope.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643356914"
+    },
     {
       "date": "2026-11-06",
       "title": "\"Power Plant\": A Signal from Anguka Anga",
@@ -190,13 +197,6 @@
       "kind": "patch",
       "summary": "Distorted that teleport in front of a fleeing player now appear farther away, giving you more time to react. Agitated Distorted animate more visibly, making it easier to see whether their sleep is restless, and that they could wake up at any moment.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656379082"
-    },
-    {
-      "date": "2026-09-30",
-      "title": "Update 0.4.0.164",
-      "kind": "patch",
-      "summary": "When firing in full-auto, the sight now tracks weapon recoil accurately and correctly again. Previously, a bug could cause the sight position to drift from the actual point of impact. Recoil itself is unchanged.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656378576"
     }
   ]
 }
