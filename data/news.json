@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T20:59:32.323Z",
+  "updated": "2026-11-09T17:23:08.733Z",
   "source": "Steam news for app 2887580",
   "items": [
     {
@@ -197,13 +197,6 @@
       "kind": "patch",
       "summary": "When firing in full-auto, the sight now tracks weapon recoil accurately and correctly again. Previously, a bug could cause the sight position to drift from the actual point of impact. Recoil itself is unchanged.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656378576"
-    },
-    {
-      "date": "2026-09-30",
-      "title": "Update 0.4.0.163",
-      "kind": "patch",
-      "summary": "Enemies Reduced the pursuit range of Seeds: they now give up the chase sooner. Fixed an issue where Hellhounds could spawn on rooftops. Distorted that are already chasing a fleeing target will now occasionally teleport ahead of it.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656377486"
     }
   ]
 }
