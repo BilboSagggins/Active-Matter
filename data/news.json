@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T17:15:21.163Z",
+  "updated": "2026-11-11T21:49:14.949Z",
   "source": "Steam news for app 2887580",
   "items": [
     {
@@ -190,13 +190,6 @@
       "kind": "news",
       "summary": "The Agency HQ has prepared an introductory briefing for operatives being deployed to explore the Multiverse. Reviewing the material is recommended before proceeding. [img src=\" src=\" src=\" src=\" src=\" src=\" src=\" src=\"",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067925881"
-    },
-    {
-      "date": "2026-10-05",
-      "title": "Update 0.4.0.173",
-      "kind": "patch",
-      "summary": "Gameplay and Balance Updated Molotov Cocktails and Incendiary Grenades to immediately ignite enemies splashed with the flammable mixture. Previously, 1–2 seconds in the flame were required to catch fire. Updated Devourers to take damage from flamethrowers and areas of fire.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656393325"
     }
   ]
 }
