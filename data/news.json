@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-11T09:12:33.534Z",
+  "updated": "2026-11-11T13:29:12.871Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-11",
+      "title": "Multiverse Portal Calibration Has Begun",
+      "kind": "news",
+      "summary": "Attention: passages to the Multiverse are temporarily closed while the Agency prepares to deploy the \"To the Sky\" update. The game will be unavailable during the maintenance. We'll let you know as soon as the passages reopen. In the meantime, take a look at what’s new waiting for you in the update.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144178594"
+    },
     {
       "date": "2026-11-11",
       "title": "Scheduled Maintenance",
@@ -190,13 +197,6 @@
       "kind": "patch",
       "summary": "Gameplay and Balance Updated Molotov Cocktails and Incendiary Grenades to immediately ignite enemies splashed with the flammable mixture. Previously, 1–2 seconds in the flame were required to catch fire. Updated Devourers to take damage from flamethrowers and areas of fire.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656393325"
-    },
-    {
-      "date": "2026-10-02",
-      "title": "Week 3 Rewards For Watching Active Matter Streams!",
-      "kind": "news",
-      "summary": "NOTE: To receive Twitch Drops for Active Matter, you must first own an edition of the game. If you purchased or received the game on Steam, you need to launch it at least once first. Then, sign in with Steam on this page and select Active Matter from the list of games that appears, if prompted.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656386321"
     }
   ]
 }
