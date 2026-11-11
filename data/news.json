@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-09T21:07:37.089Z",
+  "updated": "2026-11-11T09:12:33.534Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-11",
+      "title": "Scheduled Maintenance",
+      "kind": "news",
+      "summary": "Operatives! Today, on November 11th (12:00 UTC), the game servers will be taken offline for scheduled maintenance to deploy the \"To the sky\" major update. The game may be unavailable until maintenance is complete. Follow us on social media and check the website for updates!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144177700"
+    },
     {
       "date": "2026-11-09",
       "title": "New Calibers and Weapons: Expanding the Arsenal",
@@ -190,13 +197,6 @@
       "kind": "news",
       "summary": "NOTE: To receive Twitch Drops for Active Matter, you must first own an edition of the game. If you purchased or received the game on Steam, you need to launch it at least once first. Then, sign in with Steam on this page and select Active Matter from the list of games that appears, if prompted.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656386321"
-    },
-    {
-      "date": "2026-09-30",
-      "title": "Update 0.4.0.165",
-      "kind": "patch",
-      "summary": "Distorted that teleport in front of a fleeing player now appear farther away, giving you more time to react. Agitated Distorted animate more visibly, making it easier to see whether their sleep is restless, and that they could wake up at any moment.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656379082"
     }
   ]
 }
