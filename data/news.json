@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-11T21:49:14.949Z",
+  "updated": "2026-11-12T13:32:13.114Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-12",
+      "title": "Update 0.5.0.30",
+      "kind": "patch",
+      "summary": "This update adds a button that lets you turn in all completed investigation stages at once, and shop tabs no longer disappear after a raid. Fire now burns the ground and grass, and the RPG-7 is effective against vehicles and dangerous enemies again.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144182763"
+    },
     {
       "date": "2026-11-11",
       "title": "Major Update \"To the sky\"",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Gameplay and Balance Rare \"Guts\" and \"Ghost\" Body Sleeves have been reworked: they are now \"epic\" Body Sleeves with the same characteristics as the \"Knight\" and \"Paladin\" Body Sleeves. In Isolated (PvE) Raids, Invisibles and Hellhounds no longer suddenly spawn near players who remain in one area for a long time.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932592"
-    },
-    {
-      "date": "2026-10-07",
-      "title": "A Beginner Operative’s Guide",
-      "kind": "news",
-      "summary": "The Agency HQ has prepared an introductory briefing for operatives being deployed to explore the Multiverse. Reviewing the material is recommended before proceeding. [img src=\" src=\" src=\" src=\" src=\" src=\" src=\" src=\"",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067925881"
     }
   ]
 }
