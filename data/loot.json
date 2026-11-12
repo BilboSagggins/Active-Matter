@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "maps": [
     {
       "id": "cargo",
@@ -1185,8 +1185,8 @@
     "Backpacks": "Backpacks drop from general loot on every map, so check any container or body. The spots marked are where players report them most: Factory garages and houses in Chagulko (Chagulko isn't on this site's maps yet). The Large Backpack is unlocked from the Monolith.",
     "Armor plates": "Plates come in Rusty, UHMWPE, Steel, Ceramic and Titan, in S, L and XL sizes, and drop from general loot everywhere. Ceramic is commonly reported at the Headquarters south gas station and signal posts. Titan can also be fused from a Ceramic plate plus chronotraces, and the Market sells plates.",
     "Helmets": "Helmets drop from loot crates in every raid. TFMK-I is the most bullet-resistant; EDH-Gen V is the mid-game pick. Basic helmets can also be made in the Replicator.",
-    "Medical supplies": "Medical items drop in general loot across all maps. Marked spots are reliable extras: Ozernoe ZIL trucks and the Headquarters southern edge (driver's first aid kits). AI-2 kits are cheap at the Market.",
-    "Weapon crates": "Weapon spawns are random. These are crates that reliably appear; the gun inside changes each raid.",
+    "Medical supplies": "Medical items drop in general loot across all maps. Marked spots are reliable extras: Ozernoe ZIL trucks and the Headquarters southern edge (driver's first aid kits). AI-2 kits are cheap at the Market. Since To the Sky (Nov 11, 2026), wall-mounted first aid kits are a new container type on American and African maps.",
+    "Weapon crates": "Weapon spawns are random. These are crates that reliably appear; the gun inside changes each raid. Since To the Sky, loot matches its location: in Saltriver City (Downtown, Park) armories and military containers hold US/NATO guns and NATO ammo, household containers hold pistols and hunting guns, and police department containers can hold rare and epic items.",
     "Rigs": "Rigs are your base inventory and come in Small, Medium and Large, plus Magazine and Medicine versions that shrink ammo, grenades or meds. The Small Rig drops in every raid and in army (military) crates, so the marked spots are military-crate hotspots. Swapping onto a dead enemy's rig gives you whatever they carried. Bigger rigs come from the Shop, Replicator or Fusion: the Large Magazine Rig adds 600 storage and cuts ammo and grenade volume by 30%.",
     "Safe containers": {
       "badge": "Shop only",

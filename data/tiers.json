@@ -327,7 +327,7 @@
       "name": "RPG-7",
       "class": "Launcher",
       "tiers": {},
-      "why": "Nerfed in 0.4.0.201: less projectile damage and rockets take more space. Not ranked by current lists."
+      "why": "Nerfed in 0.4.0.201 (less projectile damage, rockets take more space). Strong again since 0.5.0.30: the PG-7VL rocket now deals both blast and armor-piercing jet damage, very effective against vehicles and dangerous anomalies. Not ranked by current lists."
     }
   ],
   "loot": [
@@ -566,6 +566,14 @@
   ],
   "patchNotes": [
     {
+      "patch": "0.5.0.30",
+      "change": "RPG-7's PG-7VL rocket deals blast plus armor-piercing damage again, so it's strong against vehicles and dangerous anomalies; armored SUV windows protect passengers again; fire scorches ground and grass; one button turns in all finished investigation steps."
+    },
+    {
+      "patch": "To the Sky",
+      "change": "New Icarus Offices and Powerplant raids. New guns: 6P67 (5.45×39), STG77 A3 and Wolverine (.300 BLK), AEK-999 machine gun (7.62×54), KSVK bolt-action (12.7×108), FD-12 shotgun. VSSK suppressor now built in; M4A1 and M110A1 gain side rails and underbarrel mounts; less rifle muzzle flash; less sway while aiming; RSh-12 investigation moved to Monolith Eta."
+    },
+    {
       "patch": "0.4.0.208",
       "change": "Fall damage restored to intended values (a three-story roof drop is likely fatal); laser sights no longer point the wrong way during extraction."
     },
@@ -668,7 +676,9 @@
       "Right-click a gun and choose Buy Ammunition and Mods to see only parts that fit.",
       "If you die with a gun, its mods are lost with it.",
       "Test builds in the Shelter shooting range before a raid.",
-      "Bulky optics and stocks cost volume you could use for loot."
+      "Bulky optics and stocks cost volume you could use for loot.",
+      "Since To the Sky (Nov 11, 2026) a mod's weight replaces the stock part's weight instead of adding to it (starting with the AK-74).",
+      "Since To the Sky the M4A1 and M110A1 have side tactical rails and an underbarrel mount."
     ]
   }
 }

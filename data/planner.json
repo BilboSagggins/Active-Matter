@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-11-12",
   "order": [
     "Default",
     "Alpha",
@@ -1282,6 +1282,60 @@
       "inv": null,
       "level": null,
       "note": "Shop (Prime) or editions."
+    },
+    {
+      "name": "6P67",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
+    },
+    {
+      "name": "STG77 A3",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
+    },
+    {
+      "name": "Wolverine",
+      "type": "weapon",
+      "sub": "Assault rifle",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
+    },
+    {
+      "name": "AEK-999",
+      "type": "weapon",
+      "sub": "Machine gun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
+    },
+    {
+      "name": "KSVK",
+      "type": "weapon",
+      "sub": "Sniper",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
+    },
+    {
+      "name": "FD-12",
+      "type": "weapon",
+      "sub": "Shotgun",
+      "kind": "Shop",
+      "inv": null,
+      "level": null,
+      "note": "Added in To the Sky (Nov 11, 2026). How it unlocks isn't documented yet; Saltriver City armories and military containers hold US/NATO weapons."
     }
   ],
   "notes": [
