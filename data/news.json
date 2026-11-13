@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-12T13:32:13.114Z",
+  "updated": "2026-11-13T17:12:23.405Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-13",
+      "title": "Update 0.5.0.33",
+      "kind": "patch",
+      "summary": "Fixed an issue with weapon recoil when using optical and thermal sights, as well as gear loss caused by long loading times when entering an Isolated Raid.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144187254"
+    },
     {
       "date": "2026-11-12",
       "title": "Update 0.5.0.30",
@@ -183,13 +190,6 @@
       "kind": "news",
       "summary": "How have we already improved the game? Here are just a few examples of what we’ve fixed in recent days and weeks. Fewer motion sickness-inducing effects reduce camera bobbing while moving directly in the game’s settings menu.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067934479"
-    },
-    {
-      "date": "2026-10-09",
-      "title": "Update 0.4.0.182",
-      "kind": "patch",
-      "summary": "Gameplay and Balance Rare \"Guts\" and \"Ghost\" Body Sleeves have been reworked: they are now \"epic\" Body Sleeves with the same characteristics as the \"Knight\" and \"Paladin\" Body Sleeves. In Isolated (PvE) Raids, Invisibles and Hellhounds no longer suddenly spawn near players who remain in one area for a long time.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932592"
     }
   ]
 }
