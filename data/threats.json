@@ -1,11 +1,12 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-16",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
     "Tiny chasers (Seeds, Mimics): don't waste ammo. One shot or a melee hit.",
     "A car that moves by itself: shoot the windshield, back off before it dies.",
-    "Statues freeze while watched; Shy Girl attacks if you stare. Know which is which."
+    "Statues freeze while watched; Shy Girl attacks if you stare. Know which is which.",
+"Since 0.5.0.33 new monsters no longer spawn in a habitat while players are nearby, so a cleared nest stays clear while you're there."
   ],
   "threats": [
     {"name":"BTR-80A","kind":"Vehicle","danger":4,"counters":["Listen","Avoid","Cover","Explosives"],"where":[],
@@ -52,13 +53,13 @@
      "does":"Frozen while you watch it, rushes you when you look away.",
      "beat":["Usually skip it: keep looking at it and back out of the area.","Bullets barely work. Use grenades if you must kill it."],
      "drops":"Nothing special."},
-    {"name":"Banshee","kind":"Monster","danger":3,"counters":["Listen"],"where":[],
+    {"name":"Banshee","kind":"Monster","danger":3,"counters":["Listen"],"where":["icarus"],
      "does":"New in the To the Sky update (Nov 11, 2026). Lives in the Icarus Offices raid inside the Vanilla skyscraper above Saltriver City. Its behavior isn't documented yet.",
      "beat":["Unconfirmed. Treat it as dangerous and move carefully through the tower's dark corridors."],
      "drops":"Unconfirmed.","source":"https://activematter.game/en/news/385"},
     {"name":"Omega Mimic","kind":"Boss","danger":4,"counters":["Explosives","Rifle","Range"],"where":["dog"],
      "does":"New armored Mimic boss in the updated Escape from Dogorsk raid (To the Sky, Nov 11, 2026).",
-     "beat":["Bring explosives: the RPG-7's PG-7VL rocket deals blast and armor-piercing damage again since 0.5.0.30, made for dangerous anomalies.","Keep your distance like with the Alpha Mimic."],
+     "beat":["Bring explosives, but expect to need more than one RPG-7 rocket: 0.5.0.33 cut the shaped-charge jet to 200 damage (blast damage unchanged).","Keep your distance like with the Alpha Mimic."],
      "drops":"Unconfirmed.","source":"https://activematter.game/en/news/385"},
     {"name":"Wall-climber Mimic","kind":"Monster","danger":2,"counters":["Range","Cover"],"where":["down","park"],
      "does":"New Mimic variant in Saltriver City (To the Sky, Nov 11, 2026). Climbs walls and throws clumps of matter at you from range.",
@@ -74,7 +75,7 @@
      "drops":"Minor."},
     {"name":"Alpha Mimic / Mimic Car","kind":"Boss","danger":4,"counters":["Rifle","Explosives","Range"],"where":[],
      "does":"A car that turns into a giant walker. Explodes when it dies. Since To the Sky (Nov 11, 2026) it can disguise itself as any of seven Soviet cars in Dogorsk and Shegolskoe or eight local vehicles in Africa, and its body becomes a lootable container after death.",
-     "beat":["Don't walk up to suspicious cars.","Shoot through the windshield.","The RPG-7 hits hard again since 0.5.0.30 and is a good answer to it.","Loot the body once it's dead.","Back away as its health drops, and stay clear of fuel tanks and other cars."],
+     "beat":["Don't walk up to suspicious cars.","Shoot through the windshield.","Since 0.5.0.33 the RPG-7's shaped-charge jet does 200 damage (was 1,200), so one rocket no longer kills it; bring several or pair rockets with rifle fire.","Loot the body once it's dead.","Back away as its health drops, and stay clear of fuel tanks and other cars."],
      "drops":"About 10× more Active Matter since 0.4.0.156; random weapons, armor and rare attachments."},
     {"name":"Scorch","kind":"Monster","danger":2,"counters":["Fire extinguisher","Rifle","Shotgun"],"where":[],
      "does":"Glowing fire creature that charges and throws a fireball. Main threat in the Ozernoe: Firestorm Overtime Raid.",

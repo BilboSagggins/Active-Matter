@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-16",
   "sources": {
     "blog": {
       "name": "activematter.blog",
@@ -327,7 +327,7 @@
       "name": "RPG-7",
       "class": "Launcher",
       "tiers": {},
-      "why": "Nerfed in 0.4.0.201 (less projectile damage, rockets take more space). Strong again since 0.5.0.30: the PG-7VL rocket now deals both blast and armor-piercing jet damage, very effective against vehicles and dangerous anomalies. Not ranked by current lists."
+      "why": "Nerfed in 0.4.0.201 (less projectile damage, rockets take more space). Strong again since 0.5.0.30: the PG-7VL rocket now deals both blast and armor-piercing jet damage, very effective against vehicles and dangerous anomalies. Trimmed again in 0.5.0.33: the jet now deals 200 damage (was 1,200), so a single rocket no longer kills an Alpha Mimic, though it still destroys vehicles; blast damage unchanged. Not ranked by current lists."
     }
   ],
   "loot": [
@@ -566,6 +566,10 @@
   ],
   "patchNotes": [
     {
+      "patch": "0.5.0.33",
+      "change": "RPG shaped-charge jet cut to 200 damage (from 1,200): still destroys vehicles but no longer one-shots an Alpha Mimic. All sights share one aim-point rule and optical/thermal sights no longer add recoil. Bullets now pass through metal mesh. HX6 suppressors renamed HX6 7.62 and HX6 5.45. Icarus Offices gets a new portal pair and much better valuables in the Medbay, hotel rooms and Warden's storeroom."
+    },
+    {
       "patch": "0.5.0.30",
       "change": "RPG-7's PG-7VL rocket deals blast plus armor-piercing damage again, so it's strong against vehicles and dangerous anomalies; armored SUV windows protect passengers again; fire scorches ground and grass; one button turns in all finished investigation steps."
     },
@@ -678,7 +682,8 @@
       "Test builds in the Shelter shooting range before a raid.",
       "Bulky optics and stocks cost volume you could use for loot.",
       "Since To the Sky (Nov 11, 2026) a mod's weight replaces the stock part's weight instead of adding to it (starting with the AK-74).",
-      "Since To the Sky the M4A1 and M110A1 have side tactical rails and an underbarrel mount."
+      "Since To the Sky the M4A1 and M110A1 have side tactical rails and an underbarrel mount.",
+      "Since 0.5.0.33 optical and thermal sights no longer add recoil, and zoom or field of view no longer shifts where the bullet lands, so a magnified optic has no hidden handling cost beyond weight and volume."
     ]
   }
 }
