@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-19T13:22:28.448Z",
+  "updated": "2026-11-19T23:05:31.498Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-19",
+      "title": "The Agency Opens The Isolated Raid \"Culling of Dogorsk\"",
+      "kind": "news",
+      "summary": "Access to the \"Culling of Dogorsk\" raid is now live. Try to make it back in one piece.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849827110429394"
+    },
     {
       "date": "2026-11-19",
       "title": "Update 0.5.0.46",
@@ -176,20 +183,6 @@
       "kind": "patch",
       "summary": "Managing gear has become less of a hassle, magazines no longer can drop on reload, visual recoil when using scopes has been adjusted, and improved item swapping when changing backpacks and safe containers at the Shelter.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677093"
-    },
-    {
-      "date": "2026-10-13",
-      "title": "Signal Lost",
-      "kind": "news",
-      "summary": "URGENT! We've lost contact with one of our Operatives, and a sudden anomaly has wiped the data on which raid they deployed to. But, their camera transmitted one final frame, and the zone is about to collapse with them still inside.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067944333"
-    },
-    {
-      "date": "2026-10-12",
-      "title": "Server update",
-      "kind": "patch",
-      "summary": "Extended the search time of the auto-fill squad feature, it should find players twice as often now.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067941187"
     }
   ]
 }
