@@ -1,7 +1,8 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-19",
   "notes": "Hangar, attic and Port crane keys can all roll from the Keys fuse recipe (Monolith level Delta, 300 Monolith Tokens): one cassette (Space Work Universe, Black Iron, Driving Home, Back Again or Blackmail) + one Accumulator battery, Damaged ammo or Fuse. The output key is random.",
   "keys": [
+    {"name":"Caretaker's storage room key","map":"Icarus Offices","opens":"The Caretaker's (Warden's) storage room","found":"Next to the Caretaker's wallet, in the same raid","craft":"No","uses":"Raid only: can't be extracted","loot":"Valuables (see Warden's storeroom on the Icarus Offices map)","source":"https://www.fpsnews.net/active-matter/patch-notes/active-matter-0-5-0-46-notes-de-mise-a-jour-completes/"},
     {"name":"Port crane key","map":"Cargo Port","opens":"Door of the port crane inside the gravity anomaly; leads to the Weapon Barge route","found":"Cargo Port, inside the gravity anomaly area (exact spawn unconfirmed)","craft":"Keys fuse recipe (Monolith Delta), random output","uses":"?","loot":"Hidden equipment stash; players report PKM, VAL, SVD from the Weapon Barge","source":"https://activematter.wiki.gg/wiki/Port_crane_key"},
     {"name":"Small military crate key","map":"Cargo Port","opens":"Small military crate on the floating barges around the gravity anomaly","found":"Unconfirmed","craft":"Unknown","uses":"?","loot":"SMG or pistol kit: MP5 + 3 mags, PP-91 Kedr + 3 mags, or M1911A1 + 3 mags","source":"https://activematter.wiki.gg/wiki/Small_military_crate_key"},
     {"name":"Big military crate key","map":"Cargo Port","opens":"Big military crate on the barges","found":"Unconfirmed","craft":"Unknown","uses":"?","loot":"Unconfirmed","source":"https://activematter.wiki.gg/wiki/Template:Keys"},

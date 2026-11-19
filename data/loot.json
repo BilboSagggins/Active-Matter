@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-19",
   "maps": [
     {
       "id": "cargo",
@@ -1150,7 +1150,7 @@
       "id": "icarus",
       "name": "Icarus Offices",
       "image": "",
-      "summary": "The floating Vanilla skyscraper above Saltriver City (To the Sky). Since 0.5.0.33 a portal pair links the tilted gravity island at the lower east entrance with the inverted floor at the top of the building. Marker positions are schematic.",
+      "summary": "The floating Vanilla skyscraper above Saltriver City (To the Sky). Since 0.5.0.33 a portal pair links the tilted gravity island at the lower east entrance with the inverted floor at the top of the building. Marker positions are schematic. 0.5.0.46 added navigation signs and arrows, fixed the elevator-shaft ↔ shopping-gallery portal exits and stopped endless respawns in the gravity zones above Vanilla Mall.",
       "links": [],
       "nodes": [
         {
@@ -1159,9 +1159,9 @@
           "type": "val",
           "label": "Icarus Medbay",
           "loot": "Valuables, high-tier loot",
-          "access": "Icarus Medbay pass (made by fusion; any soundtrack CD fills its CD slot since 0.5.0.33)",
+          "access": "Icarus Medbay pass (made by fusion; any soundtrack CD fills its CD slot since 0.5.0.33). Since 0.5.0.46 the medical block doors also need a Fuse placed in the electrical panel first.",
           "danger": "Unconfirmed",
-          "tip": "0.5.0.33 sharply raised the chance of valuable items here. Exact location in the tower isn't documented yet.",
+          "tip": "0.5.0.33 sharply raised the chance of valuable items here. Exact location in the tower isn't documented yet. Bring a Fuse for the electrical panel (0.5.0.46).",
           "items": [
             "Safes & valuables",
             "High-tier loot"
@@ -1186,12 +1186,13 @@
           "type": "key",
           "label": "Warden's storeroom",
           "loot": "Valuables; every loot spot guarantees a reward during the Warden's task",
-          "access": "Key door, marked on the map during the Warden's investigation task; the anchor-and-rope shortcut was closed in 0.5.0.33",
+          "access": "Since 0.5.0.46: only the Caretaker's storage room key, found next to the Caretaker's wallet in the same raid; it can't be extracted. The anchor-and-rope shortcut was closed in 0.5.0.33.",
           "danger": "Unconfirmed",
-          "tip": "Reworked in 0.5.0.33: more loot spots and much better valuables. The Warden's Wallet is now Epic and can be kept or processed in the Refiner. Exact location isn't documented yet.",
+          "tip": "Reworked in 0.5.0.33: more loot spots and much better valuables. The Warden's Wallet is now Epic and can be kept or processed in the Refiner. Exact location isn't documented yet. The 0.5.0.46 notes call this the Caretaker's storage room. That patch also added signs, arrows and landmarks around the tower to make it easier to navigate.",
           "items": [
             "Safes & valuables",
-            "High-tier loot"
+            "High-tier loot",
+            "Caretaker's storage room key"
           ]
         }
       ]

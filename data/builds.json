@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-11-19",
   "skills": {
     "how": [
       "Each time your operative levels up you get materials and pick one passive skill from a skill tree.",
@@ -91,7 +91,7 @@
           "−90%"
         ],
         "what": "Body temperature",
-        "detail": "Lowers your body temperature build-up; helps in hot zones and fire."
+        "detail": "Lowers your body temperature build-up; helps in hot zones and fire. A bug that switched it off on raid entry (and made you show up on thermal sights) was fixed in 0.5.0.46."
       },
       {
         "name": "Endurance",
@@ -636,7 +636,8 @@
       "Each kill can drop remains. Fuse them in the Workshop to roll a random chronogene from that creature's list; the percentages are the roll chances.",
       "Pristine remains drop rarely and always roll the creature's signature chronogene at Tier II (90%) or Tier III (10%).",
       "Ability chronogenes (Tenacity, Observation and the rest) don't come from normal remains. The Distorted Chronogene Study investigation unlocks a recipe for Rare chronogenes from Distorted.",
-      "Remains you don't need refine for 40 credits each (pristine ones for 120)."
+      "Remains you don't need refine for 40 credits each (pristine ones for 120).",
+      "Since 0.5.0.46 the Fusion menu shows every possible result, even 0% ones, sorted by chance; picking a target result filters in the chronogenes it needs. Mixed-color synthesis odds were also corrected."
     ],
     "abilitySource": "Ability chronogenes don't drop from normal monster remains. They come from Tier III random synthesis (20 Active Matter + 3 Tier II chronogenes, unlocked at Monolith Epsilon) and the Rare chronogene recipe from the Distorted Chronogene Study investigation.",
     "noRemains": "Not tied to any monster's remains. Get it from random Tier II/III synthesis."
