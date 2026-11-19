@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-13T17:12:23.405Z",
+  "updated": "2026-11-19T13:22:28.448Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-19",
+      "title": "Update 0.5.0.46",
+      "kind": "patch",
+      "summary": "Raids and Maps Fixed a rare bug that kicked players out of a raid when a game update was released. Icarus Offices: The Caretaker's storage room can now only be unlocked with a key found next to the Caretaker's wallet. This key cannot be extracted from the raid.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849827110427645"
+    },
     {
       "date": "2026-11-13",
       "title": "Update 0.5.0.33",
@@ -183,13 +190,6 @@
       "kind": "patch",
       "summary": "Extended the search time of the auto-fill squad feature, it should find players twice as often now.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067941187"
-    },
-    {
-      "date": "2026-10-09",
-      "title": "Active Matter: Activity Report",
-      "kind": "news",
-      "summary": "How have we already improved the game? Here are just a few examples of what we’ve fixed in recent days and weeks. Fewer motion sickness-inducing effects reduce camera bobbing while moving directly in the game’s settings menu.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067934479"
     }
   ]
 }
