@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-19T23:05:31.498Z",
+  "updated": "2026-11-20T16:59:50.734Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-20",
+      "title": "Update 0.5.0.55",
+      "kind": "patch",
+      "summary": "Raids and Contracts Fixed a bug that could prevent a previously completed contract from being issued again after a new version of it was released. The \"Culling of Dogorsk\" Primary Objective contract can now be completed on every run of the raid of the same name.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849827110432718"
+    },
     {
       "date": "2026-11-19",
       "title": "The Agency Opens The Isolated Raid \"Culling of Dogorsk\"",
@@ -176,13 +183,6 @@
       "kind": "patch",
       "summary": "Controls The weapon tactical flashlight and laser sight can once again be toggled separately. By default, both options are bound to the same control (“L” on keyboard), but you can assign a different binding to either of them in the controls settings.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678912"
-    },
-    {
-      "date": "2026-10-15",
-      "title": "Update 0.4.0.195",
-      "kind": "patch",
-      "summary": "Managing gear has become less of a hassle, magazines no longer can drop on reload, visual recoil when using scopes has been adjusted, and improved item swapping when changing backpacks and safe containers at the Shelter.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677093"
     }
   ]
 }
