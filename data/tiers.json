@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-23",
   "sources": {
     "blog": {
       "name": "activematter.blog",
@@ -565,6 +565,10 @@
     }
   ],
   "patchNotes": [
+    {
+      "patch": "0.5.0.55",
+      "change": "Culling of Dogorsk fixes: its Primary Objective contract can be done every run, Eliminate Turned Soldiers became a daily needing 20 kills (was 5), and Seeds no longer respawn in cleared areas. Flowerman charge attack's max damage halved. FD-12 underbarrel and side tactical slots temporarily disabled over a laser-sight bug. Quad Bike trunks grow to 1,850 (from 1,000) and other car trunks get bigger. Workshop can send marked items to the Refiner directly. Omega Mimic attacks now properly damage devices and turrets, and its Legendary Container gets an opening animation. White Distorted can no longer be carried out of a raid. Bestiary entries added for Alpha Flowerman, Alpha Mimic and Omega Mimic (unlock on kill)."
+    },
     {
       "patch": "0.5.0.46",
       "change": "Icarus Offices: the Caretaker's storage room now needs a key found beside his wallet (raid-only), the Medbay doors need a Fuse in the electrical panel, and new signs help you navigate. MAC-11, AK-15SK and M249 Para can now come from airdrops in public raids. Power Plant Joint Objective containers moved to easier spots. Dogorsk escape's final portal now opens even during zone collapse. A separate key now detaches you from an anchor rope. Faster vehicle entry; the US pickup bed seats four via the tailgate. Body-temperature chronogenes no longer break on raid entry (they had made you glow on thermal sights). Fusion menu now lists every possible result with its chance."

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-23",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
@@ -23,7 +23,7 @@
      "drops":"Active Matter, components."},
     {"name":"Flowerman","kind":"Monster","danger":2,"counters":["Fire","Shotgun"],"where":["park","ozer","dog","dam"],
      "does":"Hides in vegetation near bright orange lure flowers. Dashes at you and knocks your aim.",
-     "beat":["Taking Active Matter near the orange flowers wakes the nest. Prepare first.","Fire (Molotov, incendiary, flamethrower) is the best answer; they're armored but burn.","They're tied to their nest: back away from it and they give up.","0.4.0.201 shortened the gaps between their dashes, so expect faster follow-ups."],
+     "beat":["Taking Active Matter near the orange flowers wakes the nest. Prepare first.","Fire (Molotov, incendiary, flamethrower) is the best answer; they're armored but burn.","They're tied to their nest: back away from it and they give up.","0.4.0.201 shortened the gaps between their dashes, so expect faster follow-ups.","0.5.0.55 halved the maximum damage of their charge attack."],
      "drops":"Nests hold a lot of Active Matter."},
     {"name":"Alpha Flowerman","kind":"Boss","danger":4,"counters":["Fire","Rifle"],"where":["park"],
      "does":"Huge, slow Flowerman guarding a big nest with an escort.",
@@ -58,9 +58,9 @@
      "beat":["Unconfirmed. Treat it as dangerous and move carefully through the tower's dark corridors."],
      "drops":"Unconfirmed.","source":"https://activematter.game/en/news/385"},
     {"name":"Omega Mimic","kind":"Boss","danger":4,"counters":["Explosives","Rifle","Range"],"where":["dog"],
-     "does":"New armored Mimic boss in the updated Escape from Dogorsk raid (To the Sky, Nov 11, 2026).",
-     "beat":["Bring explosives, but expect to need more than one RPG-7 rocket: 0.5.0.33 cut the shaped-charge jet to 200 damage (blast damage unchanged).","Keep your distance like with the Alpha Mimic."],
-     "drops":"Unconfirmed.","source":"https://activematter.game/en/news/385"},
+     "does":"Huge armored Mimic that has swallowed several vehicles and holds Dogorsk's city center in the Culling of Dogorsk isolated raid (opened Nov 19, 2026). Up close its tendrils hit you even behind cover; at range it throws concrete chunks or drags you under its body. It also fires a burning beam (0.5.0.55 added charge-up and firing sounds for it). Its attacks can damage your devices and turrets.",
+     "beat":["Killing it is optional but makes extraction much easier.","Bring explosives, but expect to need more than one RPG-7 rocket: 0.5.0.33 cut the shaped-charge jet to 200 damage (blast damage unchanged).","Don't trust cover at close range; keep your distance and listen for the beam's charge-up.","The center-screen hit indicator is off for Alpha and Omega Mimics since 0.5.0.55, so don't rely on it to confirm hits."],
+     "drops":"Omega Mimic Core and a Legendary Container that can hold a fully kitted-out weapon. Killing it unlocks its Bestiary entry (0.5.0.55).","source":"https://activematter.game/en/news/395"},
     {"name":"Wall-climber Mimic","kind":"Monster","danger":2,"counters":["Range","Cover"],"where":["down","park"],
      "does":"New Mimic variant in Saltriver City (To the Sky, Nov 11, 2026). Climbs walls and throws clumps of matter at you from range.",
      "beat":["Break line of sight; it attacks from range, so don't stand in the open.","Check walls and building faces, not just the ground."],
