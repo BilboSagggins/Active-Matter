@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-20T16:59:50.734Z",
+  "updated": "2026-11-24T02:55:45.420Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-23",
+      "title": "Nominate Active Matter for \"Best Soundtrack\" in the Steam Awards",
+      "kind": "news",
+      "summary": "Operatives! The first stage of the annual Steam Awards is officially underway: until November 30th, players decide which games will compete for the awards. Help the soundtrack of Active Matter secure a spot on that list! Dozens of artists have worked together to craft the sonic landscape of Active Matter.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849827110443087"
+    },
     {
       "date": "2026-11-20",
       "title": "Update 0.5.0.55",
@@ -176,13 +183,6 @@
       "kind": "patch",
       "summary": "Interface Gear presets now equip correctly when pressing the \"Purchase and Equip\" button. Gear presets are now purchased without camouflages: if the preset included a camouflage on a weapon, it won't be purchased or applied. You can apply one separately afterwards as normal.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706681880"
-    },
-    {
-      "date": "2026-10-15",
-      "title": "Update 0.4.0.196",
-      "kind": "patch",
-      "summary": "Controls The weapon tactical flashlight and laser sight can once again be toggled separately. By default, both options are bound to the same control (“L” on keyboard), but you can assign a different binding to either of them in the controls settings.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678912"
     }
   ]
 }
