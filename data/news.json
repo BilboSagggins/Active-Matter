@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-24T02:55:45.420Z",
+  "updated": "2026-11-25T14:30:34.898Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-25",
+      "title": "Update 0.5.0.67",
+      "kind": "patch",
+      "summary": "Raids and Maps Power Plant: Enemies now spawn inside several large buildings that were previously empty. Power Plant: Relocated the monster transformation item to a more accessible spot, as recent interior layout changes made it unclear how to reach. Icarus Offices: Fixed the placement of Adam's drawing.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1850460852980751"
+    },
     {
       "date": "2026-11-23",
       "title": "Nominate Active Matter for \"Best Soundtrack\" in the Steam Awards",
@@ -176,13 +183,6 @@
       "kind": "patch",
       "summary": "Fixed muzzle flash hiders as they now once again help conceal your position when firing. Resolved several gameplay bugs in raids and made interface improvements. Controls have been further refined and performance on consoles has been improved.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114028169"
-    },
-    {
-      "date": "2026-10-16",
-      "title": "Update 0.4.0.199",
-      "kind": "patch",
-      "summary": "Interface Gear presets now equip correctly when pressing the \"Purchase and Equip\" button. Gear presets are now purchased without camouflages: if the preset included a camouflage on a weapon, it won't be purchased or applied. You can apply one separately afterwards as normal.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706681880"
     }
   ]
 }
