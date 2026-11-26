@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-26",
   "rules": [
     "Plant-like enemies (Flowermen, Dendroids, Swarms): burn them.",
     "Anything with a human head: aim for the head.",
@@ -10,7 +10,7 @@
   ],
   "threats": [
     {"name":"BTR-80A","kind":"Vehicle","danger":4,"counters":["Listen","Avoid","Cover","Explosives"],"where":[],
-     "does":"Abandoned eight-wheeled armored carrier with a 30 mm autocannon, spotted on Dalniy Island and in Anguka Anga during special raids (added Oct 30, 2026). Its armor stops bullets and claws. It needs a scavenged fuel canister and ammunition to run; whoever gets it going first drives it.",
+     "does":"Abandoned eight-wheeled armored carrier with a 30 mm autocannon, spotted on Dalniy Island and in Anguka Anga during special raids (added Oct 30, 2026). Its armor stops bullets and claws. It needs a scavenged fuel canister and ammunition to run; whoever gets it going first drives it. Since 0.5.0.67 it handles off-road terrain much better (rigidly locked differentials, keeps optimal RPM under load), so it can now reach hills and pits it used to get stuck on.",
      "beat":["Listen for engine noise or cannon fire and reroute.","If you can't avoid it, get into hard cover fast.","An RPG-7 can destroy it."],
      "drops":"Unconfirmed.","source":"https://activematter.game/en/news/374"},
     {"name":"Distorted","kind":"Monster","danger":2,"counters":["Suppressed","Headshot","Shotgun"],"where":["mil","dog","dam"],

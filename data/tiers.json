@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-26",
   "sources": {
     "blog": {
       "name": "activematter.blog",
@@ -327,7 +327,7 @@
       "name": "RPG-7",
       "class": "Launcher",
       "tiers": {},
-      "why": "Nerfed in 0.4.0.201 (less projectile damage, rockets take more space). Strong again since 0.5.0.30: the PG-7VL rocket now deals both blast and armor-piercing jet damage, very effective against vehicles and dangerous anomalies. Trimmed again in 0.5.0.33: the jet now deals 200 damage (was 1,200), so a single rocket no longer kills an Alpha Mimic, though it still destroys vehicles; blast damage unchanged. Not ranked by current lists."
+      "why": "Nerfed in 0.4.0.201 (less projectile damage, rockets take more space). Strong again since 0.5.0.30: the PG-7VL rocket now deals both blast and armor-piercing jet damage, very effective against vehicles and dangerous anomalies. Trimmed again in 0.5.0.33: the jet now deals 200 damage (was 1,200), so a single rocket no longer kills an Alpha Mimic, though it still destroys vehicles; blast damage unchanged. 0.5.0.67 fixed a bug where it could explode in your hands when fired. Not ranked by current lists."
     }
   ],
   "loot": [
@@ -565,6 +565,10 @@
     }
   ],
   "patchNotes": [
+    {
+      "patch": "0.5.0.67",
+      "change": "Power Plant: enemies now spawn in several previously empty large buildings, and the monster transformation item moved somewhere easier to reach. Icarus Offices: Medbay double doors and the unpowered first-floor door no longer start open; Adam's drawing placement fixed. Keycard doors open and close reliably again. Weapons and armor plates now save properly after extracting from an Isolated Raid. Vehicles grip better (climb out of pits and up hills, handle sand, automatics downshift on wheel slip); the BTR-80A gets locked differentials and better pulling power, plus a dry-fire click and damaged-gun warning for the gunner. Grenade radial menu (G / LB / L1) now groups incendiary, tactical and frag. Fixed the RPG-7 sometimes exploding in your hands and the Zarya 3 Stun Grenade rolling endlessly. Harmonization window split into Harmonization Protocol (free rewards) and Merit Offers (bought with Merits)."
+    },
     {
       "patch": "0.5.0.55",
       "change": "Culling of Dogorsk fixes: its Primary Objective contract can be done every run, Eliminate Turned Soldiers became a daily needing 20 kills (was 5), and Seeds no longer respawn in cleared areas. Flowerman charge attack's max damage halved. FD-12 underbarrel and side tactical slots temporarily disabled over a laser-sight bug. Quad Bike trunks grow to 1,850 (from 1,000) and other car trunks get bigger. Workshop can send marked items to the Refiner directly. Omega Mimic attacks now properly damage devices and turrets, and its Legendary Container gets an opening animation. White Distorted can no longer be carried out of a raid. Bestiary entries added for Alpha Flowerman, Alpha Mimic and Omega Mimic (unlock on kill)."
