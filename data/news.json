@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-27T00:38:53.478Z",
+  "updated": "2026-11-27T13:57:04.998Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-27",
+      "title": "Update 0.5.0.70",
+      "kind": "patch",
+      "summary": "Gameplay and Balance Fixed a bug where the Omega Mimic took excessive damage from grenades. If a grenade detonated near the center of its body, all connecting tendrils were hit by the blast at once. Now, a single explosion can damage no more than three nearby tendrils, while explosion damage itself remains unchanged.",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1850460852989025"
+    },
     {
       "date": "2026-11-26",
       "title": "Shegolskoe or Ozernoe?",
@@ -176,13 +183,6 @@
       "kind": "news",
       "summary": "Site Status: Fully engulfed in flames. Clearance: Open Raid, solo only. Threats: Burning Devourers, Scorches, fire anomalies, and hostile rival Operatives. Objective: Track the anomalous signals, locate the sources of ignition, and extract alive. Equipment: Got a fire extinguisher? Equip it in a weapon slot.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114035718"
-    },
-    {
-      "date": "2026-10-22",
-      "title": "Update 0.4.0.205",
-      "kind": "patch",
-      "summary": "In this update, markers made on the map, and shown on the compass, now show distance and elevation more clearly. The “Repair All” inventory button now also repairs armor being carried as spares, and DualSense touchpad functionality hs been improved.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114033075"
     }
   ]
 }
