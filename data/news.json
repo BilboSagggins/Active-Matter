@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-25T14:30:34.898Z",
+  "updated": "2026-11-27T00:38:53.478Z",
   "source": "Steam news for app 2887580",
   "items": [
+    {
+      "date": "2026-11-26",
+      "title": "Shegolskoe or Ozernoe?",
+      "kind": "news",
+      "summary": "A face-off on Dalniy Island: Shegolskoe vs Ozernoe! Which of these two raids do you keep coming back to? Drop a \"1\" or \"2\" and tell us why! [img src=\"",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1850460852985983"
+    },
     {
       "date": "2026-11-25",
       "title": "Update 0.5.0.67",
@@ -176,13 +183,6 @@
       "kind": "patch",
       "summary": "In this update, markers made on the map, and shown on the compass, now show distance and elevation more clearly. The “Repair All” inventory button now also repairs armor being carried as spares, and DualSense touchpad functionality hs been improved.",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114033075"
-    },
-    {
-      "date": "2026-10-21",
-      "title": "Update 0.4.0.201",
-      "kind": "patch",
-      "summary": "Fixed muzzle flash hiders as they now once again help conceal your position when firing. Resolved several gameplay bugs in raids and made interface improvements. Controls have been further refined and performance on consoles has been improved.",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114028169"
     }
   ]
 }
